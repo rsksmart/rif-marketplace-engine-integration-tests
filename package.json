@@ -28,7 +28,9 @@
     "chai": "^4.3.4",
     "mocha": "^9.1.3",
     "nft-marketplace-engine-sdk": "github:rsksmart/rif-marketplace-engine-sdk",
-    "truffle-hdwallet-provider": "^1.0.17"
+    "truffle-hdwallet-provider": "^1.0.17",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
   },
   "homepage": "https://github.com/rsksmart/rif-marketplace-engine-integration-tests#readme"
 }
