@@ -5,21 +5,31 @@ import {
     Wallet
 } from 'ethers';
 
+chai.use(chaiAsPromised);
+
+let marketplaceContract;
 describe(`MarketPlace Engine Integration Tests`, function () {
     beforeEach(() => {
-            marketplaceContract = MarketplaceContract.getInstance(
-                MarketPlaceData.networks[33].address,
-                new Wallet(
-                    '0xc85ef7d79691fe79573b1a7064c19c1a9819ebdbd1faaab1a8ec92344438aaf4'
-                )
-            );
-        }
-    };
+        marketplaceContract = MarketplaceContract.getInstance(
+            MarketPlaceData.networks[33].address,
+            new Wallet(
+                '0xcd2a3d9f938e13cd947ec05abc7fe734df8dd826'
+            )
+        );
+    });
 
-
-    it('First test', async () => {
-        assert(true);
-    })
+    it('should create a single marketplace contract instance', async () => {
+        // Unit under test
+        const marketplaceContractInstance = MarketplaceContract.getInstance(
+            MarketPlaceData.networks[33].address,
+          new Wallet(
+            '0xcd2a3d9f938e13cd947ec05abc7fe734df8dd826'
+          )
+        );
+    
+        // Verify results
+        expect(marketplaceContract).to.be.equal(marketplaceContractInstance);
+      });
 
 
 
