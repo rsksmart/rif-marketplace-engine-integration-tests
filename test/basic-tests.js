@@ -1,13 +1,14 @@
+const chai = require('chai');
 const assert = require('chai').assert;
-const MarketPlaceData = require('./build/contracts/MarketPlace.json');
-import {
-    Contract,
-    Wallet
-} from 'ethers';
+const MarketPlaceData = require('../build/contracts/MarketPlace.json');
+const ethers = require('ethers');
+const Contract = ethers.Contract;
+const Wallet = ethers.Wallet;
 
-chai.use(chaiAsPromised);
+const chaiAsPromised = require("chai-as-promised");
 
-let marketplaceContract;
+const marketplaceContract = new Contract();
+
 describe(`MarketPlace Engine Integration Tests`, function () {
     beforeEach(() => {
         marketplaceContract = MarketplaceContract.getInstance(
