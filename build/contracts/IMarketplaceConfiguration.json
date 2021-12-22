@@ -1,0 +1,2055 @@
+{
+  "contractName": "IMarketplaceConfiguration",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "isWhitelistedAssetRequired",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setRequireWhitelistedAsset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isWhitelistedAssetProviderRequired",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setRequireWhitelistedAssetProvider",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isAssetValidationRequired",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setRequireAssetValidation",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isSaleStrategyPerAssetRequired",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setRequireSaleStrategyPerAsset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isSameCurrencyPerAssetRequired",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setRequireSameCurrencyPerAsset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isAssetSubdomainRequired",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setRequireAssetSubdomain",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isStakingAndSlashingSupported",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setSupportsStakingSlashing",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"isAssetSubdomainRequired\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isAssetValidationRequired\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isSaleStrategyPerAssetRequired\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isSameCurrencyPerAssetRequired\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isStakingAndSlashingSupported\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isWhitelistedAssetProviderRequired\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isWhitelistedAssetRequired\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setRequireAssetSubdomain\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setRequireAssetValidation\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setRequireSaleStrategyPerAsset\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setRequireSameCurrencyPerAsset\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setRequireWhitelistedAsset\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setRequireWhitelistedAssetProvider\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setSupportsStakingSlashing\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"isAssetSubdomainRequired()\":{\"details\":\"Returns `true` if asset subdomain is enabled \"},\"isAssetValidationRequired()\":{\"details\":\"Returns `true` if asset validation is enabled \"},\"isSaleStrategyPerAssetRequired()\":{\"details\":\"Returns `true` if per-asset sale strategy is enabled \"},\"isSameCurrencyPerAssetRequired()\":{\"details\":\"Returns `true` if all assets use the same set of whitelisted currencies \"},\"isStakingAndSlashingSupported()\":{\"details\":\"Returns `true` if staking and slashing is enabled \"},\"isWhitelistedAssetProviderRequired()\":{\"details\":\"Returns `true` if asset provider whitelisting is enabled \"},\"isWhitelistedAssetRequired()\":{\"details\":\"Returns `true` if asset type whitelisting is enabled \"},\"setRequireAssetSubdomain(bool)\":{\"details\":\"sets a new value for requireAssetSubdomain Only executable by the contract owner. \"},\"setRequireAssetValidation(bool)\":{\"details\":\"sets a new value for requireAssetValidation Only executable by the contract owner. \"},\"setRequireSaleStrategyPerAsset(bool)\":{\"details\":\"sets a new value for requireSaleStrategyPerAsset Only executable by the contract owner. \"},\"setRequireSameCurrencyPerAsset(bool)\":{\"details\":\"sets a new value for requireSameCurrencyPerAsset Only executable by the contract owner. \"},\"setRequireWhitelistedAsset(bool)\":{\"details\":\"sets a new value for requireWhitelistedAssetType Only executable by the contract owner. \"},\"setRequireWhitelistedAssetProvider(bool)\":{\"details\":\"sets a new value for requireWhitelistedAssetProvider Only executable by the contract owner. \"},\"setSupportsStakingSlashing(bool)\":{\"details\":\"sets a new value for supportStakingAndSlashing Only executable by the contract owner. \"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/config/IMarketplaceConfiguration.sol\":\"IMarketplaceConfiguration\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/config/IMarketplaceConfiguration.sol\":{\"keccak256\":\"0x935f0283d693fbc37ec8a2845fb1a14f9c1aae94f285ef92175e8ebcb6bb8125\",\"license\":\"MIT OR Apache-2.0\",\"urls\":[\"bzz-raw://338369aa5c624ef3a5601f637066d6e5fc25ec1c8c8c487320cff773cf432fde\",\"dweb:/ipfs/QmUetR7C8pjEuUL79jA119JpQZwuH3TnmeLPt8MEX11uEq\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT OR Apache-2.0\npragma solidity ^0.8.4;\n\ninterface IMarketplaceConfiguration {\n    /**\n        @dev Returns `true` if asset type whitelisting is enabled \n    */\n    function isWhitelistedAssetRequired() external view returns (bool);\n\n    /**\n        @dev sets a new value for requireWhitelistedAssetType\n        Only executable by the contract owner. \n    */\n    function setRequireWhitelistedAsset(bool _newValue) external;\n\n    /**\n        @dev Returns `true` if asset provider whitelisting is enabled \n    */\n    function isWhitelistedAssetProviderRequired() external view returns (bool);\n\n    /**\n        @dev sets a new value for requireWhitelistedAssetProvider\n        Only executable by the contract owner. \n    */\n    function setRequireWhitelistedAssetProvider(bool _newValue) external;\n\n    /**\n        @dev Returns `true` if asset validation is enabled \n    */\n    function isAssetValidationRequired() external view returns (bool);\n\n    /**\n        @dev sets a new value for requireAssetValidation\n        Only executable by the contract owner. \n    */\n    function setRequireAssetValidation(bool _newValue) external;\n\n    /**\n        @dev Returns `true` if per-asset sale strategy is enabled \n    */\n    function isSaleStrategyPerAssetRequired() external view returns (bool);\n\n    /**\n        @dev sets a new value for requireSaleStrategyPerAsset\n        Only executable by the contract owner. \n    */\n    function setRequireSaleStrategyPerAsset(bool _newValue) external;\n\n    /**\n        @dev Returns `true` if all assets use the same set of whitelisted currencies \n    */\n    function isSameCurrencyPerAssetRequired() external view returns (bool);\n\n    /**\n        @dev sets a new value for requireSameCurrencyPerAsset\n        Only executable by the contract owner. \n    */\n    function setRequireSameCurrencyPerAsset(bool _newValue) external;\n\n    /**\n        @dev Returns `true` if asset subdomain is enabled \n    */\n    function isAssetSubdomainRequired() external view returns (bool);\n\n    /**\n        @dev sets a new value for requireAssetSubdomain\n        Only executable by the contract owner. \n    */\n    function setRequireAssetSubdomain(bool _newValue) external;\n\n    /**\n        @dev Returns `true` if staking and slashing is enabled \n    */\n    function isStakingAndSlashingSupported() external view returns (bool);\n\n    /**\n        @dev sets a new value for supportStakingAndSlashing\n        Only executable by the contract owner. \n    */\n    function setSupportsStakingSlashing(bool _newValue) external;\n}\n",
+  "sourcePath": "/Users/jjtechera/Documents/GitHub/rif-marketplace-engine-integration-tests/contracts/config/IMarketplaceConfiguration.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/config/IMarketplaceConfiguration.sol",
+    "exportedSymbols": {
+      "IMarketplaceConfiguration": [
+        11539
+      ]
+    },
+    "id": 11540,
+    "license": "MIT OR Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11454,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "46:23:23"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMarketplaceConfiguration",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11539,
+        "linearizedBaseContracts": [
+          11539
+        ],
+        "name": "IMarketplaceConfiguration",
+        "nameLocation": "81:25:23",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 11455,
+              "nodeType": "StructuredDocumentation",
+              "src": "113:77:23",
+              "text": "@dev Returns `true` if asset type whitelisting is enabled "
+            },
+            "functionSelector": "9f7149e7",
+            "id": 11460,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isWhitelistedAssetRequired",
+            "nameLocation": "204:26:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11456,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "230:2:23"
+            },
+            "returnParameters": {
+              "id": 11459,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11458,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11460,
+                  "src": "256:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11457,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "256:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "255:6:23"
+            },
+            "scope": 11539,
+            "src": "195:67:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11461,
+              "nodeType": "StructuredDocumentation",
+              "src": "268:120:23",
+              "text": "@dev sets a new value for requireWhitelistedAssetType\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "4a65abc4",
+            "id": 11466,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRequireWhitelistedAsset",
+            "nameLocation": "402:26:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11464,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11463,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "434:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11466,
+                  "src": "429:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11462,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "429:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "428:16:23"
+            },
+            "returnParameters": {
+              "id": 11465,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "453:0:23"
+            },
+            "scope": 11539,
+            "src": "393:61:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11467,
+              "nodeType": "StructuredDocumentation",
+              "src": "460:81:23",
+              "text": "@dev Returns `true` if asset provider whitelisting is enabled "
+            },
+            "functionSelector": "68d05e5f",
+            "id": 11472,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isWhitelistedAssetProviderRequired",
+            "nameLocation": "555:34:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11468,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "589:2:23"
+            },
+            "returnParameters": {
+              "id": 11471,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11470,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11472,
+                  "src": "615:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11469,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "615:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "614:6:23"
+            },
+            "scope": 11539,
+            "src": "546:75:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11473,
+              "nodeType": "StructuredDocumentation",
+              "src": "627:124:23",
+              "text": "@dev sets a new value for requireWhitelistedAssetProvider\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "691db299",
+            "id": 11478,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRequireWhitelistedAssetProvider",
+            "nameLocation": "765:34:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11476,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11475,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "805:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11478,
+                  "src": "800:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11474,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "800:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "799:16:23"
+            },
+            "returnParameters": {
+              "id": 11477,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "824:0:23"
+            },
+            "scope": 11539,
+            "src": "756:69:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11479,
+              "nodeType": "StructuredDocumentation",
+              "src": "831:70:23",
+              "text": "@dev Returns `true` if asset validation is enabled "
+            },
+            "functionSelector": "5c88dcc7",
+            "id": 11484,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetValidationRequired",
+            "nameLocation": "915:25:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11480,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "940:2:23"
+            },
+            "returnParameters": {
+              "id": 11483,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11482,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11484,
+                  "src": "966:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11481,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "966:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "965:6:23"
+            },
+            "scope": 11539,
+            "src": "906:66:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11485,
+              "nodeType": "StructuredDocumentation",
+              "src": "978:115:23",
+              "text": "@dev sets a new value for requireAssetValidation\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "c445d803",
+            "id": 11490,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRequireAssetValidation",
+            "nameLocation": "1107:25:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11488,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11487,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "1138:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11490,
+                  "src": "1133:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11486,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1133:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1132:16:23"
+            },
+            "returnParameters": {
+              "id": 11489,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1157:0:23"
+            },
+            "scope": 11539,
+            "src": "1098:60:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11491,
+              "nodeType": "StructuredDocumentation",
+              "src": "1164:77:23",
+              "text": "@dev Returns `true` if per-asset sale strategy is enabled "
+            },
+            "functionSelector": "e6c44df9",
+            "id": 11496,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isSaleStrategyPerAssetRequired",
+            "nameLocation": "1255:30:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11492,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1285:2:23"
+            },
+            "returnParameters": {
+              "id": 11495,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11494,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11496,
+                  "src": "1311:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11493,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1311:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1310:6:23"
+            },
+            "scope": 11539,
+            "src": "1246:71:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11497,
+              "nodeType": "StructuredDocumentation",
+              "src": "1323:120:23",
+              "text": "@dev sets a new value for requireSaleStrategyPerAsset\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "d2879f40",
+            "id": 11502,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRequireSaleStrategyPerAsset",
+            "nameLocation": "1457:30:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11500,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11499,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "1493:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11502,
+                  "src": "1488:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11498,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1488:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1487:16:23"
+            },
+            "returnParameters": {
+              "id": 11501,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1512:0:23"
+            },
+            "scope": 11539,
+            "src": "1448:65:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11503,
+              "nodeType": "StructuredDocumentation",
+              "src": "1519:96:23",
+              "text": "@dev Returns `true` if all assets use the same set of whitelisted currencies "
+            },
+            "functionSelector": "5d44ef0f",
+            "id": 11508,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isSameCurrencyPerAssetRequired",
+            "nameLocation": "1629:30:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11504,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1659:2:23"
+            },
+            "returnParameters": {
+              "id": 11507,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11506,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11508,
+                  "src": "1685:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11505,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1685:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1684:6:23"
+            },
+            "scope": 11539,
+            "src": "1620:71:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11509,
+              "nodeType": "StructuredDocumentation",
+              "src": "1697:120:23",
+              "text": "@dev sets a new value for requireSameCurrencyPerAsset\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "ab638cf3",
+            "id": 11514,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRequireSameCurrencyPerAsset",
+            "nameLocation": "1831:30:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11512,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11511,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "1867:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11514,
+                  "src": "1862:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11510,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1862:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1861:16:23"
+            },
+            "returnParameters": {
+              "id": 11513,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1886:0:23"
+            },
+            "scope": 11539,
+            "src": "1822:65:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11515,
+              "nodeType": "StructuredDocumentation",
+              "src": "1893:69:23",
+              "text": "@dev Returns `true` if asset subdomain is enabled "
+            },
+            "functionSelector": "7589ccdb",
+            "id": 11520,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetSubdomainRequired",
+            "nameLocation": "1976:24:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11516,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2000:2:23"
+            },
+            "returnParameters": {
+              "id": 11519,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11518,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11520,
+                  "src": "2026:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11517,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2026:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2025:6:23"
+            },
+            "scope": 11539,
+            "src": "1967:65:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11521,
+              "nodeType": "StructuredDocumentation",
+              "src": "2038:114:23",
+              "text": "@dev sets a new value for requireAssetSubdomain\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "a5f253c4",
+            "id": 11526,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRequireAssetSubdomain",
+            "nameLocation": "2166:24:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11524,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11523,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "2196:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11526,
+                  "src": "2191:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11522,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2191:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2190:16:23"
+            },
+            "returnParameters": {
+              "id": 11525,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2215:0:23"
+            },
+            "scope": 11539,
+            "src": "2157:59:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11527,
+              "nodeType": "StructuredDocumentation",
+              "src": "2222:74:23",
+              "text": "@dev Returns `true` if staking and slashing is enabled "
+            },
+            "functionSelector": "6649b502",
+            "id": 11532,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isStakingAndSlashingSupported",
+            "nameLocation": "2310:29:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11528,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2339:2:23"
+            },
+            "returnParameters": {
+              "id": 11531,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11530,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11532,
+                  "src": "2365:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11529,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2365:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2364:6:23"
+            },
+            "scope": 11539,
+            "src": "2301:70:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11533,
+              "nodeType": "StructuredDocumentation",
+              "src": "2377:118:23",
+              "text": "@dev sets a new value for supportStakingAndSlashing\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "479a9b97",
+            "id": 11538,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setSupportsStakingSlashing",
+            "nameLocation": "2509:26:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11536,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11535,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "2541:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11538,
+                  "src": "2536:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11534,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2536:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2535:16:23"
+            },
+            "returnParameters": {
+              "id": 11537,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2560:0:23"
+            },
+            "scope": 11539,
+            "src": "2500:61:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11540,
+        "src": "71:2492:23",
+        "usedErrors": []
+      }
+    ],
+    "src": "46:2518:23"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/config/IMarketplaceConfiguration.sol",
+    "exportedSymbols": {
+      "IMarketplaceConfiguration": [
+        11539
+      ]
+    },
+    "id": 11540,
+    "license": "MIT OR Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11454,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "46:23:23"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMarketplaceConfiguration",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11539,
+        "linearizedBaseContracts": [
+          11539
+        ],
+        "name": "IMarketplaceConfiguration",
+        "nameLocation": "81:25:23",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 11455,
+              "nodeType": "StructuredDocumentation",
+              "src": "113:77:23",
+              "text": "@dev Returns `true` if asset type whitelisting is enabled "
+            },
+            "functionSelector": "9f7149e7",
+            "id": 11460,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isWhitelistedAssetRequired",
+            "nameLocation": "204:26:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11456,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "230:2:23"
+            },
+            "returnParameters": {
+              "id": 11459,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11458,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11460,
+                  "src": "256:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11457,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "256:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "255:6:23"
+            },
+            "scope": 11539,
+            "src": "195:67:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11461,
+              "nodeType": "StructuredDocumentation",
+              "src": "268:120:23",
+              "text": "@dev sets a new value for requireWhitelistedAssetType\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "4a65abc4",
+            "id": 11466,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRequireWhitelistedAsset",
+            "nameLocation": "402:26:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11464,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11463,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "434:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11466,
+                  "src": "429:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11462,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "429:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "428:16:23"
+            },
+            "returnParameters": {
+              "id": 11465,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "453:0:23"
+            },
+            "scope": 11539,
+            "src": "393:61:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11467,
+              "nodeType": "StructuredDocumentation",
+              "src": "460:81:23",
+              "text": "@dev Returns `true` if asset provider whitelisting is enabled "
+            },
+            "functionSelector": "68d05e5f",
+            "id": 11472,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isWhitelistedAssetProviderRequired",
+            "nameLocation": "555:34:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11468,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "589:2:23"
+            },
+            "returnParameters": {
+              "id": 11471,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11470,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11472,
+                  "src": "615:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11469,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "615:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "614:6:23"
+            },
+            "scope": 11539,
+            "src": "546:75:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11473,
+              "nodeType": "StructuredDocumentation",
+              "src": "627:124:23",
+              "text": "@dev sets a new value for requireWhitelistedAssetProvider\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "691db299",
+            "id": 11478,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRequireWhitelistedAssetProvider",
+            "nameLocation": "765:34:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11476,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11475,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "805:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11478,
+                  "src": "800:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11474,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "800:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "799:16:23"
+            },
+            "returnParameters": {
+              "id": 11477,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "824:0:23"
+            },
+            "scope": 11539,
+            "src": "756:69:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11479,
+              "nodeType": "StructuredDocumentation",
+              "src": "831:70:23",
+              "text": "@dev Returns `true` if asset validation is enabled "
+            },
+            "functionSelector": "5c88dcc7",
+            "id": 11484,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetValidationRequired",
+            "nameLocation": "915:25:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11480,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "940:2:23"
+            },
+            "returnParameters": {
+              "id": 11483,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11482,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11484,
+                  "src": "966:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11481,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "966:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "965:6:23"
+            },
+            "scope": 11539,
+            "src": "906:66:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11485,
+              "nodeType": "StructuredDocumentation",
+              "src": "978:115:23",
+              "text": "@dev sets a new value for requireAssetValidation\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "c445d803",
+            "id": 11490,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRequireAssetValidation",
+            "nameLocation": "1107:25:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11488,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11487,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "1138:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11490,
+                  "src": "1133:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11486,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1133:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1132:16:23"
+            },
+            "returnParameters": {
+              "id": 11489,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1157:0:23"
+            },
+            "scope": 11539,
+            "src": "1098:60:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11491,
+              "nodeType": "StructuredDocumentation",
+              "src": "1164:77:23",
+              "text": "@dev Returns `true` if per-asset sale strategy is enabled "
+            },
+            "functionSelector": "e6c44df9",
+            "id": 11496,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isSaleStrategyPerAssetRequired",
+            "nameLocation": "1255:30:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11492,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1285:2:23"
+            },
+            "returnParameters": {
+              "id": 11495,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11494,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11496,
+                  "src": "1311:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11493,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1311:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1310:6:23"
+            },
+            "scope": 11539,
+            "src": "1246:71:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11497,
+              "nodeType": "StructuredDocumentation",
+              "src": "1323:120:23",
+              "text": "@dev sets a new value for requireSaleStrategyPerAsset\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "d2879f40",
+            "id": 11502,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRequireSaleStrategyPerAsset",
+            "nameLocation": "1457:30:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11500,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11499,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "1493:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11502,
+                  "src": "1488:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11498,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1488:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1487:16:23"
+            },
+            "returnParameters": {
+              "id": 11501,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1512:0:23"
+            },
+            "scope": 11539,
+            "src": "1448:65:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11503,
+              "nodeType": "StructuredDocumentation",
+              "src": "1519:96:23",
+              "text": "@dev Returns `true` if all assets use the same set of whitelisted currencies "
+            },
+            "functionSelector": "5d44ef0f",
+            "id": 11508,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isSameCurrencyPerAssetRequired",
+            "nameLocation": "1629:30:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11504,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1659:2:23"
+            },
+            "returnParameters": {
+              "id": 11507,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11506,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11508,
+                  "src": "1685:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11505,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1685:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1684:6:23"
+            },
+            "scope": 11539,
+            "src": "1620:71:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11509,
+              "nodeType": "StructuredDocumentation",
+              "src": "1697:120:23",
+              "text": "@dev sets a new value for requireSameCurrencyPerAsset\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "ab638cf3",
+            "id": 11514,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRequireSameCurrencyPerAsset",
+            "nameLocation": "1831:30:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11512,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11511,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "1867:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11514,
+                  "src": "1862:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11510,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1862:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1861:16:23"
+            },
+            "returnParameters": {
+              "id": 11513,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1886:0:23"
+            },
+            "scope": 11539,
+            "src": "1822:65:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11515,
+              "nodeType": "StructuredDocumentation",
+              "src": "1893:69:23",
+              "text": "@dev Returns `true` if asset subdomain is enabled "
+            },
+            "functionSelector": "7589ccdb",
+            "id": 11520,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetSubdomainRequired",
+            "nameLocation": "1976:24:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11516,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2000:2:23"
+            },
+            "returnParameters": {
+              "id": 11519,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11518,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11520,
+                  "src": "2026:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11517,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2026:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2025:6:23"
+            },
+            "scope": 11539,
+            "src": "1967:65:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11521,
+              "nodeType": "StructuredDocumentation",
+              "src": "2038:114:23",
+              "text": "@dev sets a new value for requireAssetSubdomain\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "a5f253c4",
+            "id": 11526,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRequireAssetSubdomain",
+            "nameLocation": "2166:24:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11524,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11523,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "2196:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11526,
+                  "src": "2191:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11522,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2191:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2190:16:23"
+            },
+            "returnParameters": {
+              "id": 11525,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2215:0:23"
+            },
+            "scope": 11539,
+            "src": "2157:59:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11527,
+              "nodeType": "StructuredDocumentation",
+              "src": "2222:74:23",
+              "text": "@dev Returns `true` if staking and slashing is enabled "
+            },
+            "functionSelector": "6649b502",
+            "id": 11532,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isStakingAndSlashingSupported",
+            "nameLocation": "2310:29:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11528,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2339:2:23"
+            },
+            "returnParameters": {
+              "id": 11531,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11530,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11532,
+                  "src": "2365:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11529,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2365:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2364:6:23"
+            },
+            "scope": 11539,
+            "src": "2301:70:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 11533,
+              "nodeType": "StructuredDocumentation",
+              "src": "2377:118:23",
+              "text": "@dev sets a new value for supportStakingAndSlashing\nOnly executable by the contract owner. "
+            },
+            "functionSelector": "479a9b97",
+            "id": 11538,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setSupportsStakingSlashing",
+            "nameLocation": "2509:26:23",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11536,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11535,
+                  "mutability": "mutable",
+                  "name": "_newValue",
+                  "nameLocation": "2541:9:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11538,
+                  "src": "2536:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11534,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2536:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2535:16:23"
+            },
+            "returnParameters": {
+              "id": 11537,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2560:0:23"
+            },
+            "scope": 11539,
+            "src": "2500:61:23",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11540,
+        "src": "71:2492:23",
+        "usedErrors": []
+      }
+    ],
+    "src": "46:2518:23"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2021-12-22T00:27:00.523Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "isAssetSubdomainRequired()": {
+        "details": "Returns `true` if asset subdomain is enabled "
+      },
+      "isAssetValidationRequired()": {
+        "details": "Returns `true` if asset validation is enabled "
+      },
+      "isSaleStrategyPerAssetRequired()": {
+        "details": "Returns `true` if per-asset sale strategy is enabled "
+      },
+      "isSameCurrencyPerAssetRequired()": {
+        "details": "Returns `true` if all assets use the same set of whitelisted currencies "
+      },
+      "isStakingAndSlashingSupported()": {
+        "details": "Returns `true` if staking and slashing is enabled "
+      },
+      "isWhitelistedAssetProviderRequired()": {
+        "details": "Returns `true` if asset provider whitelisting is enabled "
+      },
+      "isWhitelistedAssetRequired()": {
+        "details": "Returns `true` if asset type whitelisting is enabled "
+      },
+      "setRequireAssetSubdomain(bool)": {
+        "details": "sets a new value for requireAssetSubdomain Only executable by the contract owner. "
+      },
+      "setRequireAssetValidation(bool)": {
+        "details": "sets a new value for requireAssetValidation Only executable by the contract owner. "
+      },
+      "setRequireSaleStrategyPerAsset(bool)": {
+        "details": "sets a new value for requireSaleStrategyPerAsset Only executable by the contract owner. "
+      },
+      "setRequireSameCurrencyPerAsset(bool)": {
+        "details": "sets a new value for requireSameCurrencyPerAsset Only executable by the contract owner. "
+      },
+      "setRequireWhitelistedAsset(bool)": {
+        "details": "sets a new value for requireWhitelistedAssetType Only executable by the contract owner. "
+      },
+      "setRequireWhitelistedAssetProvider(bool)": {
+        "details": "sets a new value for requireWhitelistedAssetProvider Only executable by the contract owner. "
+      },
+      "setSupportsStakingSlashing(bool)": {
+        "details": "sets a new value for supportStakingAndSlashing Only executable by the contract owner. "
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

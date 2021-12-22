@@ -1,0 +1,4182 @@
+{
+  "contractName": "IMarketplaceAccessControl",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_ownerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isOwnerRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_adminAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isAdministrator",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_adminAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addAdministrator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_adminAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeAdministrator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isAssetManager",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addAssetManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeAssetManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isAssetValidatorManager",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetValidatorManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addAssetValidatorManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetValidatorAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeAssetValidatorManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetValidatorAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isAssetValidator",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetValidatorManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addAssetValidator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetValidatorAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeAssetValidator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_financeAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isFinance",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_financeAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addFinance",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_financeAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeFinance",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_financeManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isFinanceManager",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_financeManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addFinanceManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_financeManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeFinanceManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetProviderManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isAssetProviderManager",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetProviderManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addAssetProviderManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetProviderManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeAssetProviderManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetProviderAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isAssetProvider",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetProviderAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addAssetProvider",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetProviderAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeAssetProvider",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_adminAddr\",\"type\":\"address\"}],\"name\":\"addAdministrator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetManagerAddr\",\"type\":\"address\"}],\"name\":\"addAssetManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetProviderAddr\",\"type\":\"address\"}],\"name\":\"addAssetProvider\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetProviderManagerAddr\",\"type\":\"address\"}],\"name\":\"addAssetProviderManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetValidatorManagerAddr\",\"type\":\"address\"}],\"name\":\"addAssetValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetValidatorManagerAddr\",\"type\":\"address\"}],\"name\":\"addAssetValidatorManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_financeAddr\",\"type\":\"address\"}],\"name\":\"addFinance\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_financeManagerAddr\",\"type\":\"address\"}],\"name\":\"addFinanceManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_adminAddr\",\"type\":\"address\"}],\"name\":\"isAdministrator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetManagerAddr\",\"type\":\"address\"}],\"name\":\"isAssetManager\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetProviderAddr\",\"type\":\"address\"}],\"name\":\"isAssetProvider\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetProviderManagerAddr\",\"type\":\"address\"}],\"name\":\"isAssetProviderManager\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetValidatorAddr\",\"type\":\"address\"}],\"name\":\"isAssetValidator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetManagerAddr\",\"type\":\"address\"}],\"name\":\"isAssetValidatorManager\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_financeAddr\",\"type\":\"address\"}],\"name\":\"isFinance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_financeManagerAddr\",\"type\":\"address\"}],\"name\":\"isFinanceManager\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_ownerAddr\",\"type\":\"address\"}],\"name\":\"isOwnerRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_adminAddr\",\"type\":\"address\"}],\"name\":\"removeAdministrator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetManagerAddr\",\"type\":\"address\"}],\"name\":\"removeAssetManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetProviderAddr\",\"type\":\"address\"}],\"name\":\"removeAssetProvider\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetProviderManagerAddr\",\"type\":\"address\"}],\"name\":\"removeAssetProviderManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetValidatorAddr\",\"type\":\"address\"}],\"name\":\"removeAssetValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetValidatorAddr\",\"type\":\"address\"}],\"name\":\"removeAssetValidatorManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_financeAddr\",\"type\":\"address\"}],\"name\":\"removeFinance\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_financeManagerAddr\",\"type\":\"address\"}],\"name\":\"removeFinanceManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addAdministrator(address)\":{\"details\":\"Grants address all MANAGER roles. Only executable by the owner.\"},\"addAssetManager(address)\":{\"details\":\"Grants address the ASSET_MANAGER role.\"},\"addAssetValidator(address)\":{\"details\":\"Grants address the ASSET_VALIDATOR role.\"},\"addAssetValidatorManager(address)\":{\"details\":\"Grants address the ASSET_VALIDATOR_MANAGER role.\"},\"addFinance(address)\":{\"details\":\"Grants address the FINANCE role.\"},\"addFinanceManager(address)\":{\"details\":\"Grants address the FINANCE_MANAGER role.\"},\"isAdministrator(address)\":{\"details\":\"Returns `true` if address has been granted the ADMINISTRATOR role \"},\"isAssetManager(address)\":{\"details\":\"Returns `true` if address has been granted the ASSET_MANAGER role \"},\"isAssetProvider(address)\":{\"details\":\"Returns `true` if address has been granted the ASSET_PROVIDER role \"},\"isAssetProviderManager(address)\":{\"details\":\"Returns `true` if address has been granted the ASSET_PROVIDER_MANAGER role \"},\"isAssetValidator(address)\":{\"details\":\"Returns `true` if address has been granted the ASSET_VALIDATOR role \"},\"isAssetValidatorManager(address)\":{\"details\":\"Returns `true` if address has been granted the ASSET_VALIDATOR_MANAGER role \"},\"isFinance(address)\":{\"details\":\"Returns `true` if address has been granted the FINANCE role \"},\"isFinanceManager(address)\":{\"details\":\"Returns `true` if address has been granted the FINANCE_MANAGER role \"},\"isOwnerRole(address)\":{\"details\":\"Returns `true` if address has been granted the OWNER role.\"},\"removeAdministrator(address)\":{\"details\":\"Revoikes address all MANAGER roles. Only executable by the owner.\"},\"removeAssetManager(address)\":{\"details\":\"Revokes address the ASSET_MANAGER role.\"},\"removeAssetProvider(address)\":{\"details\":\"Revokes address the ASSET_PROVIDER role.\"},\"removeAssetProviderManager(address)\":{\"details\":\"Revokes address the ASSET_PROVIDER_MANAGER role.\"},\"removeAssetValidator(address)\":{\"details\":\"Revokes address the ASSET_VALIDATOR role.\"},\"removeAssetValidatorManager(address)\":{\"details\":\"Revokes address the ASSET_VALIDATOR_MANAGER role.\"},\"removeFinance(address)\":{\"details\":\"Revokes address the FINANCE role.\"},\"removeFinanceManager(address)\":{\"details\":\"Revokes address the FINANCE_MANAGER role.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"addAssetProvider(address)\":{\"notice\":\"Grants address the ASSET_PROVIDER role.\"},\"addAssetProviderManager(address)\":{\"notice\":\"Grants address the ASSET_PROVIDER_MANAGER role.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/access/IMarketplaceAccessControl.sol\":\"IMarketplaceAccessControl\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/access/IMarketplaceAccessControl.sol\":{\"keccak256\":\"0x9d494f7a4ec975c421829b353f95023c97d12e89abf9aa384331545b5024e6e7\",\"license\":\"MIT OR Apache-2.0\",\"urls\":[\"bzz-raw://693d84ef8aa25244a78fa57a6ac22eec079ef6243346f1314c233eb79efabc17\",\"dweb:/ipfs/QmduhpqLMPn6GRtrc6oQyeZHxAwFbP9izMrKwN6Qtnc5Ld\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT OR Apache-2.0\npragma solidity ^0.8.4;\n\ninterface IMarketplaceAccessControl {\n    /**\n        @dev Returns `true` if address has been granted the OWNER role.\n    */\n    function isOwnerRole(address _ownerAddr) external view returns (bool);\n\n    /**\n        @dev Returns `true` if address has been granted the ADMINISTRATOR role \n    */\n    function isAdministrator(address _adminAddr) external view returns (bool);\n\n    /**\n        @dev Grants address all MANAGER roles.\n        Only executable by the owner.\n    */\n    function addAdministrator(address _adminAddr) external;\n\n    /**\n        @dev Revoikes address all MANAGER roles.\n        Only executable by the owner.\n    */\n    function removeAdministrator(address _adminAddr) external;\n\n    /**\n        @dev Returns `true` if address has been granted the ASSET_MANAGER role \n    */\n    function isAssetManager(address _assetManagerAddr)\n        external\n        view\n        returns (bool);\n\n    /**\n        @dev Grants address the ASSET_MANAGER role.\n    */\n    function addAssetManager(address _assetManagerAddr) external;\n\n    /**\n        @dev Revokes address the ASSET_MANAGER role.\n    */\n    function removeAssetManager(address _assetManagerAddr) external;\n\n    /**\n        @dev Returns `true` if address has been granted the ASSET_VALIDATOR_MANAGER role \n    */\n    function isAssetValidatorManager(address _assetManagerAddr)\n        external\n        view\n        returns (bool);\n\n    /**\n        @dev Grants address the ASSET_VALIDATOR_MANAGER role.\n    */\n    function addAssetValidatorManager(address _assetValidatorManagerAddr)\n        external;\n\n    /**\n        @dev Revokes address the ASSET_VALIDATOR_MANAGER role.\n    */\n    function removeAssetValidatorManager(address _assetValidatorAddr) external;\n\n    /**\n        @dev Returns `true` if address has been granted the ASSET_VALIDATOR role \n    */\n    function isAssetValidator(address _assetValidatorAddr)\n        external\n        view\n        returns (bool);\n\n    /**\n        @dev Grants address the ASSET_VALIDATOR role.\n    */\n    function addAssetValidator(address _assetValidatorManagerAddr) external;\n\n    /**\n        @dev Revokes address the ASSET_VALIDATOR role.\n    */\n    function removeAssetValidator(address _assetValidatorAddr) external;\n\n    /**\n        @dev Returns `true` if address has been granted the FINANCE role \n    */\n    function isFinance(address _financeAddr) external view returns (bool);\n\n    /**\n        @dev Grants address the FINANCE role.\n    */\n    function addFinance(address _financeAddr) external;\n\n    /**\n        @dev Revokes address the FINANCE role.\n    */\n    function removeFinance(address _financeAddr) external;\n\n    /**\n        @dev Returns `true` if address has been granted the FINANCE_MANAGER role \n    */\n    function isFinanceManager(address _financeManagerAddr)\n        external\n        view\n        returns (bool);\n\n    /**\n        @dev Grants address the FINANCE_MANAGER role.\n    */\n    function addFinanceManager(address _financeManagerAddr) external;\n\n    /**\n        @dev Revokes address the FINANCE_MANAGER role.\n    */\n    function removeFinanceManager(address _financeManagerAddr) external;\n\n    /**\n        @dev Returns `true` if address has been granted the ASSET_PROVIDER_MANAGER role \n    */\n    function isAssetProviderManager(address _assetProviderManagerAddr)\n        external\n        view\n        returns (bool);\n\n    /**\n        @notice Grants address the ASSET_PROVIDER_MANAGER role.\n    */\n    function addAssetProviderManager(address _assetProviderManagerAddr)\n        external;\n\n    /**\n        @dev Revokes address the ASSET_PROVIDER_MANAGER role.\n    */\n    function removeAssetProviderManager(address _assetProviderManagerAddr)\n        external;\n\n    /**\n        @dev Returns `true` if address has been granted the ASSET_PROVIDER role \n    */\n    function isAssetProvider(address _assetProviderAddr)\n        external\n        view\n        returns (bool);\n\n    /**\n        @notice Grants address the ASSET_PROVIDER role.\n    */\n    function addAssetProvider(address _assetProviderAddr) external;\n\n    /**\n        @dev Revokes address the ASSET_PROVIDER role.\n    */\n    function removeAssetProvider(address _assetProviderAddr) external;\n}\n",
+  "sourcePath": "/Users/jjtechera/Documents/GitHub/rif-marketplace-engine-integration-tests/contracts/access/IMarketplaceAccessControl.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/access/IMarketplaceAccessControl.sol",
+    "exportedSymbols": {
+      "IMarketplaceAccessControl": [
+        10497
+      ]
+    },
+    "id": 10498,
+    "license": "MIT OR Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10328,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "46:23:17"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMarketplaceAccessControl",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 10497,
+        "linearizedBaseContracts": [
+          10497
+        ],
+        "name": "IMarketplaceAccessControl",
+        "nameLocation": "81:25:17",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 10329,
+              "nodeType": "StructuredDocumentation",
+              "src": "113:82:17",
+              "text": "@dev Returns `true` if address has been granted the OWNER role."
+            },
+            "functionSelector": "1db79e89",
+            "id": 10336,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isOwnerRole",
+            "nameLocation": "209:11:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10332,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10331,
+                  "mutability": "mutable",
+                  "name": "_ownerAddr",
+                  "nameLocation": "229:10:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10336,
+                  "src": "221:18:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10330,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "221:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "220:20:17"
+            },
+            "returnParameters": {
+              "id": 10335,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10334,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10336,
+                  "src": "264:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10333,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "264:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "263:6:17"
+            },
+            "scope": 10497,
+            "src": "200:70:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10337,
+              "nodeType": "StructuredDocumentation",
+              "src": "276:90:17",
+              "text": "@dev Returns `true` if address has been granted the ADMINISTRATOR role "
+            },
+            "functionSelector": "0a2eb301",
+            "id": 10344,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAdministrator",
+            "nameLocation": "380:15:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10339,
+                  "mutability": "mutable",
+                  "name": "_adminAddr",
+                  "nameLocation": "404:10:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10344,
+                  "src": "396:18:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10338,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "396:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "395:20:17"
+            },
+            "returnParameters": {
+              "id": 10343,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10342,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10344,
+                  "src": "439:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10341,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "439:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "438:6:17"
+            },
+            "scope": 10497,
+            "src": "371:74:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10345,
+              "nodeType": "StructuredDocumentation",
+              "src": "451:95:17",
+              "text": "@dev Grants address all MANAGER roles.\nOnly executable by the owner."
+            },
+            "functionSelector": "c9991176",
+            "id": 10350,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAdministrator",
+            "nameLocation": "560:16:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10348,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10347,
+                  "mutability": "mutable",
+                  "name": "_adminAddr",
+                  "nameLocation": "585:10:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10350,
+                  "src": "577:18:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10346,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "577:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "576:20:17"
+            },
+            "returnParameters": {
+              "id": 10349,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "605:0:17"
+            },
+            "scope": 10497,
+            "src": "551:55:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10351,
+              "nodeType": "StructuredDocumentation",
+              "src": "612:97:17",
+              "text": "@dev Revoikes address all MANAGER roles.\nOnly executable by the owner."
+            },
+            "functionSelector": "68fa8134",
+            "id": 10356,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAdministrator",
+            "nameLocation": "723:19:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10354,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10353,
+                  "mutability": "mutable",
+                  "name": "_adminAddr",
+                  "nameLocation": "751:10:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10356,
+                  "src": "743:18:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10352,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "743:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "742:20:17"
+            },
+            "returnParameters": {
+              "id": 10355,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "771:0:17"
+            },
+            "scope": 10497,
+            "src": "714:58:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10357,
+              "nodeType": "StructuredDocumentation",
+              "src": "778:90:17",
+              "text": "@dev Returns `true` if address has been granted the ASSET_MANAGER role "
+            },
+            "functionSelector": "6487aa11",
+            "id": 10364,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetManager",
+            "nameLocation": "882:14:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10360,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10359,
+                  "mutability": "mutable",
+                  "name": "_assetManagerAddr",
+                  "nameLocation": "905:17:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10364,
+                  "src": "897:25:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10358,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "897:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "896:27:17"
+            },
+            "returnParameters": {
+              "id": 10363,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10362,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10364,
+                  "src": "971:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10361,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "971:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "970:6:17"
+            },
+            "scope": 10497,
+            "src": "873:104:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10365,
+              "nodeType": "StructuredDocumentation",
+              "src": "983:62:17",
+              "text": "@dev Grants address the ASSET_MANAGER role."
+            },
+            "functionSelector": "987ea899",
+            "id": 10370,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAssetManager",
+            "nameLocation": "1059:15:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10368,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10367,
+                  "mutability": "mutable",
+                  "name": "_assetManagerAddr",
+                  "nameLocation": "1083:17:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10370,
+                  "src": "1075:25:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10366,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1075:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1074:27:17"
+            },
+            "returnParameters": {
+              "id": 10369,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1110:0:17"
+            },
+            "scope": 10497,
+            "src": "1050:61:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10371,
+              "nodeType": "StructuredDocumentation",
+              "src": "1117:63:17",
+              "text": "@dev Revokes address the ASSET_MANAGER role."
+            },
+            "functionSelector": "358bca77",
+            "id": 10376,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAssetManager",
+            "nameLocation": "1194:18:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10374,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10373,
+                  "mutability": "mutable",
+                  "name": "_assetManagerAddr",
+                  "nameLocation": "1221:17:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10376,
+                  "src": "1213:25:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10372,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1213:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1212:27:17"
+            },
+            "returnParameters": {
+              "id": 10375,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1248:0:17"
+            },
+            "scope": 10497,
+            "src": "1185:64:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10377,
+              "nodeType": "StructuredDocumentation",
+              "src": "1255:100:17",
+              "text": "@dev Returns `true` if address has been granted the ASSET_VALIDATOR_MANAGER role "
+            },
+            "functionSelector": "3edb8866",
+            "id": 10384,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetValidatorManager",
+            "nameLocation": "1369:23:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10380,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10379,
+                  "mutability": "mutable",
+                  "name": "_assetManagerAddr",
+                  "nameLocation": "1401:17:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10384,
+                  "src": "1393:25:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10378,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1393:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1392:27:17"
+            },
+            "returnParameters": {
+              "id": 10383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10382,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10384,
+                  "src": "1467:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10381,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1467:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1466:6:17"
+            },
+            "scope": 10497,
+            "src": "1360:113:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10385,
+              "nodeType": "StructuredDocumentation",
+              "src": "1479:72:17",
+              "text": "@dev Grants address the ASSET_VALIDATOR_MANAGER role."
+            },
+            "functionSelector": "d307294c",
+            "id": 10390,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAssetValidatorManager",
+            "nameLocation": "1565:24:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10388,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10387,
+                  "mutability": "mutable",
+                  "name": "_assetValidatorManagerAddr",
+                  "nameLocation": "1598:26:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10390,
+                  "src": "1590:34:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10386,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1590:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1589:36:17"
+            },
+            "returnParameters": {
+              "id": 10389,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1642:0:17"
+            },
+            "scope": 10497,
+            "src": "1556:87:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10391,
+              "nodeType": "StructuredDocumentation",
+              "src": "1649:73:17",
+              "text": "@dev Revokes address the ASSET_VALIDATOR_MANAGER role."
+            },
+            "functionSelector": "6d42ef3e",
+            "id": 10396,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAssetValidatorManager",
+            "nameLocation": "1736:27:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10394,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10393,
+                  "mutability": "mutable",
+                  "name": "_assetValidatorAddr",
+                  "nameLocation": "1772:19:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10396,
+                  "src": "1764:27:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10392,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1764:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1763:29:17"
+            },
+            "returnParameters": {
+              "id": 10395,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1801:0:17"
+            },
+            "scope": 10497,
+            "src": "1727:75:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10397,
+              "nodeType": "StructuredDocumentation",
+              "src": "1808:92:17",
+              "text": "@dev Returns `true` if address has been granted the ASSET_VALIDATOR role "
+            },
+            "functionSelector": "65418c3c",
+            "id": 10404,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetValidator",
+            "nameLocation": "1914:16:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10400,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10399,
+                  "mutability": "mutable",
+                  "name": "_assetValidatorAddr",
+                  "nameLocation": "1939:19:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10404,
+                  "src": "1931:27:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10398,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1931:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1930:29:17"
+            },
+            "returnParameters": {
+              "id": 10403,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10402,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10404,
+                  "src": "2007:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10401,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2007:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2006:6:17"
+            },
+            "scope": 10497,
+            "src": "1905:108:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10405,
+              "nodeType": "StructuredDocumentation",
+              "src": "2019:64:17",
+              "text": "@dev Grants address the ASSET_VALIDATOR role."
+            },
+            "functionSelector": "636baeab",
+            "id": 10410,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAssetValidator",
+            "nameLocation": "2097:17:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10408,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10407,
+                  "mutability": "mutable",
+                  "name": "_assetValidatorManagerAddr",
+                  "nameLocation": "2123:26:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10410,
+                  "src": "2115:34:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10406,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2115:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2114:36:17"
+            },
+            "returnParameters": {
+              "id": 10409,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2159:0:17"
+            },
+            "scope": 10497,
+            "src": "2088:72:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10411,
+              "nodeType": "StructuredDocumentation",
+              "src": "2166:65:17",
+              "text": "@dev Revokes address the ASSET_VALIDATOR role."
+            },
+            "functionSelector": "51a15fb5",
+            "id": 10416,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAssetValidator",
+            "nameLocation": "2245:20:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10414,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10413,
+                  "mutability": "mutable",
+                  "name": "_assetValidatorAddr",
+                  "nameLocation": "2274:19:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10416,
+                  "src": "2266:27:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10412,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2266:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2265:29:17"
+            },
+            "returnParameters": {
+              "id": 10415,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2303:0:17"
+            },
+            "scope": 10497,
+            "src": "2236:68:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10417,
+              "nodeType": "StructuredDocumentation",
+              "src": "2310:84:17",
+              "text": "@dev Returns `true` if address has been granted the FINANCE role "
+            },
+            "functionSelector": "f2a6d943",
+            "id": 10424,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isFinance",
+            "nameLocation": "2408:9:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10420,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10419,
+                  "mutability": "mutable",
+                  "name": "_financeAddr",
+                  "nameLocation": "2426:12:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10424,
+                  "src": "2418:20:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10418,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2418:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2417:22:17"
+            },
+            "returnParameters": {
+              "id": 10423,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10422,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10424,
+                  "src": "2463:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10421,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2463:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2462:6:17"
+            },
+            "scope": 10497,
+            "src": "2399:70:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10425,
+              "nodeType": "StructuredDocumentation",
+              "src": "2475:56:17",
+              "text": "@dev Grants address the FINANCE role."
+            },
+            "functionSelector": "92c5c407",
+            "id": 10430,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addFinance",
+            "nameLocation": "2545:10:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10428,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10427,
+                  "mutability": "mutable",
+                  "name": "_financeAddr",
+                  "nameLocation": "2564:12:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10430,
+                  "src": "2556:20:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10426,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2556:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2555:22:17"
+            },
+            "returnParameters": {
+              "id": 10429,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2586:0:17"
+            },
+            "scope": 10497,
+            "src": "2536:51:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10431,
+              "nodeType": "StructuredDocumentation",
+              "src": "2593:57:17",
+              "text": "@dev Revokes address the FINANCE role."
+            },
+            "functionSelector": "06e2a85c",
+            "id": 10436,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeFinance",
+            "nameLocation": "2664:13:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10434,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10433,
+                  "mutability": "mutable",
+                  "name": "_financeAddr",
+                  "nameLocation": "2686:12:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10436,
+                  "src": "2678:20:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10432,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2678:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2677:22:17"
+            },
+            "returnParameters": {
+              "id": 10435,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2708:0:17"
+            },
+            "scope": 10497,
+            "src": "2655:54:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10437,
+              "nodeType": "StructuredDocumentation",
+              "src": "2715:92:17",
+              "text": "@dev Returns `true` if address has been granted the FINANCE_MANAGER role "
+            },
+            "functionSelector": "59014773",
+            "id": 10444,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isFinanceManager",
+            "nameLocation": "2821:16:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10440,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10439,
+                  "mutability": "mutable",
+                  "name": "_financeManagerAddr",
+                  "nameLocation": "2846:19:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10444,
+                  "src": "2838:27:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10438,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2838:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2837:29:17"
+            },
+            "returnParameters": {
+              "id": 10443,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10442,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10444,
+                  "src": "2914:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10441,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2914:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2913:6:17"
+            },
+            "scope": 10497,
+            "src": "2812:108:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10445,
+              "nodeType": "StructuredDocumentation",
+              "src": "2926:64:17",
+              "text": "@dev Grants address the FINANCE_MANAGER role."
+            },
+            "functionSelector": "53dac930",
+            "id": 10450,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addFinanceManager",
+            "nameLocation": "3004:17:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10448,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10447,
+                  "mutability": "mutable",
+                  "name": "_financeManagerAddr",
+                  "nameLocation": "3030:19:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10450,
+                  "src": "3022:27:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10446,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3022:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3021:29:17"
+            },
+            "returnParameters": {
+              "id": 10449,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3059:0:17"
+            },
+            "scope": 10497,
+            "src": "2995:65:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10451,
+              "nodeType": "StructuredDocumentation",
+              "src": "3066:65:17",
+              "text": "@dev Revokes address the FINANCE_MANAGER role."
+            },
+            "functionSelector": "87dbdfcb",
+            "id": 10456,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeFinanceManager",
+            "nameLocation": "3145:20:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10454,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10453,
+                  "mutability": "mutable",
+                  "name": "_financeManagerAddr",
+                  "nameLocation": "3174:19:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10456,
+                  "src": "3166:27:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10452,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3166:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3165:29:17"
+            },
+            "returnParameters": {
+              "id": 10455,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3203:0:17"
+            },
+            "scope": 10497,
+            "src": "3136:68:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10457,
+              "nodeType": "StructuredDocumentation",
+              "src": "3210:99:17",
+              "text": "@dev Returns `true` if address has been granted the ASSET_PROVIDER_MANAGER role "
+            },
+            "functionSelector": "d4ad70e4",
+            "id": 10464,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetProviderManager",
+            "nameLocation": "3323:22:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10460,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10459,
+                  "mutability": "mutable",
+                  "name": "_assetProviderManagerAddr",
+                  "nameLocation": "3354:25:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10464,
+                  "src": "3346:33:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10458,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3346:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3345:35:17"
+            },
+            "returnParameters": {
+              "id": 10463,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10462,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10464,
+                  "src": "3428:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10461,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3428:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3427:6:17"
+            },
+            "scope": 10497,
+            "src": "3314:120:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10465,
+              "nodeType": "StructuredDocumentation",
+              "src": "3440:74:17",
+              "text": "@notice Grants address the ASSET_PROVIDER_MANAGER role."
+            },
+            "functionSelector": "8020caf3",
+            "id": 10470,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAssetProviderManager",
+            "nameLocation": "3528:23:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10468,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10467,
+                  "mutability": "mutable",
+                  "name": "_assetProviderManagerAddr",
+                  "nameLocation": "3560:25:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10470,
+                  "src": "3552:33:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10466,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3552:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3551:35:17"
+            },
+            "returnParameters": {
+              "id": 10469,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3603:0:17"
+            },
+            "scope": 10497,
+            "src": "3519:85:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10471,
+              "nodeType": "StructuredDocumentation",
+              "src": "3610:72:17",
+              "text": "@dev Revokes address the ASSET_PROVIDER_MANAGER role."
+            },
+            "functionSelector": "f253f7c1",
+            "id": 10476,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAssetProviderManager",
+            "nameLocation": "3696:26:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10474,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10473,
+                  "mutability": "mutable",
+                  "name": "_assetProviderManagerAddr",
+                  "nameLocation": "3731:25:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10476,
+                  "src": "3723:33:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10472,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3723:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3722:35:17"
+            },
+            "returnParameters": {
+              "id": 10475,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3774:0:17"
+            },
+            "scope": 10497,
+            "src": "3687:88:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10477,
+              "nodeType": "StructuredDocumentation",
+              "src": "3781:91:17",
+              "text": "@dev Returns `true` if address has been granted the ASSET_PROVIDER role "
+            },
+            "functionSelector": "e8f8155f",
+            "id": 10484,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetProvider",
+            "nameLocation": "3886:15:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10480,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10479,
+                  "mutability": "mutable",
+                  "name": "_assetProviderAddr",
+                  "nameLocation": "3910:18:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10484,
+                  "src": "3902:26:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10478,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3902:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3901:28:17"
+            },
+            "returnParameters": {
+              "id": 10483,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10482,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10484,
+                  "src": "3977:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10481,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3977:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3976:6:17"
+            },
+            "scope": 10497,
+            "src": "3877:106:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10485,
+              "nodeType": "StructuredDocumentation",
+              "src": "3989:66:17",
+              "text": "@notice Grants address the ASSET_PROVIDER role."
+            },
+            "functionSelector": "9201aed8",
+            "id": 10490,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAssetProvider",
+            "nameLocation": "4069:16:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10488,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10487,
+                  "mutability": "mutable",
+                  "name": "_assetProviderAddr",
+                  "nameLocation": "4094:18:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10490,
+                  "src": "4086:26:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10486,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4086:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4085:28:17"
+            },
+            "returnParameters": {
+              "id": 10489,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4122:0:17"
+            },
+            "scope": 10497,
+            "src": "4060:63:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10491,
+              "nodeType": "StructuredDocumentation",
+              "src": "4129:64:17",
+              "text": "@dev Revokes address the ASSET_PROVIDER role."
+            },
+            "functionSelector": "63b631a6",
+            "id": 10496,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAssetProvider",
+            "nameLocation": "4207:19:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10494,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10493,
+                  "mutability": "mutable",
+                  "name": "_assetProviderAddr",
+                  "nameLocation": "4235:18:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10496,
+                  "src": "4227:26:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10492,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4227:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4226:28:17"
+            },
+            "returnParameters": {
+              "id": 10495,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4263:0:17"
+            },
+            "scope": 10497,
+            "src": "4198:66:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 10498,
+        "src": "71:4195:17",
+        "usedErrors": []
+      }
+    ],
+    "src": "46:4221:17"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/access/IMarketplaceAccessControl.sol",
+    "exportedSymbols": {
+      "IMarketplaceAccessControl": [
+        10497
+      ]
+    },
+    "id": 10498,
+    "license": "MIT OR Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10328,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "46:23:17"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMarketplaceAccessControl",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 10497,
+        "linearizedBaseContracts": [
+          10497
+        ],
+        "name": "IMarketplaceAccessControl",
+        "nameLocation": "81:25:17",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 10329,
+              "nodeType": "StructuredDocumentation",
+              "src": "113:82:17",
+              "text": "@dev Returns `true` if address has been granted the OWNER role."
+            },
+            "functionSelector": "1db79e89",
+            "id": 10336,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isOwnerRole",
+            "nameLocation": "209:11:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10332,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10331,
+                  "mutability": "mutable",
+                  "name": "_ownerAddr",
+                  "nameLocation": "229:10:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10336,
+                  "src": "221:18:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10330,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "221:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "220:20:17"
+            },
+            "returnParameters": {
+              "id": 10335,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10334,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10336,
+                  "src": "264:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10333,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "264:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "263:6:17"
+            },
+            "scope": 10497,
+            "src": "200:70:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10337,
+              "nodeType": "StructuredDocumentation",
+              "src": "276:90:17",
+              "text": "@dev Returns `true` if address has been granted the ADMINISTRATOR role "
+            },
+            "functionSelector": "0a2eb301",
+            "id": 10344,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAdministrator",
+            "nameLocation": "380:15:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10339,
+                  "mutability": "mutable",
+                  "name": "_adminAddr",
+                  "nameLocation": "404:10:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10344,
+                  "src": "396:18:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10338,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "396:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "395:20:17"
+            },
+            "returnParameters": {
+              "id": 10343,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10342,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10344,
+                  "src": "439:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10341,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "439:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "438:6:17"
+            },
+            "scope": 10497,
+            "src": "371:74:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10345,
+              "nodeType": "StructuredDocumentation",
+              "src": "451:95:17",
+              "text": "@dev Grants address all MANAGER roles.\nOnly executable by the owner."
+            },
+            "functionSelector": "c9991176",
+            "id": 10350,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAdministrator",
+            "nameLocation": "560:16:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10348,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10347,
+                  "mutability": "mutable",
+                  "name": "_adminAddr",
+                  "nameLocation": "585:10:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10350,
+                  "src": "577:18:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10346,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "577:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "576:20:17"
+            },
+            "returnParameters": {
+              "id": 10349,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "605:0:17"
+            },
+            "scope": 10497,
+            "src": "551:55:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10351,
+              "nodeType": "StructuredDocumentation",
+              "src": "612:97:17",
+              "text": "@dev Revoikes address all MANAGER roles.\nOnly executable by the owner."
+            },
+            "functionSelector": "68fa8134",
+            "id": 10356,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAdministrator",
+            "nameLocation": "723:19:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10354,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10353,
+                  "mutability": "mutable",
+                  "name": "_adminAddr",
+                  "nameLocation": "751:10:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10356,
+                  "src": "743:18:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10352,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "743:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "742:20:17"
+            },
+            "returnParameters": {
+              "id": 10355,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "771:0:17"
+            },
+            "scope": 10497,
+            "src": "714:58:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10357,
+              "nodeType": "StructuredDocumentation",
+              "src": "778:90:17",
+              "text": "@dev Returns `true` if address has been granted the ASSET_MANAGER role "
+            },
+            "functionSelector": "6487aa11",
+            "id": 10364,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetManager",
+            "nameLocation": "882:14:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10360,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10359,
+                  "mutability": "mutable",
+                  "name": "_assetManagerAddr",
+                  "nameLocation": "905:17:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10364,
+                  "src": "897:25:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10358,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "897:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "896:27:17"
+            },
+            "returnParameters": {
+              "id": 10363,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10362,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10364,
+                  "src": "971:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10361,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "971:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "970:6:17"
+            },
+            "scope": 10497,
+            "src": "873:104:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10365,
+              "nodeType": "StructuredDocumentation",
+              "src": "983:62:17",
+              "text": "@dev Grants address the ASSET_MANAGER role."
+            },
+            "functionSelector": "987ea899",
+            "id": 10370,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAssetManager",
+            "nameLocation": "1059:15:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10368,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10367,
+                  "mutability": "mutable",
+                  "name": "_assetManagerAddr",
+                  "nameLocation": "1083:17:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10370,
+                  "src": "1075:25:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10366,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1075:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1074:27:17"
+            },
+            "returnParameters": {
+              "id": 10369,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1110:0:17"
+            },
+            "scope": 10497,
+            "src": "1050:61:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10371,
+              "nodeType": "StructuredDocumentation",
+              "src": "1117:63:17",
+              "text": "@dev Revokes address the ASSET_MANAGER role."
+            },
+            "functionSelector": "358bca77",
+            "id": 10376,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAssetManager",
+            "nameLocation": "1194:18:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10374,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10373,
+                  "mutability": "mutable",
+                  "name": "_assetManagerAddr",
+                  "nameLocation": "1221:17:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10376,
+                  "src": "1213:25:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10372,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1213:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1212:27:17"
+            },
+            "returnParameters": {
+              "id": 10375,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1248:0:17"
+            },
+            "scope": 10497,
+            "src": "1185:64:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10377,
+              "nodeType": "StructuredDocumentation",
+              "src": "1255:100:17",
+              "text": "@dev Returns `true` if address has been granted the ASSET_VALIDATOR_MANAGER role "
+            },
+            "functionSelector": "3edb8866",
+            "id": 10384,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetValidatorManager",
+            "nameLocation": "1369:23:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10380,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10379,
+                  "mutability": "mutable",
+                  "name": "_assetManagerAddr",
+                  "nameLocation": "1401:17:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10384,
+                  "src": "1393:25:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10378,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1393:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1392:27:17"
+            },
+            "returnParameters": {
+              "id": 10383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10382,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10384,
+                  "src": "1467:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10381,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1467:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1466:6:17"
+            },
+            "scope": 10497,
+            "src": "1360:113:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10385,
+              "nodeType": "StructuredDocumentation",
+              "src": "1479:72:17",
+              "text": "@dev Grants address the ASSET_VALIDATOR_MANAGER role."
+            },
+            "functionSelector": "d307294c",
+            "id": 10390,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAssetValidatorManager",
+            "nameLocation": "1565:24:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10388,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10387,
+                  "mutability": "mutable",
+                  "name": "_assetValidatorManagerAddr",
+                  "nameLocation": "1598:26:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10390,
+                  "src": "1590:34:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10386,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1590:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1589:36:17"
+            },
+            "returnParameters": {
+              "id": 10389,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1642:0:17"
+            },
+            "scope": 10497,
+            "src": "1556:87:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10391,
+              "nodeType": "StructuredDocumentation",
+              "src": "1649:73:17",
+              "text": "@dev Revokes address the ASSET_VALIDATOR_MANAGER role."
+            },
+            "functionSelector": "6d42ef3e",
+            "id": 10396,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAssetValidatorManager",
+            "nameLocation": "1736:27:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10394,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10393,
+                  "mutability": "mutable",
+                  "name": "_assetValidatorAddr",
+                  "nameLocation": "1772:19:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10396,
+                  "src": "1764:27:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10392,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1764:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1763:29:17"
+            },
+            "returnParameters": {
+              "id": 10395,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1801:0:17"
+            },
+            "scope": 10497,
+            "src": "1727:75:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10397,
+              "nodeType": "StructuredDocumentation",
+              "src": "1808:92:17",
+              "text": "@dev Returns `true` if address has been granted the ASSET_VALIDATOR role "
+            },
+            "functionSelector": "65418c3c",
+            "id": 10404,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetValidator",
+            "nameLocation": "1914:16:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10400,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10399,
+                  "mutability": "mutable",
+                  "name": "_assetValidatorAddr",
+                  "nameLocation": "1939:19:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10404,
+                  "src": "1931:27:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10398,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1931:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1930:29:17"
+            },
+            "returnParameters": {
+              "id": 10403,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10402,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10404,
+                  "src": "2007:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10401,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2007:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2006:6:17"
+            },
+            "scope": 10497,
+            "src": "1905:108:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10405,
+              "nodeType": "StructuredDocumentation",
+              "src": "2019:64:17",
+              "text": "@dev Grants address the ASSET_VALIDATOR role."
+            },
+            "functionSelector": "636baeab",
+            "id": 10410,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAssetValidator",
+            "nameLocation": "2097:17:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10408,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10407,
+                  "mutability": "mutable",
+                  "name": "_assetValidatorManagerAddr",
+                  "nameLocation": "2123:26:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10410,
+                  "src": "2115:34:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10406,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2115:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2114:36:17"
+            },
+            "returnParameters": {
+              "id": 10409,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2159:0:17"
+            },
+            "scope": 10497,
+            "src": "2088:72:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10411,
+              "nodeType": "StructuredDocumentation",
+              "src": "2166:65:17",
+              "text": "@dev Revokes address the ASSET_VALIDATOR role."
+            },
+            "functionSelector": "51a15fb5",
+            "id": 10416,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAssetValidator",
+            "nameLocation": "2245:20:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10414,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10413,
+                  "mutability": "mutable",
+                  "name": "_assetValidatorAddr",
+                  "nameLocation": "2274:19:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10416,
+                  "src": "2266:27:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10412,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2266:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2265:29:17"
+            },
+            "returnParameters": {
+              "id": 10415,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2303:0:17"
+            },
+            "scope": 10497,
+            "src": "2236:68:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10417,
+              "nodeType": "StructuredDocumentation",
+              "src": "2310:84:17",
+              "text": "@dev Returns `true` if address has been granted the FINANCE role "
+            },
+            "functionSelector": "f2a6d943",
+            "id": 10424,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isFinance",
+            "nameLocation": "2408:9:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10420,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10419,
+                  "mutability": "mutable",
+                  "name": "_financeAddr",
+                  "nameLocation": "2426:12:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10424,
+                  "src": "2418:20:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10418,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2418:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2417:22:17"
+            },
+            "returnParameters": {
+              "id": 10423,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10422,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10424,
+                  "src": "2463:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10421,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2463:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2462:6:17"
+            },
+            "scope": 10497,
+            "src": "2399:70:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10425,
+              "nodeType": "StructuredDocumentation",
+              "src": "2475:56:17",
+              "text": "@dev Grants address the FINANCE role."
+            },
+            "functionSelector": "92c5c407",
+            "id": 10430,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addFinance",
+            "nameLocation": "2545:10:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10428,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10427,
+                  "mutability": "mutable",
+                  "name": "_financeAddr",
+                  "nameLocation": "2564:12:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10430,
+                  "src": "2556:20:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10426,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2556:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2555:22:17"
+            },
+            "returnParameters": {
+              "id": 10429,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2586:0:17"
+            },
+            "scope": 10497,
+            "src": "2536:51:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10431,
+              "nodeType": "StructuredDocumentation",
+              "src": "2593:57:17",
+              "text": "@dev Revokes address the FINANCE role."
+            },
+            "functionSelector": "06e2a85c",
+            "id": 10436,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeFinance",
+            "nameLocation": "2664:13:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10434,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10433,
+                  "mutability": "mutable",
+                  "name": "_financeAddr",
+                  "nameLocation": "2686:12:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10436,
+                  "src": "2678:20:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10432,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2678:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2677:22:17"
+            },
+            "returnParameters": {
+              "id": 10435,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2708:0:17"
+            },
+            "scope": 10497,
+            "src": "2655:54:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10437,
+              "nodeType": "StructuredDocumentation",
+              "src": "2715:92:17",
+              "text": "@dev Returns `true` if address has been granted the FINANCE_MANAGER role "
+            },
+            "functionSelector": "59014773",
+            "id": 10444,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isFinanceManager",
+            "nameLocation": "2821:16:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10440,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10439,
+                  "mutability": "mutable",
+                  "name": "_financeManagerAddr",
+                  "nameLocation": "2846:19:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10444,
+                  "src": "2838:27:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10438,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2838:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2837:29:17"
+            },
+            "returnParameters": {
+              "id": 10443,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10442,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10444,
+                  "src": "2914:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10441,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2914:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2913:6:17"
+            },
+            "scope": 10497,
+            "src": "2812:108:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10445,
+              "nodeType": "StructuredDocumentation",
+              "src": "2926:64:17",
+              "text": "@dev Grants address the FINANCE_MANAGER role."
+            },
+            "functionSelector": "53dac930",
+            "id": 10450,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addFinanceManager",
+            "nameLocation": "3004:17:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10448,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10447,
+                  "mutability": "mutable",
+                  "name": "_financeManagerAddr",
+                  "nameLocation": "3030:19:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10450,
+                  "src": "3022:27:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10446,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3022:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3021:29:17"
+            },
+            "returnParameters": {
+              "id": 10449,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3059:0:17"
+            },
+            "scope": 10497,
+            "src": "2995:65:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10451,
+              "nodeType": "StructuredDocumentation",
+              "src": "3066:65:17",
+              "text": "@dev Revokes address the FINANCE_MANAGER role."
+            },
+            "functionSelector": "87dbdfcb",
+            "id": 10456,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeFinanceManager",
+            "nameLocation": "3145:20:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10454,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10453,
+                  "mutability": "mutable",
+                  "name": "_financeManagerAddr",
+                  "nameLocation": "3174:19:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10456,
+                  "src": "3166:27:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10452,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3166:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3165:29:17"
+            },
+            "returnParameters": {
+              "id": 10455,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3203:0:17"
+            },
+            "scope": 10497,
+            "src": "3136:68:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10457,
+              "nodeType": "StructuredDocumentation",
+              "src": "3210:99:17",
+              "text": "@dev Returns `true` if address has been granted the ASSET_PROVIDER_MANAGER role "
+            },
+            "functionSelector": "d4ad70e4",
+            "id": 10464,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetProviderManager",
+            "nameLocation": "3323:22:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10460,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10459,
+                  "mutability": "mutable",
+                  "name": "_assetProviderManagerAddr",
+                  "nameLocation": "3354:25:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10464,
+                  "src": "3346:33:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10458,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3346:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3345:35:17"
+            },
+            "returnParameters": {
+              "id": 10463,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10462,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10464,
+                  "src": "3428:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10461,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3428:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3427:6:17"
+            },
+            "scope": 10497,
+            "src": "3314:120:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10465,
+              "nodeType": "StructuredDocumentation",
+              "src": "3440:74:17",
+              "text": "@notice Grants address the ASSET_PROVIDER_MANAGER role."
+            },
+            "functionSelector": "8020caf3",
+            "id": 10470,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAssetProviderManager",
+            "nameLocation": "3528:23:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10468,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10467,
+                  "mutability": "mutable",
+                  "name": "_assetProviderManagerAddr",
+                  "nameLocation": "3560:25:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10470,
+                  "src": "3552:33:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10466,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3552:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3551:35:17"
+            },
+            "returnParameters": {
+              "id": 10469,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3603:0:17"
+            },
+            "scope": 10497,
+            "src": "3519:85:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10471,
+              "nodeType": "StructuredDocumentation",
+              "src": "3610:72:17",
+              "text": "@dev Revokes address the ASSET_PROVIDER_MANAGER role."
+            },
+            "functionSelector": "f253f7c1",
+            "id": 10476,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAssetProviderManager",
+            "nameLocation": "3696:26:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10474,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10473,
+                  "mutability": "mutable",
+                  "name": "_assetProviderManagerAddr",
+                  "nameLocation": "3731:25:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10476,
+                  "src": "3723:33:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10472,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3723:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3722:35:17"
+            },
+            "returnParameters": {
+              "id": 10475,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3774:0:17"
+            },
+            "scope": 10497,
+            "src": "3687:88:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10477,
+              "nodeType": "StructuredDocumentation",
+              "src": "3781:91:17",
+              "text": "@dev Returns `true` if address has been granted the ASSET_PROVIDER role "
+            },
+            "functionSelector": "e8f8155f",
+            "id": 10484,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetProvider",
+            "nameLocation": "3886:15:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10480,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10479,
+                  "mutability": "mutable",
+                  "name": "_assetProviderAddr",
+                  "nameLocation": "3910:18:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10484,
+                  "src": "3902:26:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10478,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3902:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3901:28:17"
+            },
+            "returnParameters": {
+              "id": 10483,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10482,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10484,
+                  "src": "3977:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10481,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3977:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3976:6:17"
+            },
+            "scope": 10497,
+            "src": "3877:106:17",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10485,
+              "nodeType": "StructuredDocumentation",
+              "src": "3989:66:17",
+              "text": "@notice Grants address the ASSET_PROVIDER role."
+            },
+            "functionSelector": "9201aed8",
+            "id": 10490,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAssetProvider",
+            "nameLocation": "4069:16:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10488,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10487,
+                  "mutability": "mutable",
+                  "name": "_assetProviderAddr",
+                  "nameLocation": "4094:18:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10490,
+                  "src": "4086:26:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10486,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4086:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4085:28:17"
+            },
+            "returnParameters": {
+              "id": 10489,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4122:0:17"
+            },
+            "scope": 10497,
+            "src": "4060:63:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 10491,
+              "nodeType": "StructuredDocumentation",
+              "src": "4129:64:17",
+              "text": "@dev Revokes address the ASSET_PROVIDER role."
+            },
+            "functionSelector": "63b631a6",
+            "id": 10496,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAssetProvider",
+            "nameLocation": "4207:19:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10494,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10493,
+                  "mutability": "mutable",
+                  "name": "_assetProviderAddr",
+                  "nameLocation": "4235:18:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10496,
+                  "src": "4227:26:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10492,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4227:7:17",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4226:28:17"
+            },
+            "returnParameters": {
+              "id": 10495,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4263:0:17"
+            },
+            "scope": 10497,
+            "src": "4198:66:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 10498,
+        "src": "71:4195:17",
+        "usedErrors": []
+      }
+    ],
+    "src": "46:4221:17"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2021-12-22T00:27:00.512Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "addAdministrator(address)": {
+        "details": "Grants address all MANAGER roles. Only executable by the owner."
+      },
+      "addAssetManager(address)": {
+        "details": "Grants address the ASSET_MANAGER role."
+      },
+      "addAssetValidator(address)": {
+        "details": "Grants address the ASSET_VALIDATOR role."
+      },
+      "addAssetValidatorManager(address)": {
+        "details": "Grants address the ASSET_VALIDATOR_MANAGER role."
+      },
+      "addFinance(address)": {
+        "details": "Grants address the FINANCE role."
+      },
+      "addFinanceManager(address)": {
+        "details": "Grants address the FINANCE_MANAGER role."
+      },
+      "isAdministrator(address)": {
+        "details": "Returns `true` if address has been granted the ADMINISTRATOR role "
+      },
+      "isAssetManager(address)": {
+        "details": "Returns `true` if address has been granted the ASSET_MANAGER role "
+      },
+      "isAssetProvider(address)": {
+        "details": "Returns `true` if address has been granted the ASSET_PROVIDER role "
+      },
+      "isAssetProviderManager(address)": {
+        "details": "Returns `true` if address has been granted the ASSET_PROVIDER_MANAGER role "
+      },
+      "isAssetValidator(address)": {
+        "details": "Returns `true` if address has been granted the ASSET_VALIDATOR role "
+      },
+      "isAssetValidatorManager(address)": {
+        "details": "Returns `true` if address has been granted the ASSET_VALIDATOR_MANAGER role "
+      },
+      "isFinance(address)": {
+        "details": "Returns `true` if address has been granted the FINANCE role "
+      },
+      "isFinanceManager(address)": {
+        "details": "Returns `true` if address has been granted the FINANCE_MANAGER role "
+      },
+      "isOwnerRole(address)": {
+        "details": "Returns `true` if address has been granted the OWNER role."
+      },
+      "removeAdministrator(address)": {
+        "details": "Revoikes address all MANAGER roles. Only executable by the owner."
+      },
+      "removeAssetManager(address)": {
+        "details": "Revokes address the ASSET_MANAGER role."
+      },
+      "removeAssetProvider(address)": {
+        "details": "Revokes address the ASSET_PROVIDER role."
+      },
+      "removeAssetProviderManager(address)": {
+        "details": "Revokes address the ASSET_PROVIDER_MANAGER role."
+      },
+      "removeAssetValidator(address)": {
+        "details": "Revokes address the ASSET_VALIDATOR role."
+      },
+      "removeAssetValidatorManager(address)": {
+        "details": "Revokes address the ASSET_VALIDATOR_MANAGER role."
+      },
+      "removeFinance(address)": {
+        "details": "Revokes address the FINANCE role."
+      },
+      "removeFinanceManager(address)": {
+        "details": "Revokes address the FINANCE_MANAGER role."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "addAssetProvider(address)": {
+        "notice": "Grants address the ASSET_PROVIDER role."
+      },
+      "addAssetProviderManager(address)": {
+        "notice": "Grants address the ASSET_PROVIDER_MANAGER role."
+      }
+    },
+    "version": 1
+  }
+}
