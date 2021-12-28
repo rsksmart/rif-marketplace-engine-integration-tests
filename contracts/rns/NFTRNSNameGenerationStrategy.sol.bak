@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT OR Apache-2.0
 pragma solidity ^0.8.4;
 
-import {RNSNameGenerationStrategy} from "contracts/rns/RNSNameGenerationStrategy.sol";
+import {RNSNameGenerationStrategy} from "./RNSNameGenerationStrategy.sol";
 import {IERC721Metadata} from "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol";
 
 contract NFTRNSNameGenerationStrategy is RNSNameGenerationStrategy {

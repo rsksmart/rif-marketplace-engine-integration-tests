@@ -30,20 +30,20 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT OR Apache-2.0\npragma solidity ^0.8.4;\n\ninterface RNSNameGenerationStrategy {\n    function generate(address _asset) external returns (bytes32);\n}\n",
-  "sourcePath": "/Users/jjtechera/Documents/GitHub/rif-marketplace-engine-integration-tests/contracts/rns/RNSNameGenerationStrategy.sol",
+  "sourcePath": "/Users/rjauregui/RIF_MKTV2/rif-marketplace-engine-integration-tests/contracts/rns/RNSNameGenerationStrategy.sol",
   "ast": {
     "absolutePath": "project:/contracts/rns/RNSNameGenerationStrategy.sol",
     "exportedSymbols": {
       "RNSNameGenerationStrategy": [
-        12046
+        3981
       ]
     },
-    "id": 12047,
+    "id": 3982,
     "license": "MIT OR Apache-2.0",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 12038,
+        "id": 3973,
         "literals": [
           "solidity",
           "^",
@@ -51,7 +51,7 @@
           ".4"
         ],
         "nodeType": "PragmaDirective",
-        "src": "46:23:30"
+        "src": "46:23:29"
       },
       {
         "abstract": false,
@@ -60,36 +60,36 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 12046,
+        "id": 3981,
         "linearizedBaseContracts": [
-          12046
+          3981
         ],
         "name": "RNSNameGenerationStrategy",
-        "nameLocation": "81:25:30",
+        "nameLocation": "81:25:29",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "functionSelector": "2fa61cd8",
-            "id": 12045,
+            "id": 3980,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "generate",
-            "nameLocation": "122:8:30",
+            "nameLocation": "122:8:29",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 12041,
+              "id": 3976,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12040,
+                  "id": 3975,
                   "mutability": "mutable",
                   "name": "_asset",
-                  "nameLocation": "139:6:30",
+                  "nameLocation": "139:6:29",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12045,
-                  "src": "131:14:30",
+                  "scope": 3980,
+                  "src": "131:14:29",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -97,10 +97,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 12039,
+                    "id": 3974,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "131:7:30",
+                    "src": "131:7:29",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -110,21 +110,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "130:16:30"
+              "src": "130:16:29"
             },
             "returnParameters": {
-              "id": 12044,
+              "id": 3979,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12043,
+                  "id": 3978,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12045,
-                  "src": "165:7:30",
+                  "scope": 3980,
+                  "src": "165:7:29",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -132,10 +132,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 12042,
+                    "id": 3977,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "165:7:30",
+                    "src": "165:7:29",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -144,35 +144,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "164:9:30"
+              "src": "164:9:29"
             },
-            "scope": 12046,
-            "src": "113:61:30",
+            "scope": 3981,
+            "src": "113:61:29",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 12047,
-        "src": "71:105:30",
+        "scope": 3982,
+        "src": "71:105:29",
         "usedErrors": []
       }
     ],
-    "src": "46:131:30"
+    "src": "46:131:29"
   },
   "legacyAST": {
     "absolutePath": "project:/contracts/rns/RNSNameGenerationStrategy.sol",
     "exportedSymbols": {
       "RNSNameGenerationStrategy": [
-        12046
+        3981
       ]
     },
-    "id": 12047,
+    "id": 3982,
     "license": "MIT OR Apache-2.0",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 12038,
+        "id": 3973,
         "literals": [
           "solidity",
           "^",
@@ -180,7 +180,7 @@
           ".4"
         ],
         "nodeType": "PragmaDirective",
-        "src": "46:23:30"
+        "src": "46:23:29"
       },
       {
         "abstract": false,
@@ -189,36 +189,36 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 12046,
+        "id": 3981,
         "linearizedBaseContracts": [
-          12046
+          3981
         ],
         "name": "RNSNameGenerationStrategy",
-        "nameLocation": "81:25:30",
+        "nameLocation": "81:25:29",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "functionSelector": "2fa61cd8",
-            "id": 12045,
+            "id": 3980,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "generate",
-            "nameLocation": "122:8:30",
+            "nameLocation": "122:8:29",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 12041,
+              "id": 3976,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12040,
+                  "id": 3975,
                   "mutability": "mutable",
                   "name": "_asset",
-                  "nameLocation": "139:6:30",
+                  "nameLocation": "139:6:29",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12045,
-                  "src": "131:14:30",
+                  "scope": 3980,
+                  "src": "131:14:29",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -226,10 +226,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 12039,
+                    "id": 3974,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "131:7:30",
+                    "src": "131:7:29",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -239,21 +239,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "130:16:30"
+              "src": "130:16:29"
             },
             "returnParameters": {
-              "id": 12044,
+              "id": 3979,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12043,
+                  "id": 3978,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12045,
-                  "src": "165:7:30",
+                  "scope": 3980,
+                  "src": "165:7:29",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -261,10 +261,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 12042,
+                    "id": 3977,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "165:7:30",
+                    "src": "165:7:29",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -273,29 +273,29 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "164:9:30"
+              "src": "164:9:29"
             },
-            "scope": 12046,
-            "src": "113:61:30",
+            "scope": 3981,
+            "src": "113:61:29",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 12047,
-        "src": "71:105:30",
+        "scope": 3982,
+        "src": "71:105:29",
         "usedErrors": []
       }
     ],
-    "src": "46:131:30"
+    "src": "46:131:29"
   },
   "compiler": {
     "name": "solc",
     "version": "0.8.11+commit.d7f03943.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.4.4",
-  "updatedAt": "2021-12-22T00:27:00.532Z",
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-12-22T21:29:30.859Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

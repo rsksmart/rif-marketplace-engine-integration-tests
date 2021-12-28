@@ -50,7 +50,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT OR Apache-2.0\npragma solidity ^0.8.4;\n\nimport {IERC721} from \"@openzeppelin/contracts/token/ERC721/IERC721.sol\";\nimport {IMarketplace} from \"../IMarketplace.sol\";\n\ninterface ISaleStrategy {\n    /**\n        @notice Execute order for sell.\n        @param _buyerAddr contract address for buyer.\n        @param _nft NFT.\n        @param _mkp marketplace.\n        @param _tokenId token owned by provider in order.\n        @param _orderId Id of an Order put on Marketplace for sell.\n        @return bool.\n     */\n    function execute(\n        address _buyerAddr,\n        IERC721 _nft,\n        IMarketplace _mkp,\n        uint256 _tokenId,\n        uint256 _orderId\n    ) external returns (bool);\n}\n",
-  "sourcePath": "/Users/jjtechera/Documents/GitHub/rif-marketplace-engine-integration-tests/contracts/asset/ISaleStrategy.sol",
+  "sourcePath": "/Users/rjauregui/RIF_MKTV2/rif-marketplace-engine-integration-tests/contracts/asset/ISaleStrategy.sol",
   "ast": {
     "absolutePath": "project:/contracts/asset/ISaleStrategy.sol",
     "exportedSymbols": {
@@ -58,18 +58,18 @@
         1251
       ],
       "IMarketplace": [
-        1578
+        1679
       ],
       "ISaleStrategy": [
-        3254
+        3388
       ]
     },
-    "id": 3255,
+    "id": 3389,
     "license": "MIT OR Apache-2.0",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3231,
+        "id": 3365,
         "literals": [
           "solidity",
           "^",
@@ -77,25 +77,25 @@
           ".4"
         ],
         "nodeType": "PragmaDirective",
-        "src": "46:23:18"
+        "src": "46:23:21"
       },
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
         "file": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
-        "id": 3233,
+        "id": 3367,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 3255,
+        "scope": 3389,
         "sourceUnit": 1252,
-        "src": "71:73:18",
+        "src": "71:73:21",
         "symbolAliases": [
           {
             "foreign": {
-              "id": 3232,
+              "id": 3366,
               "name": "IERC721",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "src": "79:7:18",
+              "src": "79:7:21",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -106,20 +106,20 @@
       {
         "absolutePath": "project:/contracts/IMarketplace.sol",
         "file": "../IMarketplace.sol",
-        "id": 3235,
+        "id": 3369,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 3255,
-        "sourceUnit": 1579,
-        "src": "145:49:18",
+        "scope": 3389,
+        "sourceUnit": 1680,
+        "src": "145:49:21",
         "symbolAliases": [
           {
             "foreign": {
-              "id": 3234,
+              "id": 3368,
               "name": "IMarketplace",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "src": "153:12:18",
+              "src": "153:12:21",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -134,42 +134,42 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 3254,
+        "id": 3388,
         "linearizedBaseContracts": [
-          3254
+          3388
         ],
         "name": "ISaleStrategy",
-        "nameLocation": "206:13:18",
+        "nameLocation": "206:13:21",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "documentation": {
-              "id": 3236,
+              "id": 3370,
               "nodeType": "StructuredDocumentation",
-              "src": "226:311:18",
+              "src": "226:311:21",
               "text": "@notice Execute order for sell.\n@param _buyerAddr contract address for buyer.\n@param _nft NFT.\n@param _mkp marketplace.\n@param _tokenId token owned by provider in order.\n@param _orderId Id of an Order put on Marketplace for sell.\n@return bool."
             },
             "functionSelector": "3343a585",
-            "id": 3253,
+            "id": 3387,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "execute",
-            "nameLocation": "551:7:18",
+            "nameLocation": "551:7:21",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3249,
+              "id": 3383,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3238,
+                  "id": 3372,
                   "mutability": "mutable",
                   "name": "_buyerAddr",
-                  "nameLocation": "576:10:18",
+                  "nameLocation": "576:10:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3253,
-                  "src": "568:18:18",
+                  "scope": 3387,
+                  "src": "568:18:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -177,10 +177,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3237,
+                    "id": 3371,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "568:7:18",
+                    "src": "568:7:21",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -191,13 +191,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3241,
+                  "id": 3375,
                   "mutability": "mutable",
                   "name": "_nft",
-                  "nameLocation": "604:4:18",
+                  "nameLocation": "604:4:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3253,
-                  "src": "596:12:18",
+                  "scope": 3387,
+                  "src": "596:12:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -205,17 +205,17 @@
                     "typeString": "contract IERC721"
                   },
                   "typeName": {
-                    "id": 3240,
+                    "id": 3374,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 3239,
+                      "id": 3373,
                       "name": "IERC721",
                       "nodeType": "IdentifierPath",
                       "referencedDeclaration": 1251,
-                      "src": "596:7:18"
+                      "src": "596:7:21"
                     },
                     "referencedDeclaration": 1251,
-                    "src": "596:7:18",
+                    "src": "596:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_contract$_IERC721_$1251",
                       "typeString": "contract IERC721"
@@ -225,33 +225,33 @@
                 },
                 {
                   "constant": false,
-                  "id": 3244,
+                  "id": 3378,
                   "mutability": "mutable",
                   "name": "_mkp",
-                  "nameLocation": "631:4:18",
+                  "nameLocation": "631:4:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3253,
-                  "src": "618:17:18",
+                  "scope": 3387,
+                  "src": "618:17:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IMarketplace_$1578",
+                    "typeIdentifier": "t_contract$_IMarketplace_$1679",
                     "typeString": "contract IMarketplace"
                   },
                   "typeName": {
-                    "id": 3243,
+                    "id": 3377,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 3242,
+                      "id": 3376,
                       "name": "IMarketplace",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 1578,
-                      "src": "618:12:18"
+                      "referencedDeclaration": 1679,
+                      "src": "618:12:21"
                     },
-                    "referencedDeclaration": 1578,
-                    "src": "618:12:18",
+                    "referencedDeclaration": 1679,
+                    "src": "618:12:21",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IMarketplace_$1578",
+                      "typeIdentifier": "t_contract$_IMarketplace_$1679",
                       "typeString": "contract IMarketplace"
                     }
                   },
@@ -259,13 +259,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3246,
+                  "id": 3380,
                   "mutability": "mutable",
                   "name": "_tokenId",
-                  "nameLocation": "653:8:18",
+                  "nameLocation": "653:8:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3253,
-                  "src": "645:16:18",
+                  "scope": 3387,
+                  "src": "645:16:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -273,10 +273,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3245,
+                    "id": 3379,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "645:7:18",
+                    "src": "645:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -286,13 +286,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3248,
+                  "id": 3382,
                   "mutability": "mutable",
                   "name": "_orderId",
-                  "nameLocation": "679:8:18",
+                  "nameLocation": "679:8:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3253,
-                  "src": "671:16:18",
+                  "scope": 3387,
+                  "src": "671:16:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -300,10 +300,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3247,
+                    "id": 3381,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "671:7:18",
+                    "src": "671:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -312,21 +312,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "558:135:18"
+              "src": "558:135:21"
             },
             "returnParameters": {
-              "id": 3252,
+              "id": 3386,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3251,
+                  "id": 3385,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3253,
-                  "src": "712:4:18",
+                  "scope": 3387,
+                  "src": "712:4:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -334,10 +334,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3250,
+                    "id": 3384,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "712:4:18",
+                    "src": "712:4:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -346,21 +346,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "711:6:18"
+              "src": "711:6:21"
             },
-            "scope": 3254,
-            "src": "542:176:18",
+            "scope": 3388,
+            "src": "542:176:21",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 3255,
-        "src": "196:524:18",
+        "scope": 3389,
+        "src": "196:524:21",
         "usedErrors": []
       }
     ],
-    "src": "46:675:18"
+    "src": "46:675:21"
   },
   "legacyAST": {
     "absolutePath": "project:/contracts/asset/ISaleStrategy.sol",
@@ -369,18 +369,18 @@
         1251
       ],
       "IMarketplace": [
-        1578
+        1679
       ],
       "ISaleStrategy": [
-        3254
+        3388
       ]
     },
-    "id": 3255,
+    "id": 3389,
     "license": "MIT OR Apache-2.0",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3231,
+        "id": 3365,
         "literals": [
           "solidity",
           "^",
@@ -388,25 +388,25 @@
           ".4"
         ],
         "nodeType": "PragmaDirective",
-        "src": "46:23:18"
+        "src": "46:23:21"
       },
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
         "file": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
-        "id": 3233,
+        "id": 3367,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 3255,
+        "scope": 3389,
         "sourceUnit": 1252,
-        "src": "71:73:18",
+        "src": "71:73:21",
         "symbolAliases": [
           {
             "foreign": {
-              "id": 3232,
+              "id": 3366,
               "name": "IERC721",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "src": "79:7:18",
+              "src": "79:7:21",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -417,20 +417,20 @@
       {
         "absolutePath": "project:/contracts/IMarketplace.sol",
         "file": "../IMarketplace.sol",
-        "id": 3235,
+        "id": 3369,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 3255,
-        "sourceUnit": 1579,
-        "src": "145:49:18",
+        "scope": 3389,
+        "sourceUnit": 1680,
+        "src": "145:49:21",
         "symbolAliases": [
           {
             "foreign": {
-              "id": 3234,
+              "id": 3368,
               "name": "IMarketplace",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "src": "153:12:18",
+              "src": "153:12:21",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -445,42 +445,42 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 3254,
+        "id": 3388,
         "linearizedBaseContracts": [
-          3254
+          3388
         ],
         "name": "ISaleStrategy",
-        "nameLocation": "206:13:18",
+        "nameLocation": "206:13:21",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "documentation": {
-              "id": 3236,
+              "id": 3370,
               "nodeType": "StructuredDocumentation",
-              "src": "226:311:18",
+              "src": "226:311:21",
               "text": "@notice Execute order for sell.\n@param _buyerAddr contract address for buyer.\n@param _nft NFT.\n@param _mkp marketplace.\n@param _tokenId token owned by provider in order.\n@param _orderId Id of an Order put on Marketplace for sell.\n@return bool."
             },
             "functionSelector": "3343a585",
-            "id": 3253,
+            "id": 3387,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "execute",
-            "nameLocation": "551:7:18",
+            "nameLocation": "551:7:21",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3249,
+              "id": 3383,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3238,
+                  "id": 3372,
                   "mutability": "mutable",
                   "name": "_buyerAddr",
-                  "nameLocation": "576:10:18",
+                  "nameLocation": "576:10:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3253,
-                  "src": "568:18:18",
+                  "scope": 3387,
+                  "src": "568:18:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -488,10 +488,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3237,
+                    "id": 3371,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "568:7:18",
+                    "src": "568:7:21",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -502,13 +502,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3241,
+                  "id": 3375,
                   "mutability": "mutable",
                   "name": "_nft",
-                  "nameLocation": "604:4:18",
+                  "nameLocation": "604:4:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3253,
-                  "src": "596:12:18",
+                  "scope": 3387,
+                  "src": "596:12:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -516,17 +516,17 @@
                     "typeString": "contract IERC721"
                   },
                   "typeName": {
-                    "id": 3240,
+                    "id": 3374,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 3239,
+                      "id": 3373,
                       "name": "IERC721",
                       "nodeType": "IdentifierPath",
                       "referencedDeclaration": 1251,
-                      "src": "596:7:18"
+                      "src": "596:7:21"
                     },
                     "referencedDeclaration": 1251,
-                    "src": "596:7:18",
+                    "src": "596:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_contract$_IERC721_$1251",
                       "typeString": "contract IERC721"
@@ -536,33 +536,33 @@
                 },
                 {
                   "constant": false,
-                  "id": 3244,
+                  "id": 3378,
                   "mutability": "mutable",
                   "name": "_mkp",
-                  "nameLocation": "631:4:18",
+                  "nameLocation": "631:4:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3253,
-                  "src": "618:17:18",
+                  "scope": 3387,
+                  "src": "618:17:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IMarketplace_$1578",
+                    "typeIdentifier": "t_contract$_IMarketplace_$1679",
                     "typeString": "contract IMarketplace"
                   },
                   "typeName": {
-                    "id": 3243,
+                    "id": 3377,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 3242,
+                      "id": 3376,
                       "name": "IMarketplace",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 1578,
-                      "src": "618:12:18"
+                      "referencedDeclaration": 1679,
+                      "src": "618:12:21"
                     },
-                    "referencedDeclaration": 1578,
-                    "src": "618:12:18",
+                    "referencedDeclaration": 1679,
+                    "src": "618:12:21",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IMarketplace_$1578",
+                      "typeIdentifier": "t_contract$_IMarketplace_$1679",
                       "typeString": "contract IMarketplace"
                     }
                   },
@@ -570,13 +570,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3246,
+                  "id": 3380,
                   "mutability": "mutable",
                   "name": "_tokenId",
-                  "nameLocation": "653:8:18",
+                  "nameLocation": "653:8:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3253,
-                  "src": "645:16:18",
+                  "scope": 3387,
+                  "src": "645:16:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -584,10 +584,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3245,
+                    "id": 3379,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "645:7:18",
+                    "src": "645:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -597,13 +597,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3248,
+                  "id": 3382,
                   "mutability": "mutable",
                   "name": "_orderId",
-                  "nameLocation": "679:8:18",
+                  "nameLocation": "679:8:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3253,
-                  "src": "671:16:18",
+                  "scope": 3387,
+                  "src": "671:16:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -611,10 +611,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3247,
+                    "id": 3381,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "671:7:18",
+                    "src": "671:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -623,21 +623,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "558:135:18"
+              "src": "558:135:21"
             },
             "returnParameters": {
-              "id": 3252,
+              "id": 3386,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3251,
+                  "id": 3385,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3253,
-                  "src": "712:4:18",
+                  "scope": 3387,
+                  "src": "712:4:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -645,10 +645,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3250,
+                    "id": 3384,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "712:4:18",
+                    "src": "712:4:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -657,29 +657,29 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "711:6:18"
+              "src": "711:6:21"
             },
-            "scope": 3254,
-            "src": "542:176:18",
+            "scope": 3388,
+            "src": "542:176:21",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 3255,
-        "src": "196:524:18",
+        "scope": 3389,
+        "src": "196:524:21",
         "usedErrors": []
       }
     ],
-    "src": "46:675:18"
+    "src": "46:675:21"
   },
   "compiler": {
     "name": "solc",
     "version": "0.8.11+commit.d7f03943.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.4.4",
-  "updatedAt": "2021-12-22T00:27:39.531Z",
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-12-22T21:29:30.836Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
