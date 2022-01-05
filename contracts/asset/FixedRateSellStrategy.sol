@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT OR Apache-2.0
 pragma solidity ^0.8.4;
 
-import {ISaleStrategy} from "./ISaleStrategy.sol";
+import {ISaleStrategy} from "contracts/asset/ISaleStrategy.sol";
 import {IERC721} from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import {Order, OrderStatus} from "../order/Order.sol";
-import {IMarketplace} from "../IMarketplace.sol";
+import {Order, OrderStatus} from "contracts/order/Order.sol";
+import {IMarketplace} from "contracts/IMarketplace.sol";
 
 contract FixedRateSellStrategy is ISaleStrategy {
     /**

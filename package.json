@@ -40,11 +40,15 @@
     "url": "https://github.com/rsksmart/rif-marketplace-engine-integration-tests/issues"
   },
   "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.3",
     "@openzeppelin/contracts": "^4.4.1",
     "ethers": "^5.5.2",
+    "hardhat": "^2.8.0",
+    "rif-marketplace-engine-sdk": "rsksmart/rif-marketplace-engine-sdk#fix/sdk-install",
+    "rif-marketplace-engine": "rsksmart/rif-marketplace-engine",
     "truffle-hdwallet-provider": "^1.0.17"
   },
-  "homepage": "https://github.com/rsksmart/rif-marketplace-engine-integration-tests#readme",
+  "homepage": "https://github.com/rsksmart/rif-marketplace-engine-integration-tests.git#readme",
   "devDependencies": {
     "@types/chai": "^4.3.0",
     "@types/chai-as-promised": "^7.1.4",
@@ -53,6 +57,7 @@
     "@typescript-eslint/parser": "^5.7.0",
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
+    "dotenv": "^10.0.0",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",

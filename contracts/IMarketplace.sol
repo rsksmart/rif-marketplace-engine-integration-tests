@@ -8,7 +8,7 @@ interface IMarketplace {
 
     function removeAcceptedCurrency(address _tokenERC20) external;
 
-    function withdraw(address _to, int256 amount) external;
+    function withdraw(address payable _to, uint256 amount) external;
 
     function assignRnsDomain(bytes32 _rnsDomainNode) external;
 

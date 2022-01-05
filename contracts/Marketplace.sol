@@ -4,7 +4,7 @@ pragma solidity ^0.8.4;
 import {AccessControl} from "@openzeppelin/contracts/access/AccessControl.sol";
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {IRNS} from "./rns/IRNSSuite.sol";
-import {MarketplaceAccessControl, ASSET_PROVIDER, ASSET_PROVIDER_MANAGER, FINANCE_MANAGER, ASSET_VALIDATOR, ASSET_VALIDATOR_MANAGER, ER_MSG_ROLE_NOT_REQUIRED} from "./access/MarketplaceAccessControl.sol";
+import {MarketplaceAccessControl, ASSET_PROVIDER, ASSET_PROVIDER_MANAGER, FINANCE_MANAGER, FINANCE, ASSET_VALIDATOR, ASSET_VALIDATOR_MANAGER, ER_MSG_ROLE_NOT_REQUIRED} from "./access/MarketplaceAccessControl.sol";
 import {MarketplaceConfiguration} from "./config/MarketplaceConfiguration.sol";
 import {AssetManagement} from "./asset/AssetManagement.sol";
 import {AssetState} from "./asset/Asset.sol";
@@ -166,7 +166,7 @@ contract Marketplace is
     function addAcceptedCurrency(address _tokenERC20)
         external
         override
-        onlyRole(FINANCE_MANAGER)
+        onlyRole(FINANCE)
     {
         string memory name = ERC20(_tokenERC20).name();
         string memory symbol = ERC20(_tokenERC20).symbol();
@@ -188,13 +188,33 @@ contract Marketplace is
     function removeAcceptedCurrency(address _tokenERC20)
         external
         override
-        onlyRole(FINANCE_MANAGER)
+        onlyRole(FINANCE)
     {
         delete _acceptedCurrencies[_tokenERC20];
     }
 
-    function withdraw(address _to, int256 amount) external override {
-        // TODO: add logic
+    /**
+        @dev Returns the marketplace balance.
+        @return Marketplace balance.
+     */
+    function _getBalance() internal view returns (uint256) {
+        return address(this).balance;
+    }
+
+    /**
+        @dev Withdraw funds from the marketplace
+        @param _to - the address funds will be transferred
+        @param _amount - amount to be withdrawn
+     */
+    function withdraw(address payable _to, uint256 _amount)
+        external
+        override
+        onlyRole(FINANCE)
+    {
+        require(_amount <= _getBalance(), "Not enough funds to withdraw");
+        require(_to != address(0x0), "Invalid 'receiver' address");
+
+        _to.transfer(_amount);
     }
 
     /***************

@@ -12,4 +12,5 @@ until nc -z localhost 4444
             echo "Waiting for RskJ..."
             sleep 1
         done
-truffle deploy --network rskRegtest
+
+#npx hardhat run --network rskRegtest src/scripts/deployMarketplace.js

@@ -2,7 +2,7 @@
 pragma solidity ^0.8.4;
 
 import {IERC721} from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
-import {IMarketplace} from "../IMarketplace.sol";
+import {IMarketplace} from "contracts/IMarketplace.sol";
 
 interface ISaleStrategy {
     /**
