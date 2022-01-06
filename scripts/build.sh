@@ -13,4 +13,4 @@ until nc -z localhost 4444
             sleep 1
         done
 
-#npx hardhat run --network rskRegtest src/scripts/deployMarketplace.js
+#npx hardhat test --network rskRegtest

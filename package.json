@@ -44,8 +44,8 @@
     "@openzeppelin/contracts": "^4.4.1",
     "ethers": "^5.5.2",
     "hardhat": "^2.8.0",
-    "rif-marketplace-engine-sdk": "rsksmart/rif-marketplace-engine-sdk#fix/sdk-install",
-    "rif-marketplace-engine": "rsksmart/rif-marketplace-engine",
+    "rif-marketplace-engine-sdk": "github:rsksmart/rif-marketplace-engine-sdk",
+    "rif-marketplace-engine": "github:rsksmart/rif-marketplace-engine",
     "truffle-hdwallet-provider": "^1.0.17"
   },
   "homepage": "https://github.com/rsksmart/rif-marketplace-engine-integration-tests.git#readme",
