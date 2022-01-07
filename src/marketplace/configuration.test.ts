@@ -40,6 +40,7 @@ describe('Marketplace Configuration', () => {
       marketplaceAddress,
       wallet
     );
+
     expect(marketplaceInstance).not.to.be.undefined;
   });
 

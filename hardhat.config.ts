@@ -2,7 +2,6 @@ import { HardhatUserConfig } from 'hardhat/config';
 import '@typechain/hardhat';
 import '@nomiclabs/hardhat-ethers';
 import 'tsconfig-paths/register';
-import { PRIV_KEY_1 } from 'env/env';
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -21,7 +20,8 @@ const config: HardhatUserConfig = {
   networks: {
     rskRegtest: {
       url: ``,
-      accounts: [PRIV_KEY_1],
+      accounts: 'remote',
+      timeout: 4000,
     },
   },
 };

@@ -9,7 +9,7 @@
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'src/**/*.ts'",
     "lint": "eslint src/**/*.ts --ext .ts",
     "lint:fix": "eslint src/**/*.ts --ext .ts --fix",
-    "format": "prettier  src/**/*.ts !.gitignore --write \"**/*.+(js|ts|json)\""
+    "format": "prettier  src/**/*.ts !.gitignore !build/**/* !dist/**/* --write \"**/*.+(js|ts|json)\""
   },
   "husky": {
     "hooks": {
@@ -22,6 +22,10 @@
       "npm run format"
     ]
   },
+  "eslintIgnore": [
+    "build/**/*",
+    "dist/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rsksmart/rif-marketplace-engine-integration-tests.git"
