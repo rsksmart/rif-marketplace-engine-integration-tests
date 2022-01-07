@@ -4,15 +4,14 @@ import {
   createMarketplaceConfiguration,
   createMarketplaceContract,
 } from 'rif-marketplace-engine-sdk';
-import { Wallet } from 'ethers';
-import { PRIV_KEY_1, RSK_NODE } from 'env/env';
+import { Wallet, ethers } from 'ethers';
+import { PRIV_KEY_1, RSK_NODE } from '../env';
 import { Provider } from '@ethersproject/providers';
 import {
   defaultMarketplaceOptions,
   deployMarketplace,
 } from 'rif-marketplace-engine/utils/deployment.utils';
 import { Marketplace } from 'rif-marketplace-engine/typechain';
-import { ethers } from 'hardhat';
 
 chai.use(chaiAsPromised);
 

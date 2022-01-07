@@ -3,7 +3,7 @@ import {
   defaultMarketplaceOptions,
   deployContract,
   MarketplaceOptions,
-} from '../src/utils/deployment';
+} from 'rif-marketplace-engine/utils/deployment.utils';
 
 config();
 

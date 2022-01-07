@@ -9,9 +9,9 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "outDir": "dist",
-    "baseUrl": "./src"
+    "baseUrl": "./test"
   },
-  "include": ["src/**/*, scripts/*.ts"],
+  "include": ["test/**/*, scripts/*.ts"],
   "exclude": ["node_modules", "dist"],
   "files": ["./hardhat.config.ts"]
 }

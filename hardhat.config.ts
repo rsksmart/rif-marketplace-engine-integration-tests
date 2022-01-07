@@ -24,6 +24,12 @@ const config: HardhatUserConfig = {
       timeout: 4000,
     },
   },
+  paths: {
+    sources: './contracts',
+    tests: './test',
+    cache: './cache',
+    artifacts: './artifacts',
+  },
 };
 
 export default config;

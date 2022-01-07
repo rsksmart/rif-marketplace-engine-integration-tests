@@ -7,9 +7,9 @@
     "prepare": "husky install",
     "build": "sh ./scripts/build.sh",
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'src/**/*.ts'",
-    "lint": "eslint src/**/*.ts --ext .ts",
-    "lint:fix": "eslint src/**/*.ts --ext .ts --fix",
-    "format": "prettier  src/**/*.ts !.gitignore !build/**/* !dist/**/* --write \"**/*.+(js|ts|json)\""
+    "lint": "eslint test/**/*.ts --ext .ts",
+    "lint:fix": "eslint test/**/*.ts --ext .ts --fix",
+    "format": "prettier  test/**/*.ts !.gitignore !build/**/* !dist/**/* !artifacts/**/* !typechain/**/* --write \"**/*.+(js|ts|json)\""
   },
   "husky": {
     "hooks": {
