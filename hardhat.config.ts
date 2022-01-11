@@ -18,6 +18,7 @@ const config: HardhatUserConfig = {
     ],
   },
   networks: {
+    hardhat: {},
     rskRegtest: {
       url: ``,
       accounts: 'remote',

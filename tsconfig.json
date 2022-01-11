@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "paths": { "~/*": ["test/*", "scripts/*", "utils/*"] },
+    "target": "ESNext",
+    "module": "CommonJS",
     "lib": ["es2015"],
     "strict": true,
     "strictNullChecks": true,
@@ -9,9 +10,9 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "outDir": "dist",
-    "baseUrl": "./test"
+    "baseUrl": "testt"
   },
-  "include": ["test/**/*, scripts/*.ts"],
+  "include": ["test/**/**, scripts/*.ts", "utils/*.ts"],
   "exclude": ["node_modules", "dist"],
   "files": ["./hardhat.config.ts"]
 }
