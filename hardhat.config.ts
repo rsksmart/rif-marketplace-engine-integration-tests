@@ -1,6 +1,6 @@
 import { HardhatUserConfig } from 'hardhat/config';
-import '@typechain/hardhat';
 import '@nomiclabs/hardhat-ethers';
+import '@typechain/hardhat';
 import 'tsconfig-paths/register';
 
 const config: HardhatUserConfig = {

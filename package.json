@@ -48,9 +48,8 @@
     "@openzeppelin/contracts": "^4.4.1",
     "ethers": "^5.5.2",
     "hardhat": "^2.8.0",
-    "rif-marketplace-engine": "github:rsksmart/rif-marketplace-engine",
-    "rif-marketplace-engine-sdk": "github:rsksmart/rif-marketplace-engine-sdk",
-    "truffle-hdwallet-provider": "^1.0.17",
+    "rif-marketplace-engine": "github:rsksmart/rif-marketplace-engine#58006b967723ba84c50ee67f94a11b61706f85d7",
+    "rif-marketplace-engine-sdk": "github:rsksmart/rif-marketplace-engine-sdk#intergration-test/fixes",
     "tsconfig-paths": "^3.12.0"
   },
   "homepage": "https://github.com/rsksmart/rif-marketplace-engine-integration-tests.git#readme",
