@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
+    "test": "REPORT_GAS=true hardhat test",
     "build": "sh ./scripts/build.sh",
-    "test": "TS_NODE_TRANSPILE_ONLY=1 npx hardhat test",
+    "clean": "rm -rf typechain cache dist artifacts && hardhat clean",
+    "compile": "npm run clean && hardhat compile --force",
+    "test:rsk": "npx hardhat test --network rskRegTest",
+    "test:hh": "REPORT_GAS=true hardhat test",
     "lint": "eslint test/**/*.ts --ext .ts",
     "lint:fix": "eslint test/**/*.ts --ext .ts --fix",
     "format": "prettier  test/**/*.ts !.gitignore !build/**/* !dist/**/* !artifacts/**/* !typechain/**/* --write \"**/*.+(js|ts|json)\""
