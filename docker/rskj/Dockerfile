@@ -13,7 +13,6 @@ ARG rskj_version=3.0.0
 ENV RSKJ_BRANCH=${rskj_codename}-${rskj_version}
 
 
-#ADD src /code/rskj
 RUN git clone --single-branch --depth 1 --branch "${RSKJ_BRANCH}" https://github.com/rsksmart/rskj.git /code/rskj
 
 WORKDIR /code/rskj

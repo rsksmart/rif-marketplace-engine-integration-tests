@@ -4,7 +4,7 @@ pragma solidity ^0.8.4;
 import {AccessControl} from "@openzeppelin/contracts/access/AccessControl.sol";
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {IRNS} from "./rns/IRNSSuite.sol";
-import {MarketplaceAccessControl, ASSET_PROVIDER, ASSET_PROVIDER_MANAGER, FINANCE_MANAGER, FINANCE, ASSET_VALIDATOR, ASSET_VALIDATOR_MANAGER, ER_MSG_ROLE_NOT_REQUIRED} from "./access/MarketplaceAccessControl.sol";
+import {MarketplaceAccessControl, ASSET_PROVIDER, ASSET_PROVIDER_MANAGER, FINANCE_MANAGER, FINANCE, ASSET_VALIDATOR, ASSET_VALIDATOR_MANAGER, ER_MSG_ROLE_NOT_REQUIRED, ADMINISTRATOR} from "./access/MarketplaceAccessControl.sol";
 import {MarketplaceConfiguration} from "./config/MarketplaceConfiguration.sol";
 import {AssetManagement} from "./asset/AssetManagement.sol";
 import {AssetState} from "./asset/Asset.sol";
@@ -13,6 +13,7 @@ import {AssetTypeWhitelist} from "./whitelist/AssetTypeWhitelist.sol";
 import {AssetValidatorDelegateWhitelist} from "./whitelist/AssetValidatorDelegateWhitelist.sol";
 import {RNSNameGenerationStrategy} from "./rns/RNSNameGenerationStrategy.sol";
 import {Order} from "./order/Order.sol";
+import {ISaleStrategy} from "./asset/ISaleStrategy.sol";
 
 /**
     @author RIF Protocols Team @IOVLabs
@@ -45,6 +46,16 @@ contract Marketplace is
     IRNS private _rns;
     bytes32 public rnsDomain;
     RNSNameGenerationStrategy private _rnsNameGenerationStrategy;
+
+    /**
+     *  @dev Stores the sales strategies accepted by the marketplace.
+     */
+    mapping(ISaleStrategy => bool) private _salesStrategies;
+
+    /**
+     *  @dev Stores the number of sales strategies accepted by the marketplace.
+     */
+    uint8 private _salesStrategyIndex;
 
     /**
      *  @dev Stores the currencies accepted by the marketplace (ERC20 tokens)
@@ -382,5 +393,26 @@ contract Marketplace is
         returns (Order memory)
     {
         return _orders[_orderId];
+    }
+
+    /**
+        @dev Adds a sale strategy into the marketplace
+        @param _saleStrategy - the strategy
+     */
+    function addSaleStrategy(ISaleStrategy _saleStrategy)
+        external
+        override
+        onlyRole(ADMINISTRATOR)
+    {
+        _salesStrategies[_saleStrategy] = true;
+        _salesStrategyIndex++;
+    }
+
+    /**
+        @dev Get the number of sales strategies added
+        @return uint8 
+     */
+    function getSaleStrategyIndex() external view override returns (uint8) {
+        return _salesStrategyIndex;
     }
 }

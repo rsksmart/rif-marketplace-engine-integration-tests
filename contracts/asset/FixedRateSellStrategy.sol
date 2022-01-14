@@ -8,6 +8,13 @@ import {Order, OrderStatus} from "contracts/order/Order.sol";
 import {IMarketplace} from "contracts/IMarketplace.sol";
 
 contract FixedRateSellStrategy is ISaleStrategy {
+    string private constant _ER_MSG_ORDER_ACTIVE =
+        "Order state must be Active for selling";
+    string private constant _ER_MSG_INSUF_FOUNDS =
+        "Buyer have insufficient funds for this order price";
+    string private constant _ER_MSG_TRANS_UNSUCCES =
+        "Transfer to Marketplace unsuccessful";
+
     /**
         @dev Sell order execution using IERC721 and IERC20 interfaces from openzeppelin.
         @inheritdoc ISaleStrategy
@@ -22,17 +29,14 @@ contract FixedRateSellStrategy is ISaleStrategy {
         Order memory _order = _mkp.getOrder(_orderId);
         IERC20 _currencyAddr = _order.currency;
 
-        require(
-            _order.status == OrderStatus.Active,
-            "Order state must be Active for selling"
-        );
+        require(_order.status == OrderStatus.Active, _ER_MSG_ORDER_ACTIVE);
         require(
             _currencyAddr.allowance(_buyerAddr, msg.sender) >= _order.price,
-            "Buyer have insufficient funds for this order price"
+            _ER_MSG_INSUF_FOUNDS
         );
         require(
             _currencyAddr.transferFrom(_buyerAddr, msg.sender, _order.price),
-            "Transfer to Marketplace unsuccessful"
+            _ER_MSG_TRANS_UNSUCCES
         );
 
         IERC721(_nft).safeTransferFrom(_order.provider, _buyerAddr, _tokenId);

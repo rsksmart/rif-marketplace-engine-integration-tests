@@ -1,7 +1,3 @@
-/**
- * This file would be removed once the engine import errors are solved
- */
-
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
 import { ethers } from 'hardhat';
 import { Contract, ContractFactory } from 'ethers';
@@ -24,8 +20,10 @@ export const deployContract = async <C extends Contract, A>(
   const contractFactory =
     factory || ((await ethers.getContractFactory(contractName)) as Factory<C>);
 
+  const contract = await contractFactory.deploy(...options);
+
   return {
-    contract: await contractFactory.deploy(...options),
+    contract: (await contract.deployed()) as C,
     signers: await ethers.getSigners(),
     contractFactory,
   };

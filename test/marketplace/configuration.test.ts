@@ -1,111 +1,44 @@
 import chai, { expect } from 'chai';
 import chaiAsPromised from 'chai-as-promised';
+import { createMarketplaceContract } from 'rif-marketplace-engine-sdk';
+import { Contract } from 'ethers';
 import {
-  createMarketplaceConfiguration,
-  createMarketplaceContract,
-} from 'rif-marketplace-engine-sdk';
-import { Wallet, ethers, Contract } from 'ethers';
-import { PRIV_KEY_1, RSK_NODE } from '../env';
-import { Provider } from '@ethersproject/providers';
-import { Marketplace } from 'rif-marketplace-engine/typechain';
-import {
-  defaultMarketplaceOptions,
-  deployMarketplace,
-} from '../utils/deployment';
+  assertMarketplaceConfiguration,
+  prepareMarkerplace,
+} from '~/utils/marketpladeConfiguration';
 
 chai.use(chaiAsPromised);
 
 describe('Marketplace Configuration', () => {
-  // let owner: SignerWithAddress;
-  let wallet: Wallet;
-  let provider: Provider;
-  let marketplace: Marketplace;
-  let marketplaceAddress: string;
-
-  beforeEach(async () => {
-    // [owner] = await ethers.getSigners();
-    provider = new ethers.providers.JsonRpcProvider(RSK_NODE);
-    wallet = new Wallet(PRIV_KEY_1, provider);
-
-    // example marketplace deployment
-    ({ contract: marketplace } = await deployMarketplace(
-      defaultMarketplaceOptions // here you'd overwrite marketplace options
-    ));
-    marketplaceAddress = marketplace.address;
-  });
-
   it('should create a marketplace contract instance', async () => {
+    const { deployer, marketplaceAddress } = await prepareMarkerplace();
+
     const marketplaceInstance = createMarketplaceContract(
       marketplaceAddress,
-      wallet
+      deployer
     );
-
     expect(marketplaceInstance).instanceOf(Contract);
   });
 
-  it('should get true for marketplace configuration for "whitelistedAsset"', async () => {
-    const marketplaceInstance = createMarketplaceContract(
-      marketplaceAddress,
-      wallet
-    );
-    const config = createMarketplaceConfiguration(marketplaceInstance);
-    console.log(await config.get('whitelistedAssetProvider'));
-
-    await expect(config.get('whitelistedAsset')).to.eventually.be.true;
-  });
-  /*
-  it('should get true for marketplace configuration for "whitelistedAssetProvider"', async () => {
-    const marketplaceInstance = createMarketplaceContract(
-      marketplaceAddress,
-      wallet
-    );
-    const config = createMarketplaceConfiguration(marketplaceInstance);
-    await expect(config.get('whitelistedAssetProvider')).to.eventually.be.true;
+  describe('Default configuration', () => {
+    /**
+     * Test that marketplace has the right configuration at deployment
+     */
+    assertMarketplaceConfiguration();
   });
 
-  it('should get true for marketplace configuration for "assetValidation"', async () => {
-    const marketplaceInstance = createMarketplaceContract(
-      marketplaceAddress,
-      wallet
-    );
-    const config = createMarketplaceConfiguration(marketplaceInstance);
-    await expect(config.get('assetValidation')).to.eventually.be.true;
+  describe('All attributes enabled', () => {
+    /**
+     * Test that marketplace has the right configuration at deployment
+     */
+    assertMarketplaceConfiguration({ 
+      requireWhitelistedAsset: true,
+      requireWhitelistedAssetProvider: true,
+      requireAssetValidation: true,
+      requireSaleStrategyPerAsset: true,
+      requireSameCurrencyPerAsset: true,
+      requireAssetSubdomain: true,
+      supportStakingAndSlashing: true
+    });
   });
-
-  it('should get true for marketplace configuration for "saleStrategyPerAsset"', async () => {
-    const marketplaceInstance = createMarketplaceContract(
-      marketplaceAddress,
-      wallet
-    );
-    const config = createMarketplaceConfiguration(marketplaceInstance);
-    await expect(config.get('saleStrategyPerAsset')).to.eventually.be.true;
-  });
-
-  it('should get true for marketplace configuration for "sameCurrencyPerAsset"', async () => {
-    const marketplaceInstance = createMarketplaceContract(
-      marketplaceAddress,
-      wallet
-    );
-    const config = createMarketplaceConfiguration(marketplaceInstance);
-    await expect(config.get('sameCurrencyPerAsset')).to.eventually.be.true;
-  });
-
-  it('should get true for marketplace configuration for "assetSubdomain"', async () => {
-    const marketplaceInstance = createMarketplaceContract(
-      marketplaceAddress,
-      wallet
-    );
-    const config = createMarketplaceConfiguration(marketplaceInstance);
-    await expect(config.get('assetSubdomain')).to.eventually.be.true;
-  });
-
-  it('should get true for marketplace configuration for "stakingAndSlashing"', async () => {
-    const marketplaceInstance = createMarketplaceContract(
-      marketplaceAddress,
-      wallet
-    );
-    const config = createMarketplaceConfiguration(marketplaceInstance);
-    await expect(config.get('stakingAndSlashing')).to.eventually.be.true;
-  });
-   */
 });

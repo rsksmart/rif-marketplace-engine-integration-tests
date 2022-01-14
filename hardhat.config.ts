@@ -18,11 +18,12 @@ const config: HardhatUserConfig = {
     ],
   },
   networks: {
-    hardhat: {},
-    rskRegtest: {
-      url: ``,
+    rskRegTest: {
+      url: `http://127.0.0.1:4444`,
       accounts: 'remote',
       timeout: 4000,
+      gasPrice: 40000,
+      chainId: 33,
     },
   },
   paths: {
