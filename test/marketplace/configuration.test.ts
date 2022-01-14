@@ -5,7 +5,7 @@ import { Contract } from 'ethers';
 import {
   assertMarketplaceConfiguration,
   prepareMarkerplace,
-} from '~/utils/marketpladeConfiguration';
+} from './configuration.utils';
 
 chai.use(chaiAsPromised);
 
@@ -21,16 +21,12 @@ describe('Marketplace Configuration', () => {
   });
 
   describe('Default configuration', () => {
-    /**
-     * Test that marketplace has the right configuration at deployment
-     */
+    // Tests that marketplace has the right configuration at deployment
     assertMarketplaceConfiguration();
   });
 
   describe('All attributes enabled', () => {
-    /**
-     * Test that marketplace has the right configuration at deployment
-     */
+   // Tests that marketplace has the right configuration when setting all attributtes
     assertMarketplaceConfiguration({ 
       requireWhitelistedAsset: true,
       requireWhitelistedAssetProvider: true,
