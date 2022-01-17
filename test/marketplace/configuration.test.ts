@@ -26,15 +26,15 @@ describe('Marketplace Configuration', () => {
   });
 
   describe('All attributes enabled', () => {
-   // Tests that marketplace has the right configuration when setting all attributtes
-    assertMarketplaceConfiguration({ 
+    // Tests that marketplace has the right configuration when setting all attributtes
+    assertMarketplaceConfiguration({
       requireWhitelistedAsset: true,
       requireWhitelistedAssetProvider: true,
       requireAssetValidation: true,
       requireSaleStrategyPerAsset: true,
       requireSameCurrencyPerAsset: true,
       requireAssetSubdomain: true,
-      supportStakingAndSlashing: true
+      supportStakingAndSlashing: true,
     });
   });
 });
