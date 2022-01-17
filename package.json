@@ -53,8 +53,7 @@
     "ethers": "^5.5.2",
     "hardhat": "^2.8.0",
     "rif-marketplace-engine": "github:rsksmart/rif-marketplace-engine#58006b967723ba84c50ee67f94a11b61706f85d7",
-    "rif-marketplace-engine-sdk": "github:rsksmart/rif-marketplace-engine-sdk#intergration-test/fixes",
-    "tsconfig-paths": "^3.12.0"
+    "rif-marketplace-engine-sdk": "github:rsksmart/rif-marketplace-engine-sdk#intergration-test/fixes"
   },
   "homepage": "https://github.com/rsksmart/rif-marketplace-engine-integration-tests.git#readme",
   "devDependencies": {
@@ -74,6 +73,7 @@
     "mocha": "^9.1.3",
     "prettier": "^2.5.1",
     "ts-node": "^10.4.0",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "tsconfig-paths": "^3.12.0"
   }
 }
