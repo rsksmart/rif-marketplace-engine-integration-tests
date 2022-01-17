@@ -2,7 +2,7 @@
 pragma solidity ^0.8.4;
 
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import {ISaleStrategy} from "../asset/ISaleStrategy.sol";
+import {ISaleStrategy} from "contracts/asset/ISaleStrategy.sol";
 
 enum OrderStatus {
     Created,

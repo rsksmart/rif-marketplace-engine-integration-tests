@@ -4,8 +4,6 @@ pragma solidity ^0.8.4;
 import {IDGenerationStrategy} from "./IDGenerationStrategy.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-//import "hardhat/console.sol";
-
 /**
     @author RIF Protocols Team @IOVLabs
     @title IncrementalOrderIDGenerationStrategy
