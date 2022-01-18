@@ -1,8 +1,8 @@
 import { HardhatUserConfig } from 'hardhat/config';
+import { RSK_NODE } from './env';
 import '@nomiclabs/hardhat-ethers';
 import '@typechain/hardhat';
 import 'tsconfig-paths/register';
-import { RSK_NODE } from '~/env';
 
 const config: HardhatUserConfig = {
   solidity: {

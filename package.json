@@ -11,9 +11,9 @@
     "compile": "npm run clean && hardhat compile --force",
     "test:rsk": "npx hardhat test --network rskRegTest",
     "test:hh": "REPORT_GAS=true hardhat test",
-    "lint": "eslint test/**/*.ts --ext .ts",
-    "lint:fix": "eslint test/**/*.ts --ext .ts --fix",
-    "format": "prettier  test/**/*.ts !.gitignore !build/**/* !dist/**/* !artifacts/**/* !typechain/**/* --write \"**/*.+(js|ts|json)\""
+    "lint": "eslint test/**/*.ts env/*.ts --ext .ts",
+    "lint:fix": "eslint test/**/*.ts env/*.ts --ext .ts --fix",
+    "format": "prettier  test/**/*.ts env/*.ts !.gitignore !build/**/* !dist/**/* !artifacts/**/* !typechain/**/* --write \"**/*.+(js|ts|json)\""
   },
   "husky": {
     "hooks": {
