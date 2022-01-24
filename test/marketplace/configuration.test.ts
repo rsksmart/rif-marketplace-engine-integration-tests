@@ -60,7 +60,7 @@ describe('Marketplace Configuration', () => {
 
     describe('Setter', () => {
       // Tests that marketplace has the right configuration at deployment
-      it('should get true when "whitelistedAsset" attribute is set enabled', async () => {
+      it('should return true when "whitelistedAsset" attribute is set enabled', async () => {
         const { deployer, marketplaceAddress } = await prepareMarkerplace();
 
         const marketplaceInstance = createMarketplaceContract(
@@ -78,7 +78,7 @@ describe('Marketplace Configuration', () => {
           .true;
       });
 
-      it('should get true when "whitelistedAssetProvider" attribute is set enabled', async () => {
+      it('should return true when "whitelistedAssetProvider" attribute is set enabled', async () => {
         const { deployer, marketplaceAddress } = await prepareMarkerplace();
 
         const marketplaceInstance = createMarketplaceContract(
@@ -96,7 +96,7 @@ describe('Marketplace Configuration', () => {
           .eventually.be.true;
       });
 
-      it('should get true when "assetValidation" attribute is set enabled', async () => {
+      it('should return true when "assetValidation" attribute is set enabled', async () => {
         const { deployer, marketplaceAddress } = await prepareMarkerplace();
 
         const marketplaceInstance = createMarketplaceContract(
@@ -114,7 +114,7 @@ describe('Marketplace Configuration', () => {
           .true;
       });
 
-      it('should get true when "saleStrategyPerAsset" attribute is set enabled', async () => {
+      it('should return true when "saleStrategyPerAsset" attribute is set enabled', async () => {
         const { deployer, marketplaceAddress } = await prepareMarkerplace();
 
         const marketplaceInstance = createMarketplaceContract(
@@ -132,7 +132,7 @@ describe('Marketplace Configuration', () => {
           .eventually.be.true;
       });
 
-      it('should get true when "sameCurrencyPerAsset" attribute is set enabled', async () => {
+      it('should return true when "sameCurrencyPerAsset" attribute is set enabled', async () => {
         const { deployer, marketplaceAddress } = await prepareMarkerplace();
 
         const marketplaceInstance = createMarketplaceContract(
@@ -150,7 +150,7 @@ describe('Marketplace Configuration', () => {
           .eventually.be.true;
       });
 
-      it('should get true when "assetSubdomain" attribute is set enabled', async () => {
+      it('should return true when "assetSubdomain" attribute is set enabled', async () => {
         const { deployer, marketplaceAddress } = await prepareMarkerplace();
 
         const marketplaceInstance = createMarketplaceContract(
@@ -168,7 +168,7 @@ describe('Marketplace Configuration', () => {
           .true;
       });
 
-      it('should get true when "stakingAndSlashing" attribute is set enabled', async () => {
+      it('should return true when "stakingAndSlashing" attribute is set enabled', async () => {
         const { deployer, marketplaceAddress } = await prepareMarkerplace();
 
         const marketplaceInstance = createMarketplaceContract(

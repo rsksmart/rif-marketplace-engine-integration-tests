@@ -1,3 +1,6 @@
+#Hardhat files
+/cache
+
 # Logs
 logs
 *.log
