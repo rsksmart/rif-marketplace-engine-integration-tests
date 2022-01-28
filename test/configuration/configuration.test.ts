@@ -59,14 +59,20 @@ describe('Marketplace Configuration', () => {
     });
 
     describe('Setter', () => {
-      // Tests that marketplace has the right configuration at deployment
-      it('should return true when "whitelistedAsset" attribute is set enabled', async () => {
-        const { deployer, marketplaceAddress } = await prepareMarkerplace();
+      let deployer: Signer;
+      let marketplaceAddress: string;
+      let marketplaceInstance: Marketplace;
 
-        const marketplaceInstance = createMarketplaceContract(
+      beforeEach(async () => {
+        ({ deployer, marketplaceAddress } = await prepareMarkerplace());
+
+        marketplaceInstance = createMarketplaceContract(
           marketplaceAddress,
           deployer
         );
+      });
+      // Tests that marketplace has the right configuration at deployment
+      it('should return true when "whitelistedAsset" attribute is set enabled', async () => {
         const marketplaceConfig =
           createMarketplaceConfiguration(marketplaceInstance);
         const tx = (await marketplaceConfig.set(
@@ -79,12 +85,6 @@ describe('Marketplace Configuration', () => {
       });
 
       it('should return true when "whitelistedAssetProvider" attribute is set enabled', async () => {
-        const { deployer, marketplaceAddress } = await prepareMarkerplace();
-
-        const marketplaceInstance = createMarketplaceContract(
-          marketplaceAddress,
-          deployer
-        );
         const marketplaceConfig =
           createMarketplaceConfiguration(marketplaceInstance);
         const tx = (await marketplaceConfig.set(
@@ -97,12 +97,6 @@ describe('Marketplace Configuration', () => {
       });
 
       it('should return true when "assetValidation" attribute is set enabled', async () => {
-        const { deployer, marketplaceAddress } = await prepareMarkerplace();
-
-        const marketplaceInstance = createMarketplaceContract(
-          marketplaceAddress,
-          deployer
-        );
         const marketplaceConfig =
           createMarketplaceConfiguration(marketplaceInstance);
         const tx = (await marketplaceConfig.set(
@@ -115,12 +109,6 @@ describe('Marketplace Configuration', () => {
       });
 
       it('should return true when "saleStrategyPerAsset" attribute is set enabled', async () => {
-        const { deployer, marketplaceAddress } = await prepareMarkerplace();
-
-        const marketplaceInstance = createMarketplaceContract(
-          marketplaceAddress,
-          deployer
-        );
         const marketplaceConfig =
           createMarketplaceConfiguration(marketplaceInstance);
         const tx = (await marketplaceConfig.set(
@@ -133,12 +121,6 @@ describe('Marketplace Configuration', () => {
       });
 
       it('should return true when "sameCurrencyPerAsset" attribute is set enabled', async () => {
-        const { deployer, marketplaceAddress } = await prepareMarkerplace();
-
-        const marketplaceInstance = createMarketplaceContract(
-          marketplaceAddress,
-          deployer
-        );
         const marketplaceConfig =
           createMarketplaceConfiguration(marketplaceInstance);
         const tx = (await marketplaceConfig.set(
@@ -151,12 +133,6 @@ describe('Marketplace Configuration', () => {
       });
 
       it('should return true when "assetSubdomain" attribute is set enabled', async () => {
-        const { deployer, marketplaceAddress } = await prepareMarkerplace();
-
-        const marketplaceInstance = createMarketplaceContract(
-          marketplaceAddress,
-          deployer
-        );
         const marketplaceConfig =
           createMarketplaceConfiguration(marketplaceInstance);
         const tx = (await marketplaceConfig.set(
@@ -169,12 +145,6 @@ describe('Marketplace Configuration', () => {
       });
 
       it('should return true when "stakingAndSlashing" attribute is set enabled', async () => {
-        const { deployer, marketplaceAddress } = await prepareMarkerplace();
-
-        const marketplaceInstance = createMarketplaceContract(
-          marketplaceAddress,
-          deployer
-        );
         const marketplaceConfig =
           createMarketplaceConfiguration(marketplaceInstance);
         const tx = (await marketplaceConfig.set(
