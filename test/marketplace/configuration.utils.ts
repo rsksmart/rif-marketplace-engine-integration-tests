@@ -83,3 +83,45 @@ export const assertMarketplaceConfiguration = async (
     });
   });
 };
+
+export const getMarketplaceConfiguration = async (
+  marketplaceOptions: MarketplaceOptions = defaultMarketplaceOptions
+) => {
+  let deployer: Signer;
+  let marketplaceAddress: string;
+
+  const marketplaceArgs: MarketplaceOptions = {
+    ...defaultMarketplaceOptions,
+    ...marketplaceOptions,
+  };
+
+  before(async () => {
+    ({ deployer, marketplaceAddress } = await prepareMarkerplace(
+      marketplaceArgs
+    ));
+  });
+
+  const marketplaceAttributes = Object.keys(
+    MARKETPLACE_CONFIG_GETTERS
+  ) as ConfigAttribute[];
+  const marketplaceAttributeValues = Object.values(marketplaceArgs);
+
+  marketplaceAttributes.map((attribute: ConfigAttribute, i: number) => {
+    const marketplaceAttributeValue = marketplaceAttributeValues[i];
+
+    it(`should get ${marketplaceAttributeValue} when "${attribute}" attribute is ${
+      marketplaceAttributeValue ? 'enabled' : 'disabled'
+    }`, async () => {
+      const marketplaceInstance = createMarketplaceContract(
+        marketplaceAddress,
+        deployer
+      );
+
+      const marketplaceConfig =
+        createMarketplaceConfiguration(marketplaceInstance);
+      await expect(marketplaceConfig.get(attribute)).to.eventually.be.equal(
+        marketplaceAttributeValue
+      );
+    });
+  });
+};
