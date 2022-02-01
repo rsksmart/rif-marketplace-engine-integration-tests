@@ -1,3 +1,6 @@
+#Hardhat files
+/cache
+
 # Logs
 logs
 *.log
@@ -36,9 +39,12 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
+artifacts/
+cache/
+typechain/
 
 # Dependency directories
-node_modules/
+node_modules
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -102,3 +108,5 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Project related

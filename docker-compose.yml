@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  rsk-regtest:
+    build:
+      context: docker/rskj
+    expose:
+      - 4444
+      - 4445

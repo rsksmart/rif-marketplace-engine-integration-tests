@@ -1,0 +1,2672 @@
+{
+  "contractName": "AssetValidatorDelegateWhitelist",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "previousAdminRole",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "newAdminRole",
+          "type": "bytes32"
+        }
+      ],
+      "name": "RoleAdminChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "RoleGranted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "RoleRevoked",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DEFAULT_ADMIN_ROLE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_adminAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addAdministrator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addAssetManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetProviderAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addAssetProvider",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetProviderManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addAssetProviderManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetValidatorAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addAssetValidator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetValidatorManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addAssetValidatorManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_financeAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addFinance",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_financeManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "addFinanceManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getRoleAdmin",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "grantRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "hasRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_adminAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isAdministrator",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isAssetManager",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetProviderAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isAssetProvider",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetProviderManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isAssetProviderManager",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isAssetSubdomainRequired",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isAssetValidationRequired",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetValidatorAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isAssetValidator",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isAssetValidatorManager",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_financeAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isFinance",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_financeManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isFinanceManager",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_ownerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "isOwnerRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isSaleStrategyPerAssetRequired",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isSameCurrencyPerAssetRequired",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isStakingAndSlashingSupported",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isWhitelistedAssetProviderRequired",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isWhitelistedAssetRequired",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_adminAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeAdministrator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeAssetManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetProviderAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeAssetProvider",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetProviderManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeAssetProviderManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetValidatorAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeAssetValidator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetValidatorManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeAssetValidatorManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_financeAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeFinance",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_financeManagerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "removeFinanceManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "renounceRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "revokeRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setRequireAssetSubdomain",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setRequireAssetValidation",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setRequireSaleStrategyPerAsset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setRequireSameCurrencyPerAsset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setRequireWhitelistedAsset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setRequireWhitelistedAssetProvider",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_newValue",
+          "type": "bool"
+        }
+      ],
+      "name": "setSupportsStakingSlashing",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "addAssetValidatorDelegate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "removeAssetValidatorDelegate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "isAssetValidatorDelegate",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_adminAddr\",\"type\":\"address\"}],\"name\":\"addAdministrator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetManagerAddr\",\"type\":\"address\"}],\"name\":\"addAssetManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetProviderAddr\",\"type\":\"address\"}],\"name\":\"addAssetProvider\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetProviderManagerAddr\",\"type\":\"address\"}],\"name\":\"addAssetProviderManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetValidatorAddr\",\"type\":\"address\"}],\"name\":\"addAssetValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"addAssetValidatorDelegate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetValidatorManagerAddr\",\"type\":\"address\"}],\"name\":\"addAssetValidatorManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_financeAddr\",\"type\":\"address\"}],\"name\":\"addFinance\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_financeManagerAddr\",\"type\":\"address\"}],\"name\":\"addFinanceManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_adminAddr\",\"type\":\"address\"}],\"name\":\"isAdministrator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetManagerAddr\",\"type\":\"address\"}],\"name\":\"isAssetManager\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetProviderAddr\",\"type\":\"address\"}],\"name\":\"isAssetProvider\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetProviderManagerAddr\",\"type\":\"address\"}],\"name\":\"isAssetProviderManager\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isAssetSubdomainRequired\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isAssetValidationRequired\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetValidatorAddr\",\"type\":\"address\"}],\"name\":\"isAssetValidator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"isAssetValidatorDelegate\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetManagerAddr\",\"type\":\"address\"}],\"name\":\"isAssetValidatorManager\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_financeAddr\",\"type\":\"address\"}],\"name\":\"isFinance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_financeManagerAddr\",\"type\":\"address\"}],\"name\":\"isFinanceManager\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_ownerAddr\",\"type\":\"address\"}],\"name\":\"isOwnerRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isSaleStrategyPerAssetRequired\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isSameCurrencyPerAssetRequired\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isStakingAndSlashingSupported\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isWhitelistedAssetProviderRequired\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isWhitelistedAssetRequired\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_adminAddr\",\"type\":\"address\"}],\"name\":\"removeAdministrator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetManagerAddr\",\"type\":\"address\"}],\"name\":\"removeAssetManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetProviderAddr\",\"type\":\"address\"}],\"name\":\"removeAssetProvider\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetProviderManagerAddr\",\"type\":\"address\"}],\"name\":\"removeAssetProviderManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetValidatorAddr\",\"type\":\"address\"}],\"name\":\"removeAssetValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"removeAssetValidatorDelegate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetValidatorManagerAddr\",\"type\":\"address\"}],\"name\":\"removeAssetValidatorManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_financeAddr\",\"type\":\"address\"}],\"name\":\"removeFinance\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_financeManagerAddr\",\"type\":\"address\"}],\"name\":\"removeFinanceManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setRequireAssetSubdomain\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setRequireAssetValidation\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setRequireSaleStrategyPerAsset\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setRequireSameCurrencyPerAsset\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setRequireWhitelistedAsset\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setRequireWhitelistedAssetProvider\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_newValue\",\"type\":\"bool\"}],\"name\":\"setSupportsStakingSlashing\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addAdministrator(address)\":{\"details\":\"Grants address all MANAGER roles. Only executable by the owner.\"},\"addAssetManager(address)\":{\"details\":\"Grants address the ASSET_MANAGER role.\"},\"addAssetValidator(address)\":{\"details\":\"Grants address the ASSET_VALIDATOR role.\"},\"addAssetValidatorManager(address)\":{\"details\":\"Grants address the ASSET_VALIDATOR_MANAGER role.\"},\"addFinance(address)\":{\"details\":\"Grants address the FINANCE role.\"},\"addFinanceManager(address)\":{\"details\":\"Grants address the FINANCE_MANAGER role.\"},\"getRoleAdmin(bytes32)\":{\"details\":\"Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}.\"},\"grantRole(bytes32,address)\":{\"details\":\"Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role.\"},\"hasRole(bytes32,address)\":{\"details\":\"Returns `true` if `account` has been granted `role`.\"},\"isAdministrator(address)\":{\"details\":\"Returns `true` if address has been granted the ADMINISTRATOR role \"},\"isAssetManager(address)\":{\"details\":\"Returns `true` if address has been granted the ASSET_MANAGER role \"},\"isAssetProvider(address)\":{\"details\":\"Returns `true` if address has been granted the ASSET_PROVIDER role \"},\"isAssetProviderManager(address)\":{\"details\":\"Returns `true` if address has been granted the ASSET_PROVIDER_MANAGER role \"},\"isAssetSubdomainRequired()\":{\"details\":\"Returns `true` if asset subdomain is enabled \"},\"isAssetValidationRequired()\":{\"details\":\"Returns `true` if asset validation is enabled \"},\"isAssetValidator(address)\":{\"details\":\"Returns `true` if address has been granted the ASSET_VALIDATOR role \"},\"isAssetValidatorManager(address)\":{\"details\":\"Returns `true` if address has been granted the ASSET_VALIDATOR_MANAGER role \"},\"isFinance(address)\":{\"details\":\"Returns `true` if address has been granted the FINANCE role \"},\"isFinanceManager(address)\":{\"details\":\"Returns `true` if address has been granted the FINANCE_MANAGER role \"},\"isOwnerRole(address)\":{\"details\":\"Returns `true` if address has been granted the OWNER role.\"},\"isSaleStrategyPerAssetRequired()\":{\"details\":\"Returns `true` if per-asset sale strategy is enabled \"},\"isSameCurrencyPerAssetRequired()\":{\"details\":\"Returns `true` if all assets use the same set of whitelisted currencies \"},\"isStakingAndSlashingSupported()\":{\"details\":\"Returns `true` if staking and slashing is enabled \"},\"isWhitelistedAssetProviderRequired()\":{\"details\":\"Returns `true` if asset provider whitelisting is enabled \"},\"isWhitelistedAssetRequired()\":{\"details\":\"Returns `true` if asset type whitelisting is enabled \"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"removeAdministrator(address)\":{\"details\":\"Revoikes address all MANAGER roles. Only executable by the owner.\"},\"removeAssetManager(address)\":{\"details\":\"Revokes address the ASSET_MANAGER role.\"},\"removeAssetProvider(address)\":{\"details\":\"Revokes address the ASSET_PROVIDER role.\"},\"removeAssetProviderManager(address)\":{\"details\":\"Revokes address the ASSET_PROVIDER_MANAGER role.\"},\"removeAssetValidator(address)\":{\"details\":\"Revokes address the ASSET_VALIDATOR role.\"},\"removeAssetValidatorManager(address)\":{\"details\":\"Revokes address the ASSET_VALIDATOR_MANAGER role.\"},\"removeFinance(address)\":{\"details\":\"Revokes address the FINANCE role.\"},\"removeFinanceManager(address)\":{\"details\":\"Revokes address the FINANCE_MANAGER role.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"renounceRole(bytes32,address)\":{\"details\":\"Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`.\"},\"revokeRole(bytes32,address)\":{\"details\":\"Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role.\"},\"setRequireAssetSubdomain(bool)\":{\"details\":\"sets a new value for requireAssetSubdomain Only executable by the contract owner. \"},\"setRequireAssetValidation(bool)\":{\"details\":\"sets a new value for requireAssetValidation Only executable by the contract owner. \"},\"setRequireSaleStrategyPerAsset(bool)\":{\"details\":\"sets a new value for requireSaleStrategyPerAsset Only executable by the contract owner. \"},\"setRequireSameCurrencyPerAsset(bool)\":{\"details\":\"sets a new value for requireSameCurrencyPerAsset Only executable by the contract owner. \"},\"setRequireWhitelistedAsset(bool)\":{\"details\":\"sets a new value for requireWhitelistedAssetType Only executable by the contract owner. \"},\"setRequireWhitelistedAssetProvider(bool)\":{\"details\":\"sets a new value for requireWhitelistedAssetProvider Only executable by the contract owner. \"},\"setSupportsStakingSlashing(bool)\":{\"details\":\"sets a new value for supportStakingAndSlashing Only executable by the contract owner. \"},\"supportsInterface(bytes4)\":{\"details\":\"See {IERC165-supportsInterface}.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"addAssetProvider(address)\":{\"notice\":\"Grants address the ASSET_PROVIDER role.\"},\"addAssetProviderManager(address)\":{\"notice\":\"Grants address the ASSET_PROVIDER_MANAGER role.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/whitelist/AssetValidatorDelegateWhitelist.sol\":\"AssetValidatorDelegateWhitelist\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/AccessControl.sol\":{\"keccak256\":\"0xb9a137b317dc4806805f2259686186c0c053c32d80fe9c15ecdbf2eb1cf52849\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8910762bea89696c6dc68a63be98c6ddd597955f8a29418661cc99d0ce090663\",\"dweb:/ipfs/Qmed14MXXFdNYE22bCuVy5XVAMKUo1DncY8BF8VkyrvXmh\"]},\"@openzeppelin/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a\",\"dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x24e0364e503a9bbde94c715d26573a76f14cd2a202d45f96f52134ab806b67b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e12cbaa7378fd9b62280e4e1d164bedcb4399ce238f5f98fc0eefb7e50577981\",\"dweb:/ipfs/QmXRoFGUgfsaRkoPT5bxNMtSayKTQ8GZATLPXf69HcRA51\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0x32c202bd28995dd20c4347b7c6467a6d3241c74c8ad3edcbb610cd9205916c45\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8179c356adb19e70d6b31a1eedc8c5c7f0c00e669e2540f4099e3844c6074d30\",\"dweb:/ipfs/QmWFbivarEobbqhS1go64ootVuHfVohBseerYy9FTEd1W2\"]},\"@openzeppelin/contracts/utils/introspection/ERC165.sol\":{\"keccak256\":\"0xd10975de010d89fd1c78dc5e8a9a7e7f496198085c151648f20cba166b32582b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fb0048dee081f6fffa5f74afc3fb328483c2a30504e94a0ddd2a5114d731ec4d\",\"dweb:/ipfs/QmZptt1nmYoA5SgjwnSgWqgUSDgm4q52Yos3xhnMv3MV43\"]},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"project:/contracts/access/IMarketplaceAccessControl.sol\":{\"keccak256\":\"0x9d494f7a4ec975c421829b353f95023c97d12e89abf9aa384331545b5024e6e7\",\"license\":\"MIT OR Apache-2.0\",\"urls\":[\"bzz-raw://693d84ef8aa25244a78fa57a6ac22eec079ef6243346f1314c233eb79efabc17\",\"dweb:/ipfs/QmduhpqLMPn6GRtrc6oQyeZHxAwFbP9izMrKwN6Qtnc5Ld\"]},\"project:/contracts/access/MarketplaceAccessControl.sol\":{\"keccak256\":\"0x6726e768c6fd4dff7c27997d6f75103fdd13a64e5e0115e159ebeea67c7f670d\",\"license\":\"MIT OR Apache-2.0\",\"urls\":[\"bzz-raw://5e5fb1e21c9c7da289898048709faa3cb8d8b49e4aa94b55695dfbd3fdc15990\",\"dweb:/ipfs/QmUt76i59o32vxQCBJsdLBYoMzx4ZFjSgaYcMUvZuUB3wz\"]},\"project:/contracts/config/IMarketplaceConfiguration.sol\":{\"keccak256\":\"0x935f0283d693fbc37ec8a2845fb1a14f9c1aae94f285ef92175e8ebcb6bb8125\",\"license\":\"MIT OR Apache-2.0\",\"urls\":[\"bzz-raw://338369aa5c624ef3a5601f637066d6e5fc25ec1c8c8c487320cff773cf432fde\",\"dweb:/ipfs/QmUetR7C8pjEuUL79jA119JpQZwuH3TnmeLPt8MEX11uEq\"]},\"project:/contracts/config/MarketplaceConfiguration.sol\":{\"keccak256\":\"0x2280e5d23edf7be077a0f3a7b93fede09aa5fe89c8b3e6a2f9ca78c58db2f08a\",\"license\":\"MIT OR Apache-2.0\",\"urls\":[\"bzz-raw://26296cffe80adf3081a9fe23df4c535c1701513b11f9b9d8a094ba9620f1e8d1\",\"dweb:/ipfs/QmYdk8Ydfz8CN1sGoYSwpChpSvYJar1tthHBbDAEPZ5c6t\"]},\"project:/contracts/whitelist/AssetValidatorDelegateWhitelist.sol\":{\"keccak256\":\"0x4efc6bb72d4a0485eca2a18176cbf7659f548e61161db6de475ebadc9336b84e\",\"license\":\"MIT OR Apache-2.0\",\"urls\":[\"bzz-raw://9de70f268e942dc116558b1daae90e6ad47e48e9fdc2c4bb496725e057ebefad\",\"dweb:/ipfs/QmbasChTAXEYW2FxjJedTaJaLAAM3LamED825QfDoiaiUE\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT OR Apache-2.0\npragma solidity ^0.8.4;\n\nimport {MarketplaceConfiguration} from \"../config/MarketplaceConfiguration.sol\";\nimport {MarketplaceAccessControl, ASSET_VALIDATOR} from \"../access/MarketplaceAccessControl.sol\";\n\nabstract contract AssetValidatorDelegateWhitelist is\n    MarketplaceAccessControl,\n    MarketplaceConfiguration\n{\n    mapping(address => mapping(address => bool))\n        private _assetValidatorDelegateWhitelist;\n\n    function addAssetValidatorDelegate(address _address)\n        external\n        requiresAssetValidation\n        onlyRole(ASSET_VALIDATOR)\n    {\n        _assetValidatorDelegateWhitelist[msg.sender][_address] = true;\n    }\n\n    function removeAssetValidatorDelegate(address _address)\n        external\n        requiresAssetValidation\n        onlyRole(ASSET_VALIDATOR)\n    {\n        _assetValidatorDelegateWhitelist[msg.sender][_address] = false;\n    }\n\n    function isAssetValidatorDelegate(address _address)\n        external\n        view\n        returns (bool)\n    {\n        return _assetValidatorDelegateWhitelist[msg.sender][_address];\n    }\n}\n",
+  "sourcePath": "/Users/rjauregui/RIF_MKTV2/rif-marketplace-engine-integration-tests/contracts/whitelist/AssetValidatorDelegateWhitelist.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/whitelist/AssetValidatorDelegateWhitelist.sol",
+    "exportedSymbols": {
+      "ASSET_VALIDATOR": [
+        2466
+      ],
+      "AssetValidatorDelegateWhitelist": [
+        4138
+      ],
+      "MarketplaceAccessControl": [
+        3035
+      ],
+      "MarketplaceConfiguration": [
+        3736
+      ]
+    },
+    "id": 4139,
+    "license": "MIT OR Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4067,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "46:23:31"
+      },
+      {
+        "absolutePath": "project:/contracts/config/MarketplaceConfiguration.sol",
+        "file": "../config/MarketplaceConfiguration.sol",
+        "id": 4069,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 4139,
+        "sourceUnit": 3737,
+        "src": "71:80:31",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 4068,
+              "name": "MarketplaceConfiguration",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "79:24:31",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/access/MarketplaceAccessControl.sol",
+        "file": "../access/MarketplaceAccessControl.sol",
+        "id": 4072,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 4139,
+        "sourceUnit": 3036,
+        "src": "152:97:31",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 4070,
+              "name": "MarketplaceAccessControl",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "160:24:31",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 4071,
+              "name": "ASSET_VALIDATOR",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "186:15:31",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 4073,
+              "name": "MarketplaceAccessControl",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3035,
+              "src": "308:24:31"
+            },
+            "id": 4074,
+            "nodeType": "InheritanceSpecifier",
+            "src": "308:24:31"
+          },
+          {
+            "baseName": {
+              "id": 4075,
+              "name": "MarketplaceConfiguration",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3736,
+              "src": "338:24:31"
+            },
+            "id": 4076,
+            "nodeType": "InheritanceSpecifier",
+            "src": "338:24:31"
+          }
+        ],
+        "canonicalName": "AssetValidatorDelegateWhitelist",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 4138,
+        "linearizedBaseContracts": [
+          4138,
+          3736,
+          3475,
+          3035,
+          486,
+          308,
+          1601,
+          1613,
+          381,
+          1300,
+          2433
+        ],
+        "name": "AssetValidatorDelegateWhitelist",
+        "nameLocation": "269:31:31",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4082,
+            "mutability": "mutable",
+            "name": "_assetValidatorDelegateWhitelist",
+            "nameLocation": "430:32:31",
+            "nodeType": "VariableDeclaration",
+            "scope": 4138,
+            "src": "369:93:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
+              "typeString": "mapping(address => mapping(address => bool))"
+            },
+            "typeName": {
+              "id": 4081,
+              "keyType": {
+                "id": 4077,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "377:7:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "369:44:31",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
+                "typeString": "mapping(address => mapping(address => bool))"
+              },
+              "valueType": {
+                "id": 4080,
+                "keyType": {
+                  "id": 4078,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "396:7:31",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "388:24:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                  "typeString": "mapping(address => bool)"
+                },
+                "valueType": {
+                  "id": 4079,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "407:4:31",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                }
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 4101,
+              "nodeType": "Block",
+              "src": "609:78:31",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 4099,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "baseExpression": {
+                          "id": 4092,
+                          "name": "_assetValidatorDelegateWhitelist",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4082,
+                          "src": "619:32:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
+                            "typeString": "mapping(address => mapping(address => bool))"
+                          }
+                        },
+                        "id": 4096,
+                        "indexExpression": {
+                          "expression": {
+                            "id": 4093,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4294967281,
+                            "src": "652:3:31",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 4094,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "652:10:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "619:44:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 4097,
+                      "indexExpression": {
+                        "id": 4095,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4084,
+                        "src": "664:8:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "619:54:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "74727565",
+                      "id": 4098,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "676:4:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "619:61:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 4100,
+                  "nodeType": "ExpressionStatement",
+                  "src": "619:61:31"
+                }
+              ]
+            },
+            "functionSelector": "a76b0e95",
+            "id": 4102,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 4087,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 4086,
+                  "name": "requiresAssetValidation",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 3560,
+                  "src": "547:23:31"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "547:23:31"
+              },
+              {
+                "arguments": [
+                  {
+                    "id": 4089,
+                    "name": "ASSET_VALIDATOR",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2466,
+                    "src": "588:15:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 4090,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 4088,
+                  "name": "onlyRole",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 40,
+                  "src": "579:8:31"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "579:25:31"
+              }
+            ],
+            "name": "addAssetValidatorDelegate",
+            "nameLocation": "478:25:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4085,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4084,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "512:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4102,
+                  "src": "504:16:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4083,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "504:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "503:18:31"
+            },
+            "returnParameters": {
+              "id": 4091,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "609:0:31"
+            },
+            "scope": 4138,
+            "src": "469:218:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 4121,
+              "nodeType": "Block",
+              "src": "836:79:31",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 4119,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "baseExpression": {
+                          "id": 4112,
+                          "name": "_assetValidatorDelegateWhitelist",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4082,
+                          "src": "846:32:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
+                            "typeString": "mapping(address => mapping(address => bool))"
+                          }
+                        },
+                        "id": 4116,
+                        "indexExpression": {
+                          "expression": {
+                            "id": 4113,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4294967281,
+                            "src": "879:3:31",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 4114,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "879:10:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "846:44:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 4117,
+                      "indexExpression": {
+                        "id": 4115,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4104,
+                        "src": "891:8:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "846:54:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "66616c7365",
+                      "id": 4118,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "903:5:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "846:62:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 4120,
+                  "nodeType": "ExpressionStatement",
+                  "src": "846:62:31"
+                }
+              ]
+            },
+            "functionSelector": "5432c1dc",
+            "id": 4122,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 4107,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 4106,
+                  "name": "requiresAssetValidation",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 3560,
+                  "src": "774:23:31"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "774:23:31"
+              },
+              {
+                "arguments": [
+                  {
+                    "id": 4109,
+                    "name": "ASSET_VALIDATOR",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2466,
+                    "src": "815:15:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 4110,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 4108,
+                  "name": "onlyRole",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 40,
+                  "src": "806:8:31"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "806:25:31"
+              }
+            ],
+            "name": "removeAssetValidatorDelegate",
+            "nameLocation": "702:28:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4105,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4104,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "739:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4122,
+                  "src": "731:16:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4103,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "731:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "730:18:31"
+            },
+            "returnParameters": {
+              "id": 4111,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "836:0:31"
+            },
+            "scope": 4138,
+            "src": "693:222:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 4136,
+              "nodeType": "Block",
+              "src": "1030:78:31",
+              "statements": [
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "baseExpression": {
+                        "id": 4129,
+                        "name": "_assetValidatorDelegateWhitelist",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4082,
+                        "src": "1047:32:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
+                          "typeString": "mapping(address => mapping(address => bool))"
+                        }
+                      },
+                      "id": 4132,
+                      "indexExpression": {
+                        "expression": {
+                          "id": 4130,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967281,
+                          "src": "1080:3:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 4131,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1080:10:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1047:44:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                        "typeString": "mapping(address => bool)"
+                      }
+                    },
+                    "id": 4134,
+                    "indexExpression": {
+                      "id": 4133,
+                      "name": "_address",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4124,
+                      "src": "1092:8:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1047:54:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 4128,
+                  "id": 4135,
+                  "nodeType": "Return",
+                  "src": "1040:61:31"
+                }
+              ]
+            },
+            "functionSelector": "176e75a1",
+            "id": 4137,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetValidatorDelegate",
+            "nameLocation": "930:24:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4125,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4124,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "963:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4137,
+                  "src": "955:16:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4123,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "955:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "954:18:31"
+            },
+            "returnParameters": {
+              "id": 4128,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4127,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4137,
+                  "src": "1020:4:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4126,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1020:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1019:6:31"
+            },
+            "scope": 4138,
+            "src": "921:187:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4139,
+        "src": "251:859:31",
+        "usedErrors": []
+      }
+    ],
+    "src": "46:1065:31"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/whitelist/AssetValidatorDelegateWhitelist.sol",
+    "exportedSymbols": {
+      "ASSET_VALIDATOR": [
+        2466
+      ],
+      "AssetValidatorDelegateWhitelist": [
+        4138
+      ],
+      "MarketplaceAccessControl": [
+        3035
+      ],
+      "MarketplaceConfiguration": [
+        3736
+      ]
+    },
+    "id": 4139,
+    "license": "MIT OR Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4067,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "46:23:31"
+      },
+      {
+        "absolutePath": "project:/contracts/config/MarketplaceConfiguration.sol",
+        "file": "../config/MarketplaceConfiguration.sol",
+        "id": 4069,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 4139,
+        "sourceUnit": 3737,
+        "src": "71:80:31",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 4068,
+              "name": "MarketplaceConfiguration",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "79:24:31",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/access/MarketplaceAccessControl.sol",
+        "file": "../access/MarketplaceAccessControl.sol",
+        "id": 4072,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 4139,
+        "sourceUnit": 3036,
+        "src": "152:97:31",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 4070,
+              "name": "MarketplaceAccessControl",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "160:24:31",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 4071,
+              "name": "ASSET_VALIDATOR",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "186:15:31",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 4073,
+              "name": "MarketplaceAccessControl",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3035,
+              "src": "308:24:31"
+            },
+            "id": 4074,
+            "nodeType": "InheritanceSpecifier",
+            "src": "308:24:31"
+          },
+          {
+            "baseName": {
+              "id": 4075,
+              "name": "MarketplaceConfiguration",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3736,
+              "src": "338:24:31"
+            },
+            "id": 4076,
+            "nodeType": "InheritanceSpecifier",
+            "src": "338:24:31"
+          }
+        ],
+        "canonicalName": "AssetValidatorDelegateWhitelist",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 4138,
+        "linearizedBaseContracts": [
+          4138,
+          3736,
+          3475,
+          3035,
+          486,
+          308,
+          1601,
+          1613,
+          381,
+          1300,
+          2433
+        ],
+        "name": "AssetValidatorDelegateWhitelist",
+        "nameLocation": "269:31:31",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4082,
+            "mutability": "mutable",
+            "name": "_assetValidatorDelegateWhitelist",
+            "nameLocation": "430:32:31",
+            "nodeType": "VariableDeclaration",
+            "scope": 4138,
+            "src": "369:93:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
+              "typeString": "mapping(address => mapping(address => bool))"
+            },
+            "typeName": {
+              "id": 4081,
+              "keyType": {
+                "id": 4077,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "377:7:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "369:44:31",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
+                "typeString": "mapping(address => mapping(address => bool))"
+              },
+              "valueType": {
+                "id": 4080,
+                "keyType": {
+                  "id": 4078,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "396:7:31",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "388:24:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                  "typeString": "mapping(address => bool)"
+                },
+                "valueType": {
+                  "id": 4079,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "407:4:31",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                }
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 4101,
+              "nodeType": "Block",
+              "src": "609:78:31",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 4099,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "baseExpression": {
+                          "id": 4092,
+                          "name": "_assetValidatorDelegateWhitelist",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4082,
+                          "src": "619:32:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
+                            "typeString": "mapping(address => mapping(address => bool))"
+                          }
+                        },
+                        "id": 4096,
+                        "indexExpression": {
+                          "expression": {
+                            "id": 4093,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4294967281,
+                            "src": "652:3:31",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 4094,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "652:10:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "619:44:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 4097,
+                      "indexExpression": {
+                        "id": 4095,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4084,
+                        "src": "664:8:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "619:54:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "74727565",
+                      "id": 4098,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "676:4:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "619:61:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 4100,
+                  "nodeType": "ExpressionStatement",
+                  "src": "619:61:31"
+                }
+              ]
+            },
+            "functionSelector": "a76b0e95",
+            "id": 4102,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 4087,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 4086,
+                  "name": "requiresAssetValidation",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 3560,
+                  "src": "547:23:31"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "547:23:31"
+              },
+              {
+                "arguments": [
+                  {
+                    "id": 4089,
+                    "name": "ASSET_VALIDATOR",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2466,
+                    "src": "588:15:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 4090,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 4088,
+                  "name": "onlyRole",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 40,
+                  "src": "579:8:31"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "579:25:31"
+              }
+            ],
+            "name": "addAssetValidatorDelegate",
+            "nameLocation": "478:25:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4085,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4084,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "512:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4102,
+                  "src": "504:16:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4083,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "504:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "503:18:31"
+            },
+            "returnParameters": {
+              "id": 4091,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "609:0:31"
+            },
+            "scope": 4138,
+            "src": "469:218:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 4121,
+              "nodeType": "Block",
+              "src": "836:79:31",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 4119,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "baseExpression": {
+                          "id": 4112,
+                          "name": "_assetValidatorDelegateWhitelist",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4082,
+                          "src": "846:32:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
+                            "typeString": "mapping(address => mapping(address => bool))"
+                          }
+                        },
+                        "id": 4116,
+                        "indexExpression": {
+                          "expression": {
+                            "id": 4113,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4294967281,
+                            "src": "879:3:31",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 4114,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "879:10:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "846:44:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 4117,
+                      "indexExpression": {
+                        "id": 4115,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4104,
+                        "src": "891:8:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "846:54:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "hexValue": "66616c7365",
+                      "id": 4118,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "903:5:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "846:62:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 4120,
+                  "nodeType": "ExpressionStatement",
+                  "src": "846:62:31"
+                }
+              ]
+            },
+            "functionSelector": "5432c1dc",
+            "id": 4122,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 4107,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 4106,
+                  "name": "requiresAssetValidation",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 3560,
+                  "src": "774:23:31"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "774:23:31"
+              },
+              {
+                "arguments": [
+                  {
+                    "id": 4109,
+                    "name": "ASSET_VALIDATOR",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2466,
+                    "src": "815:15:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 4110,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 4108,
+                  "name": "onlyRole",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 40,
+                  "src": "806:8:31"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "806:25:31"
+              }
+            ],
+            "name": "removeAssetValidatorDelegate",
+            "nameLocation": "702:28:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4105,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4104,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "739:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4122,
+                  "src": "731:16:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4103,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "731:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "730:18:31"
+            },
+            "returnParameters": {
+              "id": 4111,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "836:0:31"
+            },
+            "scope": 4138,
+            "src": "693:222:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 4136,
+              "nodeType": "Block",
+              "src": "1030:78:31",
+              "statements": [
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "baseExpression": {
+                        "id": 4129,
+                        "name": "_assetValidatorDelegateWhitelist",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4082,
+                        "src": "1047:32:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
+                          "typeString": "mapping(address => mapping(address => bool))"
+                        }
+                      },
+                      "id": 4132,
+                      "indexExpression": {
+                        "expression": {
+                          "id": 4130,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967281,
+                          "src": "1080:3:31",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 4131,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1080:10:31",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1047:44:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                        "typeString": "mapping(address => bool)"
+                      }
+                    },
+                    "id": 4134,
+                    "indexExpression": {
+                      "id": 4133,
+                      "name": "_address",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4124,
+                      "src": "1092:8:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1047:54:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 4128,
+                  "id": 4135,
+                  "nodeType": "Return",
+                  "src": "1040:61:31"
+                }
+              ]
+            },
+            "functionSelector": "176e75a1",
+            "id": 4137,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAssetValidatorDelegate",
+            "nameLocation": "930:24:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4125,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4124,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "963:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4137,
+                  "src": "955:16:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4123,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "955:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "954:18:31"
+            },
+            "returnParameters": {
+              "id": 4128,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4127,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4137,
+                  "src": "1020:4:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4126,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1020:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1019:6:31"
+            },
+            "scope": 4138,
+            "src": "921:187:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4139,
+        "src": "251:859:31",
+        "usedErrors": []
+      }
+    ],
+    "src": "46:1065:31"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-12-22T21:29:30.862Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "addAdministrator(address)": {
+        "details": "Grants address all MANAGER roles. Only executable by the owner."
+      },
+      "addAssetManager(address)": {
+        "details": "Grants address the ASSET_MANAGER role."
+      },
+      "addAssetValidator(address)": {
+        "details": "Grants address the ASSET_VALIDATOR role."
+      },
+      "addAssetValidatorManager(address)": {
+        "details": "Grants address the ASSET_VALIDATOR_MANAGER role."
+      },
+      "addFinance(address)": {
+        "details": "Grants address the FINANCE role."
+      },
+      "addFinanceManager(address)": {
+        "details": "Grants address the FINANCE_MANAGER role."
+      },
+      "getRoleAdmin(bytes32)": {
+        "details": "Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}."
+      },
+      "grantRole(bytes32,address)": {
+        "details": "Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role."
+      },
+      "hasRole(bytes32,address)": {
+        "details": "Returns `true` if `account` has been granted `role`."
+      },
+      "isAdministrator(address)": {
+        "details": "Returns `true` if address has been granted the ADMINISTRATOR role "
+      },
+      "isAssetManager(address)": {
+        "details": "Returns `true` if address has been granted the ASSET_MANAGER role "
+      },
+      "isAssetProvider(address)": {
+        "details": "Returns `true` if address has been granted the ASSET_PROVIDER role "
+      },
+      "isAssetProviderManager(address)": {
+        "details": "Returns `true` if address has been granted the ASSET_PROVIDER_MANAGER role "
+      },
+      "isAssetSubdomainRequired()": {
+        "details": "Returns `true` if asset subdomain is enabled "
+      },
+      "isAssetValidationRequired()": {
+        "details": "Returns `true` if asset validation is enabled "
+      },
+      "isAssetValidator(address)": {
+        "details": "Returns `true` if address has been granted the ASSET_VALIDATOR role "
+      },
+      "isAssetValidatorManager(address)": {
+        "details": "Returns `true` if address has been granted the ASSET_VALIDATOR_MANAGER role "
+      },
+      "isFinance(address)": {
+        "details": "Returns `true` if address has been granted the FINANCE role "
+      },
+      "isFinanceManager(address)": {
+        "details": "Returns `true` if address has been granted the FINANCE_MANAGER role "
+      },
+      "isOwnerRole(address)": {
+        "details": "Returns `true` if address has been granted the OWNER role."
+      },
+      "isSaleStrategyPerAssetRequired()": {
+        "details": "Returns `true` if per-asset sale strategy is enabled "
+      },
+      "isSameCurrencyPerAssetRequired()": {
+        "details": "Returns `true` if all assets use the same set of whitelisted currencies "
+      },
+      "isStakingAndSlashingSupported()": {
+        "details": "Returns `true` if staking and slashing is enabled "
+      },
+      "isWhitelistedAssetProviderRequired()": {
+        "details": "Returns `true` if asset provider whitelisting is enabled "
+      },
+      "isWhitelistedAssetRequired()": {
+        "details": "Returns `true` if asset type whitelisting is enabled "
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "removeAdministrator(address)": {
+        "details": "Revoikes address all MANAGER roles. Only executable by the owner."
+      },
+      "removeAssetManager(address)": {
+        "details": "Revokes address the ASSET_MANAGER role."
+      },
+      "removeAssetProvider(address)": {
+        "details": "Revokes address the ASSET_PROVIDER role."
+      },
+      "removeAssetProviderManager(address)": {
+        "details": "Revokes address the ASSET_PROVIDER_MANAGER role."
+      },
+      "removeAssetValidator(address)": {
+        "details": "Revokes address the ASSET_VALIDATOR role."
+      },
+      "removeAssetValidatorManager(address)": {
+        "details": "Revokes address the ASSET_VALIDATOR_MANAGER role."
+      },
+      "removeFinance(address)": {
+        "details": "Revokes address the FINANCE role."
+      },
+      "removeFinanceManager(address)": {
+        "details": "Revokes address the FINANCE_MANAGER role."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "renounceRole(bytes32,address)": {
+        "details": "Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`."
+      },
+      "revokeRole(bytes32,address)": {
+        "details": "Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role."
+      },
+      "setRequireAssetSubdomain(bool)": {
+        "details": "sets a new value for requireAssetSubdomain Only executable by the contract owner. "
+      },
+      "setRequireAssetValidation(bool)": {
+        "details": "sets a new value for requireAssetValidation Only executable by the contract owner. "
+      },
+      "setRequireSaleStrategyPerAsset(bool)": {
+        "details": "sets a new value for requireSaleStrategyPerAsset Only executable by the contract owner. "
+      },
+      "setRequireSameCurrencyPerAsset(bool)": {
+        "details": "sets a new value for requireSameCurrencyPerAsset Only executable by the contract owner. "
+      },
+      "setRequireWhitelistedAsset(bool)": {
+        "details": "sets a new value for requireWhitelistedAssetType Only executable by the contract owner. "
+      },
+      "setRequireWhitelistedAssetProvider(bool)": {
+        "details": "sets a new value for requireWhitelistedAssetProvider Only executable by the contract owner. "
+      },
+      "setSupportsStakingSlashing(bool)": {
+        "details": "sets a new value for supportStakingAndSlashing Only executable by the contract owner. "
+      },
+      "supportsInterface(bytes4)": {
+        "details": "See {IERC165-supportsInterface}."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "addAssetProvider(address)": {
+        "notice": "Grants address the ASSET_PROVIDER role."
+      },
+      "addAssetProviderManager(address)": {
+        "notice": "Grants address the ASSET_PROVIDER_MANAGER role."
+      }
+    },
+    "version": 1
+  }
+}

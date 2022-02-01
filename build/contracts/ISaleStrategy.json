@@ -1,0 +1,710 @@
+{
+  "contractName": "ISaleStrategy",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_buyerAddr",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IERC721",
+          "name": "_nft",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IMarketplace",
+          "name": "_mkp",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_orderId",
+          "type": "uint256"
+        }
+      ],
+      "name": "execute",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_buyerAddr\",\"type\":\"address\"},{\"internalType\":\"contract IERC721\",\"name\":\"_nft\",\"type\":\"address\"},{\"internalType\":\"contract IMarketplace\",\"name\":\"_mkp\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_orderId\",\"type\":\"uint256\"}],\"name\":\"execute\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"execute(address,address,address,uint256,uint256)\":{\"params\":{\"_buyerAddr\":\"contract address for buyer.\",\"_mkp\":\"marketplace.\",\"_nft\":\"NFT.\",\"_orderId\":\"Id of an Order put on Marketplace for sell.\",\"_tokenId\":\"token owned by provider in order.\"},\"returns\":{\"_0\":\"bool.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"execute(address,address,address,uint256,uint256)\":{\"notice\":\"Execute order for sell.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/asset/ISaleStrategy.sol\":\"ISaleStrategy\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x61437cb513a887a1bbad006e7b1c8b414478427d33de47c5600af3c748f108da\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2c3d0973630ed74f2b5ce3944677a885dc70ec32fc83b35f55045a10224da32b\",\"dweb:/ipfs/QmbefZ5RoEZKNHXCALfh683PnaNYzKPcKMFjyY1DVAgq8A\"]},\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x516a22876c1fab47f49b1bc22b4614491cd05338af8bd2e7b382da090a079990\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a439187f7126d31add4557f82d8aed6be0162007cd7182c48fd934dbab8f3849\",\"dweb:/ipfs/QmRPLguRFvrRJS7r6F1bcLvsx6q1VrgjEpZafyeL8D7xZh\"]},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"project:/contracts/IMarketplace.sol\":{\"keccak256\":\"0x7c902daaaf1bcdaacb3da0b50fc4b05621d94ea21a21f6bb9f8e075c5d12227f\",\"license\":\"MIT OR Apache-2.0\",\"urls\":[\"bzz-raw://ed32f318be1fc827cd0155f60abbdd711242129a04ab106d77088fff3c4a4458\",\"dweb:/ipfs/QmdKejgy23pEdcFcPRtrmuTrkiiczDfWSFpSuzGajm9XYF\"]},\"project:/contracts/asset/ISaleStrategy.sol\":{\"keccak256\":\"0xdf577abe7ef32207ebd1b73fb3c364afb1c0952dccf8a91fcd4a8390696263fd\",\"license\":\"MIT OR Apache-2.0\",\"urls\":[\"bzz-raw://5059e356c581494d20e48932346eed5e262ba71dca350c219f425719a5954e13\",\"dweb:/ipfs/QmWYeGCuGWFmYGRdPKYifAkKd1y1LL2jr8mx5fCU6VDBSA\"]},\"project:/contracts/order/Order.sol\":{\"keccak256\":\"0x361578e3e3f9442d57d66bd6af5bf30e118bf191297f1cc39b097ff5055ed561\",\"license\":\"MIT OR Apache-2.0\",\"urls\":[\"bzz-raw://7dc93544b75ebc6bcbdf5b4ef36f71bb564ecfa967ac66dbead26da8c3f76ec9\",\"dweb:/ipfs/QmSC9a4F7ZESqXyFE96Y6ngJS8ozecU16gXJ3uP1LsEH4h\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT OR Apache-2.0\npragma solidity ^0.8.4;\n\nimport {IERC721} from \"@openzeppelin/contracts/token/ERC721/IERC721.sol\";\nimport {IMarketplace} from \"../IMarketplace.sol\";\n\ninterface ISaleStrategy {\n    /**\n        @notice Execute order for sell.\n        @param _buyerAddr contract address for buyer.\n        @param _nft NFT.\n        @param _mkp marketplace.\n        @param _tokenId token owned by provider in order.\n        @param _orderId Id of an Order put on Marketplace for sell.\n        @return bool.\n     */\n    function execute(\n        address _buyerAddr,\n        IERC721 _nft,\n        IMarketplace _mkp,\n        uint256 _tokenId,\n        uint256 _orderId\n    ) external returns (bool);\n}\n",
+  "sourcePath": "/Users/rjauregui/RIF_MKTV2/rif-marketplace-engine-integration-tests/contracts/asset/ISaleStrategy.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/asset/ISaleStrategy.sol",
+    "exportedSymbols": {
+      "IERC721": [
+        1251
+      ],
+      "IMarketplace": [
+        1679
+      ],
+      "ISaleStrategy": [
+        3388
+      ]
+    },
+    "id": 3389,
+    "license": "MIT OR Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3365,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "46:23:21"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "file": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "id": 3367,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 3389,
+        "sourceUnit": 1252,
+        "src": "71:73:21",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 3366,
+              "name": "IERC721",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "79:7:21",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/IMarketplace.sol",
+        "file": "../IMarketplace.sol",
+        "id": 3369,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 3389,
+        "sourceUnit": 1680,
+        "src": "145:49:21",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 3368,
+              "name": "IMarketplace",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "153:12:21",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISaleStrategy",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 3388,
+        "linearizedBaseContracts": [
+          3388
+        ],
+        "name": "ISaleStrategy",
+        "nameLocation": "206:13:21",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 3370,
+              "nodeType": "StructuredDocumentation",
+              "src": "226:311:21",
+              "text": "@notice Execute order for sell.\n@param _buyerAddr contract address for buyer.\n@param _nft NFT.\n@param _mkp marketplace.\n@param _tokenId token owned by provider in order.\n@param _orderId Id of an Order put on Marketplace for sell.\n@return bool."
+            },
+            "functionSelector": "3343a585",
+            "id": 3387,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "execute",
+            "nameLocation": "551:7:21",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3372,
+                  "mutability": "mutable",
+                  "name": "_buyerAddr",
+                  "nameLocation": "576:10:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3387,
+                  "src": "568:18:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3371,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "568:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3375,
+                  "mutability": "mutable",
+                  "name": "_nft",
+                  "nameLocation": "604:4:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3387,
+                  "src": "596:12:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC721_$1251",
+                    "typeString": "contract IERC721"
+                  },
+                  "typeName": {
+                    "id": 3374,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 3373,
+                      "name": "IERC721",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1251,
+                      "src": "596:7:21"
+                    },
+                    "referencedDeclaration": 1251,
+                    "src": "596:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC721_$1251",
+                      "typeString": "contract IERC721"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3378,
+                  "mutability": "mutable",
+                  "name": "_mkp",
+                  "nameLocation": "631:4:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3387,
+                  "src": "618:17:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IMarketplace_$1679",
+                    "typeString": "contract IMarketplace"
+                  },
+                  "typeName": {
+                    "id": 3377,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 3376,
+                      "name": "IMarketplace",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1679,
+                      "src": "618:12:21"
+                    },
+                    "referencedDeclaration": 1679,
+                    "src": "618:12:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMarketplace_$1679",
+                      "typeString": "contract IMarketplace"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3380,
+                  "mutability": "mutable",
+                  "name": "_tokenId",
+                  "nameLocation": "653:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3387,
+                  "src": "645:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3379,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "645:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3382,
+                  "mutability": "mutable",
+                  "name": "_orderId",
+                  "nameLocation": "679:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3387,
+                  "src": "671:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3381,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "671:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "558:135:21"
+            },
+            "returnParameters": {
+              "id": 3386,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3385,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3387,
+                  "src": "712:4:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3384,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "712:4:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "711:6:21"
+            },
+            "scope": 3388,
+            "src": "542:176:21",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3389,
+        "src": "196:524:21",
+        "usedErrors": []
+      }
+    ],
+    "src": "46:675:21"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/asset/ISaleStrategy.sol",
+    "exportedSymbols": {
+      "IERC721": [
+        1251
+      ],
+      "IMarketplace": [
+        1679
+      ],
+      "ISaleStrategy": [
+        3388
+      ]
+    },
+    "id": 3389,
+    "license": "MIT OR Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3365,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "46:23:21"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "file": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "id": 3367,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 3389,
+        "sourceUnit": 1252,
+        "src": "71:73:21",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 3366,
+              "name": "IERC721",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "79:7:21",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/IMarketplace.sol",
+        "file": "../IMarketplace.sol",
+        "id": 3369,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 3389,
+        "sourceUnit": 1680,
+        "src": "145:49:21",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 3368,
+              "name": "IMarketplace",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "153:12:21",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISaleStrategy",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 3388,
+        "linearizedBaseContracts": [
+          3388
+        ],
+        "name": "ISaleStrategy",
+        "nameLocation": "206:13:21",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 3370,
+              "nodeType": "StructuredDocumentation",
+              "src": "226:311:21",
+              "text": "@notice Execute order for sell.\n@param _buyerAddr contract address for buyer.\n@param _nft NFT.\n@param _mkp marketplace.\n@param _tokenId token owned by provider in order.\n@param _orderId Id of an Order put on Marketplace for sell.\n@return bool."
+            },
+            "functionSelector": "3343a585",
+            "id": 3387,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "execute",
+            "nameLocation": "551:7:21",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3372,
+                  "mutability": "mutable",
+                  "name": "_buyerAddr",
+                  "nameLocation": "576:10:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3387,
+                  "src": "568:18:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3371,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "568:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3375,
+                  "mutability": "mutable",
+                  "name": "_nft",
+                  "nameLocation": "604:4:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3387,
+                  "src": "596:12:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC721_$1251",
+                    "typeString": "contract IERC721"
+                  },
+                  "typeName": {
+                    "id": 3374,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 3373,
+                      "name": "IERC721",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1251,
+                      "src": "596:7:21"
+                    },
+                    "referencedDeclaration": 1251,
+                    "src": "596:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC721_$1251",
+                      "typeString": "contract IERC721"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3378,
+                  "mutability": "mutable",
+                  "name": "_mkp",
+                  "nameLocation": "631:4:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3387,
+                  "src": "618:17:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IMarketplace_$1679",
+                    "typeString": "contract IMarketplace"
+                  },
+                  "typeName": {
+                    "id": 3377,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 3376,
+                      "name": "IMarketplace",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1679,
+                      "src": "618:12:21"
+                    },
+                    "referencedDeclaration": 1679,
+                    "src": "618:12:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMarketplace_$1679",
+                      "typeString": "contract IMarketplace"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3380,
+                  "mutability": "mutable",
+                  "name": "_tokenId",
+                  "nameLocation": "653:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3387,
+                  "src": "645:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3379,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "645:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3382,
+                  "mutability": "mutable",
+                  "name": "_orderId",
+                  "nameLocation": "679:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3387,
+                  "src": "671:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3381,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "671:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "558:135:21"
+            },
+            "returnParameters": {
+              "id": 3386,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3385,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3387,
+                  "src": "712:4:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3384,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "712:4:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "711:6:21"
+            },
+            "scope": 3388,
+            "src": "542:176:21",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3389,
+        "src": "196:524:21",
+        "usedErrors": []
+      }
+    ],
+    "src": "46:675:21"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-12-22T21:29:30.836Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "execute(address,address,address,uint256,uint256)": {
+        "params": {
+          "_buyerAddr": "contract address for buyer.",
+          "_mkp": "marketplace.",
+          "_nft": "NFT.",
+          "_orderId": "Id of an Order put on Marketplace for sell.",
+          "_tokenId": "token owned by provider in order."
+        },
+        "returns": {
+          "_0": "bool."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "execute(address,address,address,uint256,uint256)": {
+        "notice": "Execute order for sell."
+      }
+    },
+    "version": 1
+  }
+}

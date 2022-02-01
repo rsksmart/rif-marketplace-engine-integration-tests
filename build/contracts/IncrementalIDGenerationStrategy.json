@@ -1,0 +1,1220 @@
+{
+  "contractName": "IncrementalIDGenerationStrategy",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getTokenCounter",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "generate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"generate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTokenCounter\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"RIF Protocols Team @IOVLabs\",\"details\":\"Partial marketplace contract, defining an incremental strategy for ids.\",\"kind\":\"dev\",\"methods\":{\"generate()\":{\"returns\":{\"_0\":\"result an uint256 with the id value.\"}}},\"title\":\"IncrementalOrderIDGenerationStrategy\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"generate()\":{\"notice\":\"Generates the id using openzeppelin Counter. \"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/id/IncrementalIDGenerationStrategy.sol\":\"IncrementalIDGenerationStrategy\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Counters.sol\":{\"keccak256\":\"0xf0018c2440fbe238dd3a8732fa8e17a0f9dce84d31451dc8a32f6d62b349c9f1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://59e1c62884d55b70f3ae5432b44bb3166ad71ae3acd19c57ab6ddc3c87c325ee\",\"dweb:/ipfs/QmezuXg5GK5oeA4F91EZhozBFekhq5TD966bHPH18cCqhu\"]},\"project:/contracts/id/IDGenerationStrategy.sol\":{\"keccak256\":\"0x6473cd52d9e17cb7d4a8b109b369e2d4af7dc40d1bdacbd550b826ee5c7c8584\",\"license\":\"MIT OR Apache-2.0\",\"urls\":[\"bzz-raw://72debf6ef3382817e2ef36f6344c7b93057a71da30800920f8a980455d093879\",\"dweb:/ipfs/QmYAP99t8n52aWL1T3xknD8o4Ymwqc95uWP6sbjAidsvtZ\"]},\"project:/contracts/id/IncrementalIDGenerationStrategy.sol\":{\"keccak256\":\"0x4e37621d5335c45b78a2800d15fedd69e2a9f78ea730e332877982992b8de278\",\"license\":\"MIT OR Apache-2.0\",\"urls\":[\"bzz-raw://77ecc4e309493a97eac923018c3b15236ef4570171cd4c3773b83e10341f6e9a\",\"dweb:/ipfs/QmYfFov7od1kff6Yt1cbJYX4JEGr41bMGJ3UKaMwmAGhju\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061011b806100206000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80632a1bbc341460375780636e02007d146051575b600080fd5b603d606b565b6040516048919060cc565b60405180910390f35b60576082565b6040516062919060cc565b60405180910390f35b6000607560006091565b607d600060a7565b905090565b6000608c600060a7565b905090565b6001816000016000828254019250508190555050565b600081600001549050919050565b6000819050919050565b60c68160b5565b82525050565b600060208201905060df600083018460bf565b9291505056fea264697066735822122009d3c1b37eaf7ab8c08d71871a5651e94c9b833fc40d1521397bce466535e39064736f6c634300080b0033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80632a1bbc341460375780636e02007d146051575b600080fd5b603d606b565b6040516048919060cc565b60405180910390f35b60576082565b6040516062919060cc565b60405180910390f35b6000607560006091565b607d600060a7565b905090565b6000608c600060a7565b905090565b6001816000016000828254019250508190555050565b600081600001549050919050565b6000819050919050565b60c68160b5565b82525050565b600060208201905060df600083018460bf565b9291505056fea264697066735822122009d3c1b37eaf7ab8c08d71871a5651e94c9b833fc40d1521397bce466535e39064736f6c634300080b0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [
+    {
+      "ast": {
+        "nodeType": "YulBlock",
+        "src": "0:439:32",
+        "statements": [
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "52:32:32",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "62:16:32",
+                  "value": {
+                    "name": "value",
+                    "nodeType": "YulIdentifier",
+                    "src": "73:5:32"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "62:7:32"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_uint256",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "34:5:32",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "44:7:32",
+                "type": ""
+              }
+            ],
+            "src": "7:77:32"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "155:53:32",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nodeType": "YulIdentifier",
+                        "src": "172:3:32"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "195:5:32"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "cleanup_t_uint256",
+                          "nodeType": "YulIdentifier",
+                          "src": "177:17:32"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "177:24:32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "165:6:32"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "165:37:32"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "165:37:32"
+                }
+              ]
+            },
+            "name": "abi_encode_t_uint256_to_t_uint256_fromStack",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "143:5:32",
+                "type": ""
+              },
+              {
+                "name": "pos",
+                "nodeType": "YulTypedName",
+                "src": "150:3:32",
+                "type": ""
+              }
+            ],
+            "src": "90:118:32"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "312:124:32",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "322:26:32",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "334:9:32"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "345:2:32",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "330:3:32"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "330:18:32"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "322:4:32"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value0",
+                        "nodeType": "YulIdentifier",
+                        "src": "402:6:32"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "415:9:32"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "426:1:32",
+                            "type": "",
+                            "value": "0"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "411:3:32"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "411:17:32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "abi_encode_t_uint256_to_t_uint256_fromStack",
+                      "nodeType": "YulIdentifier",
+                      "src": "358:43:32"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "358:71:32"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "358:71:32"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "284:9:32",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "296:6:32",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "307:4:32",
+                "type": ""
+              }
+            ],
+            "src": "214:222:32"
+          }
+        ]
+      },
+      "contents": "{\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n}\n",
+      "id": 32,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "401:545:25:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "401:545:25:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;802:142;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;560:106;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;802:142;849:7;868:27;:15;:25;:27::i;:::-;912:25;:15;:23;:25::i;:::-;905:32;;802:142;:::o;560:106::-;608:7;634:25;:15;:23;:25::i;:::-;627:32;;560:106;:::o;945:123:9:-;1050:1;1032:7;:14;;;:19;;;;;;;;;;;945:123;:::o;827:112::-;892:7;918;:14;;;911:21;;827:112;;;:::o;7:77:32:-;44:7;73:5;62:16;;7:77;;;:::o;90:118::-;177:24;195:5;177:24;:::i;:::-;172:3;165:37;90:118;;:::o;214:222::-;307:4;345:2;334:9;330:18;322:26;;358:71;426:1;415:9;411:17;402:6;358:71;:::i;:::-;214:222;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT OR Apache-2.0\npragma solidity ^0.8.4;\n\nimport {IDGenerationStrategy} from \"./IDGenerationStrategy.sol\";\nimport \"@openzeppelin/contracts/utils/Counters.sol\";\n\n//import \"hardhat/console.sol\";\n\n/**\n    @author RIF Protocols Team @IOVLabs\n    @title IncrementalOrderIDGenerationStrategy\n\n    @dev Partial marketplace contract, defining an incremental strategy for ids.\n */\ncontract IncrementalIDGenerationStrategy is IDGenerationStrategy {\n    using Counters for Counters.Counter;\n    Counters.Counter private _tokenIdCounter;\n\n    function getTokenCounter() public view returns (uint256) {\n        return _tokenIdCounter.current();\n    }\n\n    /**\n        @notice Generates the id using openzeppelin Counter. \n        @return result an uint256 with the id value.\n    */\n    function generate() external override returns (uint256) {\n        _tokenIdCounter.increment();\n        return _tokenIdCounter.current();\n    }\n}\n",
+  "sourcePath": "/Users/rjauregui/RIF_MKTV2/rif-marketplace-engine-integration-tests/contracts/id/IncrementalIDGenerationStrategy.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/id/IncrementalIDGenerationStrategy.sol",
+    "exportedSymbols": {
+      "Counters": [
+        1374
+      ],
+      "IDGenerationStrategy": [
+        3744
+      ],
+      "IncrementalIDGenerationStrategy": [
+        3787
+      ]
+    },
+    "id": 3788,
+    "license": "MIT OR Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3746,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "46:23:25"
+      },
+      {
+        "absolutePath": "project:/contracts/id/IDGenerationStrategy.sol",
+        "file": "./IDGenerationStrategy.sol",
+        "id": 3748,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 3788,
+        "sourceUnit": 3745,
+        "src": "71:64:25",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 3747,
+              "name": "IDGenerationStrategy",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "79:20:25",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/utils/Counters.sol",
+        "file": "@openzeppelin/contracts/utils/Counters.sol",
+        "id": 3749,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 3788,
+        "sourceUnit": 1375,
+        "src": "136:52:25",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 3751,
+              "name": "IDGenerationStrategy",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3744,
+              "src": "445:20:25"
+            },
+            "id": 3752,
+            "nodeType": "InheritanceSpecifier",
+            "src": "445:20:25"
+          }
+        ],
+        "canonicalName": "IncrementalIDGenerationStrategy",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 3750,
+          "nodeType": "StructuredDocumentation",
+          "src": "223:177:25",
+          "text": "@author RIF Protocols Team @IOVLabs\n@title IncrementalOrderIDGenerationStrategy\n@dev Partial marketplace contract, defining an incremental strategy for ids."
+        },
+        "fullyImplemented": true,
+        "id": 3787,
+        "linearizedBaseContracts": [
+          3787,
+          3744
+        ],
+        "name": "IncrementalIDGenerationStrategy",
+        "nameLocation": "410:31:25",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 3756,
+            "libraryName": {
+              "id": 3753,
+              "name": "Counters",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1374,
+              "src": "478:8:25"
+            },
+            "nodeType": "UsingForDirective",
+            "src": "472:36:25",
+            "typeName": {
+              "id": 3755,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 3754,
+                "name": "Counters.Counter",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 1306,
+                "src": "491:16:25"
+              },
+              "referencedDeclaration": 1306,
+              "src": "491:16:25",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Counter_$1306_storage_ptr",
+                "typeString": "struct Counters.Counter"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 3759,
+            "mutability": "mutable",
+            "name": "_tokenIdCounter",
+            "nameLocation": "538:15:25",
+            "nodeType": "VariableDeclaration",
+            "scope": 3787,
+            "src": "513:40:25",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Counter_$1306_storage",
+              "typeString": "struct Counters.Counter"
+            },
+            "typeName": {
+              "id": 3758,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 3757,
+                "name": "Counters.Counter",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 1306,
+                "src": "513:16:25"
+              },
+              "referencedDeclaration": 1306,
+              "src": "513:16:25",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Counter_$1306_storage_ptr",
+                "typeString": "struct Counters.Counter"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 3768,
+              "nodeType": "Block",
+              "src": "617:49:25",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 3764,
+                        "name": "_tokenIdCounter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3759,
+                        "src": "634:15:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$1306_storage",
+                          "typeString": "struct Counters.Counter storage ref"
+                        }
+                      },
+                      "id": 3765,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "current",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1318,
+                      "src": "634:23:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$1306_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$1306_storage_ptr_$",
+                        "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 3766,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "634:25:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3763,
+                  "id": 3767,
+                  "nodeType": "Return",
+                  "src": "627:32:25"
+                }
+              ]
+            },
+            "functionSelector": "6e02007d",
+            "id": 3769,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenCounter",
+            "nameLocation": "569:15:25",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3760,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "584:2:25"
+            },
+            "returnParameters": {
+              "id": 3763,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3762,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3769,
+                  "src": "608:7:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3761,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "608:7:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "607:9:25"
+            },
+            "scope": 3787,
+            "src": "560:106:25",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "baseFunctions": [
+              3743
+            ],
+            "body": {
+              "id": 3785,
+              "nodeType": "Block",
+              "src": "858:86:25",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 3776,
+                        "name": "_tokenIdCounter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3759,
+                        "src": "868:15:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$1306_storage",
+                          "typeString": "struct Counters.Counter storage ref"
+                        }
+                      },
+                      "id": 3778,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "increment",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1332,
+                      "src": "868:25:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$1306_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$1306_storage_ptr_$",
+                        "typeString": "function (struct Counters.Counter storage pointer)"
+                      }
+                    },
+                    "id": 3779,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "868:27:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3780,
+                  "nodeType": "ExpressionStatement",
+                  "src": "868:27:25"
+                },
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 3781,
+                        "name": "_tokenIdCounter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3759,
+                        "src": "912:15:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$1306_storage",
+                          "typeString": "struct Counters.Counter storage ref"
+                        }
+                      },
+                      "id": 3782,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "current",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1318,
+                      "src": "912:23:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$1306_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$1306_storage_ptr_$",
+                        "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 3783,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "912:25:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3775,
+                  "id": 3784,
+                  "nodeType": "Return",
+                  "src": "905:32:25"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 3770,
+              "nodeType": "StructuredDocumentation",
+              "src": "672:125:25",
+              "text": "@notice Generates the id using openzeppelin Counter. \n@return result an uint256 with the id value."
+            },
+            "functionSelector": "2a1bbc34",
+            "id": 3786,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generate",
+            "nameLocation": "811:8:25",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 3772,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "831:8:25"
+            },
+            "parameters": {
+              "id": 3771,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "819:2:25"
+            },
+            "returnParameters": {
+              "id": 3775,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3774,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3786,
+                  "src": "849:7:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3773,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "849:7:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "848:9:25"
+            },
+            "scope": 3787,
+            "src": "802:142:25",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3788,
+        "src": "401:545:25",
+        "usedErrors": []
+      }
+    ],
+    "src": "46:901:25"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/id/IncrementalIDGenerationStrategy.sol",
+    "exportedSymbols": {
+      "Counters": [
+        1374
+      ],
+      "IDGenerationStrategy": [
+        3744
+      ],
+      "IncrementalIDGenerationStrategy": [
+        3787
+      ]
+    },
+    "id": 3788,
+    "license": "MIT OR Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3746,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "46:23:25"
+      },
+      {
+        "absolutePath": "project:/contracts/id/IDGenerationStrategy.sol",
+        "file": "./IDGenerationStrategy.sol",
+        "id": 3748,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 3788,
+        "sourceUnit": 3745,
+        "src": "71:64:25",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 3747,
+              "name": "IDGenerationStrategy",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "79:20:25",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/utils/Counters.sol",
+        "file": "@openzeppelin/contracts/utils/Counters.sol",
+        "id": 3749,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 3788,
+        "sourceUnit": 1375,
+        "src": "136:52:25",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 3751,
+              "name": "IDGenerationStrategy",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3744,
+              "src": "445:20:25"
+            },
+            "id": 3752,
+            "nodeType": "InheritanceSpecifier",
+            "src": "445:20:25"
+          }
+        ],
+        "canonicalName": "IncrementalIDGenerationStrategy",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 3750,
+          "nodeType": "StructuredDocumentation",
+          "src": "223:177:25",
+          "text": "@author RIF Protocols Team @IOVLabs\n@title IncrementalOrderIDGenerationStrategy\n@dev Partial marketplace contract, defining an incremental strategy for ids."
+        },
+        "fullyImplemented": true,
+        "id": 3787,
+        "linearizedBaseContracts": [
+          3787,
+          3744
+        ],
+        "name": "IncrementalIDGenerationStrategy",
+        "nameLocation": "410:31:25",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 3756,
+            "libraryName": {
+              "id": 3753,
+              "name": "Counters",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1374,
+              "src": "478:8:25"
+            },
+            "nodeType": "UsingForDirective",
+            "src": "472:36:25",
+            "typeName": {
+              "id": 3755,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 3754,
+                "name": "Counters.Counter",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 1306,
+                "src": "491:16:25"
+              },
+              "referencedDeclaration": 1306,
+              "src": "491:16:25",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Counter_$1306_storage_ptr",
+                "typeString": "struct Counters.Counter"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 3759,
+            "mutability": "mutable",
+            "name": "_tokenIdCounter",
+            "nameLocation": "538:15:25",
+            "nodeType": "VariableDeclaration",
+            "scope": 3787,
+            "src": "513:40:25",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Counter_$1306_storage",
+              "typeString": "struct Counters.Counter"
+            },
+            "typeName": {
+              "id": 3758,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 3757,
+                "name": "Counters.Counter",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 1306,
+                "src": "513:16:25"
+              },
+              "referencedDeclaration": 1306,
+              "src": "513:16:25",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Counter_$1306_storage_ptr",
+                "typeString": "struct Counters.Counter"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 3768,
+              "nodeType": "Block",
+              "src": "617:49:25",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 3764,
+                        "name": "_tokenIdCounter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3759,
+                        "src": "634:15:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$1306_storage",
+                          "typeString": "struct Counters.Counter storage ref"
+                        }
+                      },
+                      "id": 3765,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "current",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1318,
+                      "src": "634:23:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$1306_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$1306_storage_ptr_$",
+                        "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 3766,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "634:25:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3763,
+                  "id": 3767,
+                  "nodeType": "Return",
+                  "src": "627:32:25"
+                }
+              ]
+            },
+            "functionSelector": "6e02007d",
+            "id": 3769,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenCounter",
+            "nameLocation": "569:15:25",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3760,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "584:2:25"
+            },
+            "returnParameters": {
+              "id": 3763,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3762,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3769,
+                  "src": "608:7:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3761,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "608:7:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "607:9:25"
+            },
+            "scope": 3787,
+            "src": "560:106:25",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "baseFunctions": [
+              3743
+            ],
+            "body": {
+              "id": 3785,
+              "nodeType": "Block",
+              "src": "858:86:25",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 3776,
+                        "name": "_tokenIdCounter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3759,
+                        "src": "868:15:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$1306_storage",
+                          "typeString": "struct Counters.Counter storage ref"
+                        }
+                      },
+                      "id": 3778,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "increment",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1332,
+                      "src": "868:25:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$1306_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$1306_storage_ptr_$",
+                        "typeString": "function (struct Counters.Counter storage pointer)"
+                      }
+                    },
+                    "id": 3779,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "868:27:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3780,
+                  "nodeType": "ExpressionStatement",
+                  "src": "868:27:25"
+                },
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 3781,
+                        "name": "_tokenIdCounter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3759,
+                        "src": "912:15:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$1306_storage",
+                          "typeString": "struct Counters.Counter storage ref"
+                        }
+                      },
+                      "id": 3782,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "current",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1318,
+                      "src": "912:23:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$1306_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$1306_storage_ptr_$",
+                        "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 3783,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "912:25:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3775,
+                  "id": 3784,
+                  "nodeType": "Return",
+                  "src": "905:32:25"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 3770,
+              "nodeType": "StructuredDocumentation",
+              "src": "672:125:25",
+              "text": "@notice Generates the id using openzeppelin Counter. \n@return result an uint256 with the id value."
+            },
+            "functionSelector": "2a1bbc34",
+            "id": 3786,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generate",
+            "nameLocation": "811:8:25",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 3772,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "831:8:25"
+            },
+            "parameters": {
+              "id": 3771,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "819:2:25"
+            },
+            "returnParameters": {
+              "id": 3775,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3774,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3786,
+                  "src": "849:7:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3773,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "849:7:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "848:9:25"
+            },
+            "scope": 3787,
+            "src": "802:142:25",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3788,
+        "src": "401:545:25",
+        "usedErrors": []
+      }
+    ],
+    "src": "46:901:25"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-12-22T21:29:30.850Z",
+  "devdoc": {
+    "author": "RIF Protocols Team @IOVLabs",
+    "details": "Partial marketplace contract, defining an incremental strategy for ids.",
+    "kind": "dev",
+    "methods": {
+      "generate()": {
+        "returns": {
+          "_0": "result an uint256 with the id value."
+        }
+      }
+    },
+    "title": "IncrementalOrderIDGenerationStrategy",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "generate()": {
+        "notice": "Generates the id using openzeppelin Counter. "
+      }
+    },
+    "version": 1
+  }
+}
