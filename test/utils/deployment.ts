@@ -1,7 +1,7 @@
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
 import { ethers } from 'hardhat';
 import { Contract, ContractFactory } from 'ethers';
-import { Marketplace } from 'rif-marketplace-engine/typechain';
+import { Marketplace } from 'rif-marketplace-engine/typechain-types';
 
 export interface Factory<C extends Contract> extends ContractFactory {
   deploy: (...args: Array<unknown>) => Promise<C>;

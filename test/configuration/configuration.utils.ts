@@ -3,12 +3,12 @@ import {
   ConfigAttribute,
   createMarketplaceConfiguration,
   createMarketplaceContract,
-  MARKETPLACE_CONFIG_GETTERS,
+  //MARKETPLACE_CONFIG_GETTERS,
 } from 'rif-marketplace-engine-sdk';
 import { ethers } from 'hardhat';
 import { RSK_NODE } from '../../env';
 import { Provider } from '@ethersproject/providers';
-import { Marketplace } from 'rif-marketplace-engine/typechain';
+import { Marketplace } from 'rif-marketplace-engine/typechain-types';
 import {
   defaultMarketplaceOptions,
   deployMarketplace,

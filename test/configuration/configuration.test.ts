@@ -6,7 +6,7 @@ import {
 } from 'rif-marketplace-engine-sdk';
 import { Contract, ContractTransaction, Signer } from 'ethers';
 import { Provider } from '@ethersproject/providers';
-import { Marketplace } from 'rif-marketplace-engine/typechain';
+import { Marketplace } from 'rif-marketplace-engine/typechain-types';
 import {
   assertMarketplaceConfiguration,
   getMarketplaceConfiguration,

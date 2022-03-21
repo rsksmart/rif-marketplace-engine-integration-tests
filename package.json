@@ -52,12 +52,13 @@
     "url": "https://github.com/rsksmart/rif-marketplace-engine-integration-tests/issues"
   },
   "dependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.0.3",
-    "@openzeppelin/contracts": "^4.4.1",
-    "ethers": "^5.5.2",
-    "hardhat": "^2.8.0",
-    "rif-marketplace-engine": "github:rsksmart/rif-marketplace-engine#58006b967723ba84c50ee67f94a11b61706f85d7",
-    "rif-marketplace-engine-sdk": "github:rsksmart/rif-marketplace-engine-sdk#intergration-test/fixes"
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@openzeppelin/contracts": "^4.5.0",
+    "ethers": "^5.5.4",
+    "hardhat": "2.9.0",
+    "typechain": "^7.0.0",
+    "rif-marketplace-engine": "github:rsksmart/rif-marketplace-engine",
+    "rif-marketplace-engine-sdk": "github:rsksmart/rif-marketplace-engine-sdk"
   },
   "homepage": "https://github.com/rsksmart/rif-marketplace-engine-integration-tests.git#readme",
   "devDependencies": {
